@@ -1,20 +1,20 @@
 import React from "react";
 import './Navbar.css'
+import video from './WikiAssets/Astronauta.mp4'
+import logo from './WikiAssets/Logo.png'
 
 
 
 function Navbar() {
     return (
-      <nav className="main-nav">
-        {/* Logo a sinistra */}
-        <div className="logo">
-          <h2>
-            <span>InSpace</span>
-          </h2>
-        </div>
-  
-        {/* Link al centro */}
-        <div className="menu-link">
+      <div className="wiki-container">
+        <video src={video} autoPlay loop muted></video>
+        <nav className="main-nav">
+          {/* Logo a sinistra */}
+          <div className="logo">
+           <img src={logo} alt="" width='300px' />
+          </div>
+          <div className="menu-link">
           <ul>
             <li>
               <a href="#">Home</a>
@@ -30,7 +30,12 @@ function Navbar() {
             </li>
           </ul>
         </div>
-      </nav>
+        </nav>
+        <header>
+          {/* Contenuto dell'header */}
+        </header>
+      </div>
     );
   }
-export default Navbar;
+  
+  export default Navbar;
