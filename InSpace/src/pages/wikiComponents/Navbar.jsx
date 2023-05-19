@@ -1,6 +1,6 @@
 import React from "react";
 import './Navbar.css'
-import video from './WikiAssets/Astronauta.mp4'
+import video from './WikiAssets/WikiPlanet3.mp4'
 import logo from './WikiAssets/Logo.png'
 
 
