@@ -8,10 +8,9 @@ const App = () => {
   return(
     <>
       <nav>
-        <Link to="/">Home</Link>
+        {/* <Link to="/">Home</Link>
         <Link to="/ExplorPlanets">ExplorPlanets</Link>
-        <Link to="/WikiPlanet">WikiPlanet</Link>
-        <Link to="/FormPlanet">FormPlanet</Link>
+        <Link to="/FormPlanet">FormPlanet</Link> */}
       </nav>
 
       <Routes>

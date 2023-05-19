@@ -1,11 +1,11 @@
-
+import Navbar from "./wikiComponents/Navbar";
 
 
 const WikiPlanet = () => {
 
     return(
         <div>
-            <h1>WikiPlanet</h1>
+            <Navbar/>
         </div>
     );
 };
