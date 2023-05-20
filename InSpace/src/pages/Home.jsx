@@ -1,10 +1,11 @@
+import Footer from "./footer/Footer";
 
 
 const Home = () => {
 
     return(
         <div>
-            <h1>Hello Space</h1>
+            <Footer/>
         </div>
     );
 };
