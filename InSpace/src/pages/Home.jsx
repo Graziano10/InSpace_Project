@@ -1,10 +1,14 @@
+import Header from "./components/componentsHeader/Header";
+import NavBar from "./components/componentsHeader/NavBar";
+
 
 
 const Home = () => {
 
     return(
         <div>
-            <h1>Hello Space</h1>
+            <NavBar/> 
+            <Header/>
         </div>
     );
 };
