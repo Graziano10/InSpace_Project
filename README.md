@@ -1,8 +1,8 @@
 # InSpaceProject
 InSpace Project:
 
-                - Tutor : Vittorio Sabbatini 
-                - Team leader : Graziano Corineo
+                -Tutor : Vittorio Sabbatini 
+                -Team leader : Graziano Corineo
                 
                 Component Assignment:
                 Home:
