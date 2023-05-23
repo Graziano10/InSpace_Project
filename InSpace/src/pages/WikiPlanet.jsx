@@ -1,10 +1,13 @@
 import Planets from "./wikiComponents/SectionPlanets";
+import Navbar from "./wikiComponents/Navbar";
 
 const WikiPlanet = () => {
   return (
     <>
       <div className="FirstPart">
-        <section></section>
+        <section>
+          <Navbar />
+        </section>
       </div>
       <div className="LastPart">
         <section>
