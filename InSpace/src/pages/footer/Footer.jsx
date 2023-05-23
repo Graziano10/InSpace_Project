@@ -6,7 +6,7 @@ function Footer() {
     <div className=" bg-neutral-950 h-screen flex flex-col items-center justify-center">
       <div className=" relative flex justify-around items-center mt-10 mb-24 container rounded-3xl bg-[url('assets/universe.jpg')] bg-cover h-4/5">
         <div className="w-4/12 h-4/6 absolute left-0 bottom-13">
-          <img src={mars} alt="" />
+          <img src={mars} alt="mars" />
         </div>
         <div className="text-white ml-80">
           <p className="3xl:text-6xl xl:text-3xl md:text-lg xs:text-base mb-5  ">
