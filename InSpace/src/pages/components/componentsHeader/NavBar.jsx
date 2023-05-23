@@ -7,7 +7,7 @@ const NavBar = () => {
 
   return (
     <nav className="flex dark:bg-neutral-500 items-center relative justify-between bg-white px-5 py-6 w-full h-14">
-      <div className="pl-16">
+      <div className="pl-14">
         <Logo/>
       </div>
       <ul
