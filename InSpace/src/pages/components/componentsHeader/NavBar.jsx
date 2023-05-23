@@ -196,14 +196,19 @@ const NavBar = () => {
           </svg>
         </div>
         <li className="font-medium text-sm p-3 hover:bg-slate-300 dark:hover:bg-slate-800 sm:p-0 sm:hover:bg-transparent text-primary flex gap-3">
-          <Link className="dark:text-white" to="/ExplorPlanets">ExplorPlanets</Link>
+          <Link className="dark:text-white" to="/ExplorPlanets">
+            ExplorPlanets
+          </Link>
         </li>
         <li className="font-medium text-sm p-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-800 sm:p-0 sm:hover:bg-transparent text-gray-600 hover:text-primary transition-colors">
-           <Link className="dark:text-white mx-36" to="/WikiPlanet">WikiPlanet</Link>
+          <Link className="dark:text-white mx-36" to="/WikiPlanet">
+            WikiPlanet
+          </Link>
         </li>
         <li className="font-medium text-sm p-3 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-800 sm:p-0 sm:hover:bg-transparent text-gray-600 hover:text-primary transition-colors">
-
-        <Link className="dark:text-white" to="/FormPlanet">FormPlanet</Link>
+          <Link className="dark:text-white" to="/FormPlanet">
+            FormPlanet
+          </Link>
         </li>
       </ul>
       <div className="flex gap-3 items-center">
