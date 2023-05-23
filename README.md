@@ -13,7 +13,7 @@ InSpace Project:
                 -Header : Antonio Cammarata / Antonio Francesco L'abbate
                 -Section01 : Antonio Cammarata / Antonio Francesco L'abbate
                 ---
-                WikiPlanest Component:
+                WikiPlanet Component:
                 -Descriptive Component : Antonio Francesco L'abbate
                 ---
                 Form Component:
