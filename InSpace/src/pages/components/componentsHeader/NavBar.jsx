@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import Logo from "./Logo";
+
 
 const NavBar = () => {
+
+  const logo = <svg></svg>; <img src={logo} alt="Logo" />
+
   return (
-    <nav className="flex dark:bg-neutral-500 items-center relative justify-between bg-white px-5 py-6 w-full">
-      <div>
-      
-        <h1 className="text-white">Logo</h1>
+    <nav className="flex dark:bg-neutral-500 items-center relative justify-between bg-white px-5 py-6 w-full h-14">
+      <div className="pl-16">
+        <Logo/>
       </div>
       <ul
         id="drawer"
@@ -56,8 +59,7 @@ const NavBar = () => {
       </ul>
       <div className="flex gap-3 items-center">
         <div className="h-10 w-10 hover:ring-4 user cursor-pointer relative ring-blue-700/30 rounded-full bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')]">
-          <div className="drop-down  w-48 overflow-hidden bg-white rounded-md shadow absolute top-12 right-3">
-          </div>
+          <div className="drop-down  w-48 overflow-hidden bg-white rounded-md shadow absolute top-12 right-3"></div>
         </div>
         <div className="sm:hidden cursor-pointer" id="mobile-toggle">
           <svg
@@ -69,8 +71,9 @@ const NavBar = () => {
           >
             <path
               className="dark:stroke-white"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth
               stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16"
             />
