@@ -1,0 +1,111 @@
+.Container {
+  position: relative;
+  height: 100vh;
+}
+.Stelle {
+  width: 100%;
+  height: 100vh;
+  object-fit: fill;
+  position: absolute;
+  overflow: hidden;
+  z-index: -100;
+}
+.images-luna {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 250px;
+  height: 250px;
+  animation: animate 3s infinite cubic-bezier(0.69, 0.58, 0.87, 0.88) alternate;
+}
+.images-luna img {
+  width: 370px;
+  height: 220px;
+}
+.images-marte {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  animation: animate 3s infinite cubic-bezier(0.69, 0.58, 0.87, 0.88) alternate;
+}
+.images-marte img {
+  width: 400px;
+  height: 300px;
+}
+.images-saturno {
+  position: absolute;
+  top: 4%;
+  left: 40%;
+  object-fit: contain;
+  margin: auto;
+  animation: animate 3s infinite cubic-bezier(0.69, 0.58, 0.87, 0.88) alternate;
+}
+@keyframes animate {
+  to {
+    transform: translateY(20px);
+  }
+}
+
+.images-saturno img {
+  width: 300px;
+  height: 300px;
+}
+.images-pianeta {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  animation: animate 3s infinite cubic-bezier(0.69, 0.58, 0.87, 0.88) alternate;
+}
+.images-pianeta img {
+  width: 280px;
+  height: 280px;
+}
+.Little-section {
+  position: absolute;
+  top: 65%;
+  left: 75%;
+  max-width: 350px;
+  max-height: 200px;
+}
+.Little-section p {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+#Life {
+  padding: 10px 40px;
+  border-radius: 3%;
+  border: 3px solid rgb(133, 130, 130);
+  background: local;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+#GoHome {
+  padding: 10px 40px;
+  margin-left: 20px;
+  border-radius: 3%;
+  border: 3px solid rgb(133, 130, 130);
+  background: local;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+#Life:hover {
+  overflow: hidden;
+  background: white;
+  transition: 1s;
+  color: rgb(0, 0, 0);
+}
+#GoHome:hover {
+  overflow: hidden;
+  background: white;
+  transition: 1s;
+  color: rgb(0, 0, 0);
+}

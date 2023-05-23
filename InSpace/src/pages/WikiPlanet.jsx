@@ -1,13 +1,18 @@
-
-
+import Planets from "./wikiComponents/SectionPlanets";
 
 const WikiPlanet = () => {
-
-    return(
-        <div>
-            <h1>WikiPlanet</h1>
-        </div>
-    );
+  return (
+    <>
+      <div className="FirstPart">
+        <section></section>
+      </div>
+      <div className="LastPart">
+        <section>
+          <Planets />
+        </section>
+      </div>
+    </>
+  );
 };
 
 export default WikiPlanet;

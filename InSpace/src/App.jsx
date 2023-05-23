@@ -1,11 +1,11 @@
-import { Routes, Route, Link } from "react-router-dom"
-import ExplorPlanets from "./pages/ExplorPlanets"
-import WikiPlanet from "./pages/WikiPlanet"
-import FormPlanet from "./pages/FormPlanet"
-import Home from "./pages/Home"
+import { Routes, Route, Link } from "react-router-dom";
+import ExplorPlanets from "./pages/ExplorPlanets";
+import WikiPlanet from "./pages/WikiPlanet";
+import FormPlanet from "./pages/FormPlanet";
+import Home from "./pages/Home";
 
 const App = () => {
-  return(
+  return (
     <>
       <nav>
         <Link to="/">Home</Link>
@@ -15,13 +15,13 @@ const App = () => {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/ExplorPlanets" element={<ExplorPlanets />}/>
-        <Route path="/WikiPlanet" element={<WikiPlanet/>}/>
-        <Route path="/FormPlanet" element={<FormPlanet/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/ExplorPlanets" element={<ExplorPlanets />} />
+        <Route path="/WikiPlanet" element={<WikiPlanet />} />
+        <Route path="/FormPlanet" element={<FormPlanet />} />
       </Routes>
     </>
-  )
+  );
 };
 
 export default App;
