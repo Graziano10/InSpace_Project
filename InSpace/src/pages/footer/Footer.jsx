@@ -9,7 +9,7 @@ function Footer() {
         <div className="w-4/12 h-4/6 absolute left-0 bottom-13">
           <img src={mars} alt="mars" />
         </div>
-        <div className="text-white ml-80">
+        <div className="text-white ml-80 ">
           <p className="3xl:text-6xl xl:text-3xl md:text-lg xs:text-base mb-5  ">
             LEARNING IS EASY WITH US
           </p>
