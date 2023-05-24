@@ -2,10 +2,10 @@
 
 const FormPlanet = () => {
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-form-bg bg-cover bg-center">
-        <div className="w-2/4 h-1/6 border ">
+    <div className="w-screen h-screen flex flex-col justify-center items-center bg-form-bg bg-cover bg-center">
+        <h1 className="text-white w-3/4 text-center text-5xl mb-10" >The space is waiting for you</h1>
+        <div className="w-2/4 h-4/6 border border-zinc-500 bg-zinc-500/50 rounded-2xl">
 
-        <h1 className="text-white">Universe is waiting for you</h1>
 
         <label htmlFor="fullname">firstname</label>
         <input type="text" id='name' placeholder=" name"/>
@@ -37,6 +37,8 @@ const FormPlanet = () => {
 
         <label htmlFor="state">zip code</label>
         <input type="text" />
+
+        <button className="bg-white rounded p-5  ">SUBMIT</button>
         </div>
 
         
