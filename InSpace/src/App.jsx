@@ -12,7 +12,7 @@ const App = () => {
         <Link to="/">Home</Link>
         <Link to="/ExplorPlanets">ExplorPlanets</Link>
         <Link to="/FormPlanet">FormPlanet</Link> 
-        <Link to="/WikiPlanet">WikiPlanets</Link>
+        <Link to="/Wiki-Planet">WikiPlanets</Link>
         <Link to="/Login">Login</Link>
       </nav>
 
