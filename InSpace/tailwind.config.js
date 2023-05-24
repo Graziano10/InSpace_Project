@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'form-bg': "url('../assets/formBg.png')"
+        'form-bg': "url('./assets/formBg.png')"
       }
     },
   },

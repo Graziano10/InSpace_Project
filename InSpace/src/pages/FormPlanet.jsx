@@ -2,7 +2,7 @@
 
 const FormPlanet = () => {
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-form-bg">
+    <div className="w-screen h-screen flex justify-center items-center bg-form-bg bg-cover bg-center">
         <div className="w-2/4 h-1/6 border ">
 
         <h1 className="text-white">Universe is waiting for you</h1>
