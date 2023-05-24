@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Section01 = () => {
   const divStyle02 = {
-    backgroundImage: "url('src/pages/components/componentsHeader/assetsHeader/universe04.jpg')"
+    backgroundImage: "url('/src/assets/assets-Header/universe04.jpg')"
   };
 
   return (
