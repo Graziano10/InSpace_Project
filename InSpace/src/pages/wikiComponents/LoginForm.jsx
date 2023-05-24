@@ -7,7 +7,7 @@ const LoginForm = () => {
         <div className="background">
         <div className="login-box">
             <form action="">
-                <h2>Login</h2>
+                <h2 className='login-h2'>Login</h2>
                 <div className="input-box">
                     <span className="icon"><ion-icon name="mail"></ion-icon></span>
                     <input type="email" required />
