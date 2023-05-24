@@ -3,7 +3,7 @@ import './LoginForm.css'
 
 const LoginForm = () => {
     return(
-        <section>
+        <section className='section-login'>
         <div className="background">
         <div className="login-box">
             <form action="">
@@ -22,7 +22,7 @@ const LoginForm = () => {
                     <label><input type="checkbox"/>Remember me</label>
                     <a href="#">Forgot Password?</a>
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit" className='login-button'>Login</button>
                 <div className="register-link">
                     <p>Don't have an account?<a href="#">Register</a></p>
                 </div>
