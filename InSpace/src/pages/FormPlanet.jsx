@@ -1,9 +1,10 @@
+import bg_img from '../assets/formBg.png'
+
 const FormPlanet = () => {
   return (
-    <div className="flex bg-red-600 w-10 h-[500px] ring-2">
-        <h1>Text</h1>
-      <h1 className="text-1xl font-bold underline">Hello world!</h1>
-    </div>
+    <div>
+        <img src={bg_img} alt="" className="w-full h-full"/>
+    </div> 
   );
 };
 
