@@ -7,10 +7,22 @@ import pianeta from "./WikiAssets/Terra.png";
 function Planets() {
   return (
     <>
+      <div className="banner">
+        <h4>The most important choise</h4>
+        <div className="adv">
+          <a href="">
+            Click a planet below or return to <span>Home</span>{" "}
+          </a>
+        </div>
+      </div>
       <div className="Container">
         <img src={stelle} alt="" className="Stelle" />
         <div className="images-luna">
-          <img src={luna} alt="luna" />
+          <figure>
+            <a href="">
+              <img src={luna} alt="luna" />
+            </a>
+          </figure>
         </div>
         <div className="images-marte">
           <img src={marte} alt="marte" />

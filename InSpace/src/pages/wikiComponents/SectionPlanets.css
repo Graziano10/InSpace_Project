@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .Container {
   position: relative;
   height: 100vh;
@@ -9,6 +14,43 @@
   position: absolute;
   overflow: hidden;
   z-index: -100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner {
+  height: 9vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #04060c;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.banner h4{
+ margin-bottom: 10px;
+}
+.adv a{
+  color: white;
+  text-decoration: none
+
+}
+.adv a span {
+  text-decoration: underline;
+}
+.adv a span:hover{
+  color: #59272b;
+}
+.Container h4 {
+  align-items: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  left: 34%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .images-luna {
   position: absolute;
