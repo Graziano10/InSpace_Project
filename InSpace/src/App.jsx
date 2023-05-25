@@ -1,9 +1,12 @@
-import { Routes, Route, Link  } from "react-router-dom";
+import { Routes, Route, Link, Navigate  } from "react-router-dom";
 import ExplorPlanets from "./pages/ExplorPlanets";
 import WikiPlanet from "./pages/WikiPlanet";
 import FormPlanet from "./pages/FormPlanet";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+
+
+
 
 const App = () => {
   return (
@@ -27,5 +30,6 @@ const App = () => {
     </>
   );
 };
+
 
 export default App;
