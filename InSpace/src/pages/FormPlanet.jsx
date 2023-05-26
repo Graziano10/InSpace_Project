@@ -1,10 +1,14 @@
 // import bg_img from '../assets/formBg.png'
-
+import './formPlanet.css'
 export const FormPlanet = () => {
   return (
-    <div className=" bg-form-bg bg-cover bg-center min-h-screen items-center flex align-center justify-center">
+    <div className=" bg-form-bg bg-cover bg-center min-h-screen  flex justify-center md:items-center xl:justify-end xl:items-start">
 
-	<form className="bg-zinc-500/50 p-6 rounded my-10">
+        <div className="bg-video">
+        {/* <video src="../assets/video-2.mp4" autoPlay loop muted></video> */}
+        </div>
+
+	<form className="bg-zinc-500/50 p-6 rounded my-10 md:w-2/3 md:h-min xl:w-1/2 xl:h-screen xl:my-0 xl:bg-white xl:rounded-none">
     <div className="grid gap-6 mg-6 md:grid-cols-2  ">
         <div>
             <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">First name</label>

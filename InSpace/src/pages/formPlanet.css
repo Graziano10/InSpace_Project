@@ -1,0 +1,14 @@
+.bg-video{
+    border: 1px solid red;
+    width: 500px;
+    height: 500px;
+    background: url('../assets/video-2.mp4');
+}
+/* .bg-video video{
+    border: 2px solid green;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    animation: video-autoplay 0.1s linear forwards;
+} */
+
