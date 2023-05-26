@@ -4,11 +4,15 @@ export const FormPlanet = () => {
   return (
     <div className=" bg-form-bg bg-cover bg-center min-h-screen  flex justify-center md:items-center xl:justify-end xl:items-start">
 
-        <div className="bg-video">
+        <div className="bg-form-bg2 bg-no-repeat  bg-cover bg-center w-3/5 h-screen  ">
+            <div className='flex flex-col items-center mt-20  '>
+            <h1 className='text-white text-7xl mb-5'>Be the next</h1>
+            <p className='text-white text-3xl '>Universe is waiting for you</p>
+            </div>
         {/* <video src="../assets/video-2.mp4" autoPlay loop muted></video> */}
         </div>
 
-	<form className="bg-zinc-500/50 p-6 rounded my-10 md:w-2/3 md:h-min xl:w-1/2 xl:h-screen xl:my-0 xl:bg-white xl:rounded-none">
+	<form className="bg-zinc-500/50 p-6 rounded my-10 md:w-2/3 md:h-min xl:w-1/2 xl:h-screen xl:my-0 xl:bg-white xl:rounded-none ">
     <div className="grid gap-6 mg-6 md:grid-cols-2  ">
         <div>
             <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">First name</label>

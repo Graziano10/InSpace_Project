@@ -7,11 +7,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'form-bg': "url('./assets/formBg.png')"
+        'form-bg': "url('./assets/formBg.png')",
+        'form-bg2' : "url('./assets/bg-3.webp')"
       },
-      backgroundVideo : {
-        'form-bg-video': "url('./assets/form-video.mp4')"
-      }
+      
     },
     
   },
