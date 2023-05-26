@@ -18,7 +18,7 @@ const NavBar = () => {
       <nav className="flex dark:bg-neutral-800 bg-white h-14 px-10 relative">
         <div className="flex items-center justify-between w-full">
           <Logo />
-          <div className=" mdd:block xs:hidden">
+          <div className="mdd:block xs:hidden">
             <Link
               to="/ExplorPlanets"
               className="text-white hover:text-gray-30 text-xl font-medium"
@@ -41,12 +41,12 @@ const NavBar = () => {
           <div className="flex items-center justify-between w-[90px]">
             <Link
               to="/ExplorPlanets"
-              className="text-white hover:text-gray-300 text-xl font-medium"
+              className="text-white hover:text-gray-300 text-xl font-medium mdd:block xs:hidden"
             >
               Login
             </Link>
             <HamburgerMenu
-              className="mdd:block xs:hidden"
+              className="mdd:block xs:hidden "
               isOpen={isMenuOpen}
               toggleMenu={toggleMenu}
             />
