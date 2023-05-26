@@ -36,7 +36,7 @@ const HamburgerMenu = () => {
       {isOpen && (
         <div className=" flex flex-col text-xl absolute top-0 right-0 mt-10 w-[321px] h-[700px]  bg-white shadow-lg transition-transform duration-300 transform translate-x-10 z-50">
           <ul className="py-2 mt-6 flex flex-col flex-1">
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10">
+            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10 ">
               <Link
                 to="/ExplorPlanets"
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10"
