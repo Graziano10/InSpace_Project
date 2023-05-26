@@ -15,9 +15,11 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="flex dark:bg-neutral-800 bg-white h-14 px-10 relative">
-        <div className="flex items-center justify-between w-full">
-          <Logo />
+      <nav className="flex dark:bg-neutral-800 bg-white h-14 px-10 sticky top-0 z-50">
+        <div className="flex items-center justify-between w-full relative">
+          <div className="">
+          <Logo/>
+          </div>
           <div className="mdd:block xs:hidden">
             <Link
               to="/ExplorPlanets"
@@ -38,15 +40,15 @@ const NavBar = () => {
               FormPlanet
             </Link>
           </div>
-          <div className="flex items-center justify-between w-[90px]">
+          <div className="flex items-center justify-between mdd:w-[90px] w-[15px]">
             <Link
               to="/ExplorPlanets"
-              className="text-white hover:text-gray-300 text-xl font-medium mdd:block xs:hidden"
+              className="text-white hover:text-gray-300 text-xl font-medium mdd:block xs:hidden w-[40px]"
             >
               Login
             </Link>
             <HamburgerMenu
-              className="mdd:block xs:hidden "
+              className="hidden "
               isOpen={isMenuOpen}
               toggleMenu={toggleMenu}
             />

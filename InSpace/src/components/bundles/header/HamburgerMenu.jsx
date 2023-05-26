@@ -42,8 +42,9 @@ const HamburgerMenu = () => {
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10"
               >
                 Explor Planets
+                
               </Link>
-              <div className="w-full h-[2px] bg-gray-900"></div>
+              <div className="w-full h-[2px] bg-gray-900 mt-2"></div>
             </li>
 
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10">
@@ -53,7 +54,7 @@ const HamburgerMenu = () => {
               >
                 Wiki Planet
               </Link>
-              <div className="w-full h-[2px] bg-gray-900"></div>
+              <div className="w-full h-[2px] bg-gray-900  mt-2"></div>
             </li>
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10">
               <Link
@@ -62,7 +63,7 @@ const HamburgerMenu = () => {
               >
                 Form Planet
               </Link>
-              <div className="w-full h-[2px] bg-gray-900"></div>
+              <div className="w-full h-[2px] bg-gray-900  mt-2"></div>
             </li>
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10">
               <Link
@@ -71,10 +72,10 @@ const HamburgerMenu = () => {
               >
                 Login
               </Link>
-              <div className="w-full h-[2px] bg-gray-900"></div>
+              <div className="w-full h-[2px] bg-gray-900 mt-2"></div>
             </li>
           </ul>
-          <div className="w-full h-[2px] bg-gray-900 mb-1"></div>
+          <div className="w-full h-[2px] bg-gray-900"></div>
           <div class="m-1 flex  justify-center pb-2">
 
             <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start gap-9">
