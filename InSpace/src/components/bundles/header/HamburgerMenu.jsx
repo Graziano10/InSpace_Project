@@ -37,7 +37,7 @@ const HamburgerMenu = () => {
         </svg>
       </button>
       {isOpen && (
-        <div className="absolute top-0 right-0 mt-10 w-48 bg-white shadow-lg transition-transform duration-300 transform translate-x-0 z-50">
+        <div className="absolute top-0 right-0 mt-10 w-48 bg-white shadow-lg transition-transform duration-300 transform translate-x-10 z-50">
           <ul className="py-2">
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
               <a href="#">Menu Item 1</a>
