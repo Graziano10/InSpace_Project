@@ -48,7 +48,7 @@ const NavBar = () => {
               Login
             </Link>
             <HamburgerMenu
-              className="hidden "
+              className=""
               isOpen={isMenuOpen}
               toggleMenu={toggleMenu}
             />
