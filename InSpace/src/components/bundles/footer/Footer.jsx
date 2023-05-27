@@ -37,8 +37,8 @@ function Footer() {
             </div>
             <div class="w-full md:w-1/2 px-10">
                 <div class="mb-10">
-                    <h1 class="font-bold uppercase text-2xl mb-5">the future is now</h1>
-                    <p class="text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Eos, voluptatum dolorum! Laborum blanditiis consequatur, voluptates, sint enim fugiat saepe, dolor fugit, magnam explicabo eaque quas id quo porro dolorum facilis... <a href="#" class="opacity-50 text-gray-900 hover:opacity-100 inline-block text-xs leading-none border-b border-gray-900">MORE <i class="mdi mdi-arrow-right"></i></a></p>
+                    <h1 class="font-bold uppercase text-3xl mb-5">the future is now</h1>
+                    <p class="text-xl">Explore a new way to travel,join this new adventure, you won't regret it <a href="#" class="opacity-50 text-gray-900 hover:opacity-100 inline-block text-xs leading-none border-b border-gray-900">MORE <i class="mdi mdi-arrow-right"></i></a></p>
                 </div>
                 <div>
                     
