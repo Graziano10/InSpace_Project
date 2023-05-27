@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import NavBar from "./NavBar";
 
 const Header = () => {
 
   return (
     <div className="h-screen text-white flex items-center relative">
       <section className="w-full bg-cover bg-center h-full bg-[url('/src\assets\assets-Header\moon-3704285_1920.jpg')]">
+        <NavBar/>
         <div className="container mx-auto text-center  text-white flex flex-col justify-center items-center h-full">
           <h1 className="text-5xl font-medium mb-6">Welcome InSpace</h1>
           <p className="text-xl mb-12">

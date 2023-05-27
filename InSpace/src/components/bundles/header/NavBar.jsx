@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="flex dark:bg-neutral-800 bg-white h-14 px-10 sticky top-0 z-50">
+      <nav className="flex px-10 sticky top-0 z-50 shadow-xl opacity-90  ">
         <div className="flex items-center justify-between w-full relative">
           <div className="">
           <Logo/>
