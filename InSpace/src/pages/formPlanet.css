@@ -6,8 +6,12 @@
 } */
 
 @media (max-width:1279px) {
-    .bg-form-bg2{
+    .backy{
         display: none;
     }
+    .logo{
+        display: none;
+    }
+
 }
 
