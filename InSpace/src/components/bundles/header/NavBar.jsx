@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import HamburgerMenu from "./hamburgerMenu";
+import './navBar.css'
 
 const NavBar = () => {
   const logo = <svg></svg>;
@@ -15,46 +16,31 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="flex px-10 sticky top-0 z-50 shadow-xl opacity-90  ">
-        <div className="flex items-center justify-between w-full relative">
-          <div className="">
-          <Logo/>
+           <div className="wiki-container">
+        <nav className="main-nav">
+          {/* Logo a sinistra */}
+          <div className="logo">
+           <img src={logo} alt="" width='300px' />
           </div>
-          <div className="mdd:block xs:hidden">
-            <Link
-              to="/ExplorPlanets"
-              className="text-white hover:text-gray-30 text-xl font-medium"
-            >
-              ExplorPlanets
-            </Link>
-            <Link
-              to="/WikiPlanet"
-              className="text-white hover:text-gray-300 text-xl font-medium mx-14"
-            >
-              WikiPlanet
-            </Link>
-            <Link
-              to="/FormPlanet"
-              className="text-white hover:text-gray-300 text-xl font-medium"
-            >
-              FormPlanet
-            </Link>
-          </div>
-          <div className="flex items-center justify-between mdd:w-[90px] w-[15px]">
-            <Link
-              to="/ExplorPlanets"
-              className="text-white hover:text-gray-300 text-xl font-medium mdd:block xs:hidden w-[40px]"
-            >
-              Login
-            </Link>
-            <HamburgerMenu
-              className=""
-              isOpen={isMenuOpen}
-              toggleMenu={toggleMenu}
-            />
-          </div>
+          <div className="menu-link">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Menu</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+        </nav>
+      </div>
+
     </>
   );
 };
