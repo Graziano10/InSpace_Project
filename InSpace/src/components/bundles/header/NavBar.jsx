@@ -6,7 +6,7 @@ import "./navBar.css";
 
 const NavBar = () => {
   const logo = "src/assets/assets-Header/Logo.png";
-  <img src={logo} alt="Logo" />;
+ 
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,26 +16,54 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="wiki-container">
-        <nav className="main-nav">
-          <div className="menu-link">
-            <div className="logo">
-              <img src={logo} alt="" width="300px" />
-            </div>
-
-            <ul>
-              <Link to="/ExplorPlanets">ExplorPlanets</Link>
-              <Link to="/ExplorPlanets">ExplorPlanets</Link>
-              <Link to="/ExplorPlanets">ExplorPlanets</Link>
-            </ul>
-            <div className="login">
-              <Link to="/ExplorPlanets">Login</Link>
-            </div>
+      <nav className="flex px-10 z-50 shadow-black shadow-xl opacity-90 bg-[#020617] ">
+        <div className="flex items-center justify-between w-full relative">
+          <div className="w-[205px]">
+          <img src={logo} alt="Logo" />
           </div>
-        </nav>
-      </div>
+          <div className="mdd:block xs:hidden">
+            <Link
+              to="/ExplorPlanets"
+              className="text-white hover:text-gray-30 text-xl font-medium"
+            >
+              ExplorPlanets
+            </Link>
+            <Link
+              to="/WikiPlanet"
+              className="text-white hover:text-gray-300 text-xl font-medium mx-14"
+            >
+              WikiPlanet
+            </Link>
+            <Link
+              to="/FormPlanet"
+              className="text-white hover:text-gray-300 text-xl font-medium"
+            >
+              FormPlanet
+            </Link>
+          </div>
+          <div className="flex items-center justify-between mdd:w-[90px] w-[15px]">
+            <Link
+              to="/ExplorPlanets"
+              className="text-white hover:text-gray-300 text-xl font-medium mdd:block xs:hidden w-[40px]"
+            >
+              Login
+            </Link>
+            <HamburgerMenu
+              className="bg-white text-"
+              isOpen={isMenuOpen}
+              toggleMenu={toggleMenu}
+            />
+          </div>
+        </div>
+      </nav> 
+
+
+
+
+
+
     </>
-  );
+  )
 };
 
 export default NavBar;

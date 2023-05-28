@@ -12,13 +12,14 @@ const HamburgerMenu = () => {
     <div className="relative h-auto">
       <button
         type="button"
-        className="block text-white hover:text-gray-900 focus:text-gray-900 focus:outline-none"
+        className="block text-white hover:text-gray-900 focus:text-gray-900 focus:outline-none mdd:hidden"
         onClick={toggleMenu}
       >
         <svg
           className="h-6 w-6"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
+          fill="white"
         >
           {isOpen ? (
             <path fillRule="evenodd" clipRule="evenodd" d="M19 13H5v-2h14v2z" />

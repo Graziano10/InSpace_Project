@@ -6,7 +6,7 @@ const Section01 = () => {
   };
 
   return (
-    <div className="h-screen text-white flex items-center justify-center relative bg-[#0E0F14]">
+    <div className="h-screen text-white flex items-center justify-center relative bg-[#0E0F14] z-0">
       <section className=" container w-11/12 h-5/6 bg-cover bg-center rounded-lg" style={divStyle02}>
         <div className="container mx-auto text-center text-white flex flex-col justify-center items-center h-screen">
           <h1 className="text-5xl font-medium mb-6">Universo: la meraviglia oltre</h1>
