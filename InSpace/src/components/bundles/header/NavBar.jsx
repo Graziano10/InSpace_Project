@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "./Logo";
 import HamburgerMenu from "./hamburgerMenu";
-import "./navBar.css";
 
 const NavBar = () => {
   const logo = "src/assets/assets-Header/Logo.png";
@@ -16,9 +14,9 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="flex px-10 z-50 shadow-black shadow-xl opacity-90 bg-[#020617] ">
+      <nav className="flex px-10 z-50  shadow-xl shadow-black opacity-90 bg-[#020617bc] ">
         <div className="flex items-center justify-between w-full relative">
-          <div className="w-[205px]">
+          <div className="w-[210px]">
           <img src={logo} alt="Logo" />
           </div>
           <div className="mdd:block xs:hidden">
