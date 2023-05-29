@@ -4,7 +4,7 @@ export const FormPlanet = () => {
   return (
     <section className=" bg-form-bg bg-cover bg-center min-h-screen  flex flex-col xl:flex-row justify-evenly md:items-center xl:justify-end xl:items-start">
 
-        <div className=" backy bg-form-bg6 bg-no-repeat  bg-cover bg-center w-3/5 h-screen  ">
+        <div className=" backy bg-form-bg5 bg-no-repeat  bg-cover bg-center w-3/5 h-screen  ">
 
             {/* testi pc */}
             <div className='flex flex-col items-center mt-10  '>
