@@ -13,6 +13,7 @@ export default {
         'form-bg3' : "url('./assets/spacewalk.jpg')",
         'form-bg4' : "url('./assets/shuttle.webp')",
         'form-bg5' : "url('./assets/shuttle.launching.webp')",
+        'form-bg6' : "url('./assets/donna_blue.webp')",
       },
       
     },
