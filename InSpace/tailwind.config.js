@@ -14,6 +14,7 @@ export default {
         'form-bg4' : "url('./assets/shuttle.webp')",
         'form-bg5' : "url('./assets/shuttle.launching.webp')",
         'form-bg6' : "url('./assets/donna_blue.webp')",
+        'form-bg7' : "url('./assets/rocket.jpeg')",
       },
       
     },

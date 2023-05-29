@@ -4,12 +4,16 @@ export const FormPlanet = () => {
   return (
     <section className=" bg-form-bg bg-cover bg-center min-h-screen  flex flex-col xl:flex-row justify-evenly md:items-center xl:justify-end xl:items-start">
 
-        <div className=" backy bg-form-bg5 bg-no-repeat  bg-cover bg-center w-3/5 h-screen  ">
+        <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center w-1/2 h-screen  ">
+            <div className='overlay flex justify-center items-center bg-'>
+                
 
-            {/* testi pc */}
-            <div className='flex flex-col items-center mt-10  '>
-                <h1 className='text-white text-7xl mb-1 '>Be the next</h1>
-                <p className='text-white text-3xl '>Universe is waiting for you</p>
+                {/* testi pc */}
+                    <div className='flex flex-col items-center w-full p-5 m-10 rounded-xl'>
+                        <h1 className='text-white text-7xl mb-1 italic'>Be the next</h1>
+                        <p className='text-white text-3xl '>Universe is waiting for you</p>
+                    
+                </div>
             </div>
         </div>
 
@@ -23,13 +27,13 @@ export const FormPlanet = () => {
 
             
             
-        <form className="bg-gradient-to-b from-transparent to-blue-700 md:bg-zinc-600/50 p-6 md:w-2/3 md:h-min xl:w-1/2 xl:h-screen xl:my-0  rounded-none xl:bg-black xk:bg-gradient-to-b xl:from-black xl:to-black">
+        <form className=" shadow-2xl bg-gradient-to-b from-transparent to-blue-700  p-6 md:w-2/3 md:h-min xl:w-1/2 xl:h-screen xl:my-0  rounded-none  xl:bg-gradient-to-b xl:from-orange xl:to-black ">
                 <div className='logo w-1/2 h-10 bg-logo bg-cover bg-center xl: translate-x-1/2 '>
                 </div>
             <div className="grid gap-6 mg-6 md:grid-cols-2 xl:mt-10 ">
                 <div>
                     <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">First name</label>
-                    <input type="text" id="first_name" className="bg-gray-200 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required/>
+                    <input type="text" id="first_name" className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required/>
                 </div>
                 <div>
                     <label htmlFor="last_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Last name</label>
