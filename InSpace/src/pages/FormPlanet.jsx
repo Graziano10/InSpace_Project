@@ -9,7 +9,7 @@ export const FormPlanet = () => {
                 
 
                 {/* testi pc */}
-                    <div className='flex flex-col items-center w-full p-5 m-10 rounded-xl'>
+                    <div className='flex flex-col items-center w-full p-5 m-auto rounded-xl'>
                         <h1 className='text-white text-7xl mb-1 italic'>Be the next</h1>
                         <p className='text-white text-3xl '>Universe is waiting for you</p>
                     
@@ -28,7 +28,7 @@ export const FormPlanet = () => {
             
             
         <form className=" shadow-2xl bg-gradient-to-b from-transparent to-blue-700  p-6 md:w-2/3 md:h-min xl:w-1/2 xl:h-screen xl:my-0  rounded-none  xl:bg-gradient-to-b xl:from-orange xl:to-black ">
-                <div className='logo w-1/2 h-10 bg-logo bg-cover bg-center xl: translate-x-1/2 '>
+                <div className='logo w-1/3 h-10 bg-logo bg-cover bg-center xl: m-auto'>
                 </div>
             <div className="grid gap-6 mg-6 md:grid-cols-2 xl:mt-10 ">
                 <div>
