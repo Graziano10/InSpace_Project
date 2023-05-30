@@ -1,13 +1,26 @@
-
-
-
+import Planets from "./wikiComponents/SectionPlanets";
+import Cards from "./wikiComponents/Cards";
+import Navbar from "./wikiComponents/WikiHeader";
 const WikiPlanet = () => {
-
-    return(
-        <div>
-            <h1>WikiPlanet</h1>
-        </div>
-    );
+  return (
+    <>
+      <div className="FirstPart">
+        <section>
+          <Navbar />
+        </section>
+      </div>
+      <div className="Middlepart">
+        <section>
+          <Cards />
+        </section>
+      </div>
+      <div className="LastPart">
+        <section>
+          <Planets />
+        </section>
+      </div>
+    </>
+  );
 };
 
 export default WikiPlanet;

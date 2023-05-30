@@ -1,10 +1,8 @@
-
+import LoginForm from "./wikiComponents/LoginForm";
 
 const Login = () => {
     return(
-        <h1>
-            hello login
-        </h1>
+       <LoginForm/>
     )
 }
 export default Login;
