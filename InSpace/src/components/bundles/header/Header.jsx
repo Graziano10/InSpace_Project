@@ -23,10 +23,9 @@ const Header = () => {
             <div className="container text-center text-white flex flex-col justify-center items-center h-full z-1">
               <h1 className="text-5xl font-medium mb-6">Welcome InSpace</h1>
               <p className="text-xl mb-12">
-                Un piccolo passo per l'uomo, un grande passo per l'umanita{" "}
-                <br></br>
-                oggi ne sono stai fatti due, i viaggi interplanetari sono ora
-                una realtà,
+                
+One small step for man, one giant leap for humanity
+two were done today, interplanetary travel is now a reality
               </p>
               <Link
                 to="/Wiki-Planet"
