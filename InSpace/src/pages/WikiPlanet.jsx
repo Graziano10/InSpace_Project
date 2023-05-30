@@ -1,5 +1,6 @@
 import Planets from "./wikiComponents/SectionPlanets";
 import Navbar from "./wikiComponents/Navbar";
+import Cards from "./wikiComponents/Cards";
 
 const WikiPlanet = () => {
   return (
@@ -7,6 +8,11 @@ const WikiPlanet = () => {
       <div className="FirstPart">
         <section>
           <Navbar />
+        </section>
+      </div>
+      <div className="Middlepart">
+        <section>
+          <Cards />
         </section>
       </div>
       <div className="LastPart">
