@@ -8,7 +8,7 @@ import Login from "./pages/Login"
 const App = () => {
   return(
     <>
-      <nav>
+      <nav className="hidden"> 
         <Link to="/">Home</Link>
         <Link to="/ExplorPlanets">ExplorPlanets</Link>
         <Link to="/WikiPlanet">WikiPlanet</Link>
