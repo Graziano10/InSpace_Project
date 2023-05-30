@@ -65,7 +65,7 @@ const HamburgerMenu = () => {
             <li className="px-4 py-2 cursor-pointer mb-10">
               <Link
                 to="/Login"
-                className="px-4 py-2 cursor-pointer mb-10"
+                className="px-4 py-2 cursor-pointer mb-10 "
               >
                 Login
               </Link>
