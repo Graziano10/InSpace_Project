@@ -1,0 +1,24 @@
+/* .bg-video{
+    width: 70%;
+    height: 100vh;
+    background: url('../assets/video-2.mp4');
+    
+} */
+
+@media (max-width:1279px) {
+    .backy{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+
+}
+
+.overlay{
+    
+    height: 100%;
+    box-shadow: 1px 1px 104px 36px rgba(0,0,0,0.75) inset;
+
+}
+

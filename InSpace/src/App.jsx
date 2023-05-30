@@ -11,8 +11,8 @@ const App = () => {
     <>
       <nav className="hidden"> 
         <Link to="/">Home</Link>
-        <Link to="/ExplorPlanets">ExplorPlanets</Link>
-        <Link to="/FormPlanet">FormPlanet</Link> 
+        <Link to="/Explor-Planets">ExplorPlanets</Link>
+        <Link to="/Form-Planet">FormPlanet</Link> 
         <Link to="/Wiki-Planet">WikiPlanets</Link>
         <Link to="/Login">Login</Link>
       </nav>
