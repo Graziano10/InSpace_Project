@@ -1,7 +1,6 @@
 import Planets from "./wikiComponents/SectionPlanets";
-import Navbar from "./wikiComponents/Navbar";
 import Cards from "./wikiComponents/Cards";
-
+import Navbar from "./wikiComponents/WikiHeader";
 const WikiPlanet = () => {
   return (
     <>

@@ -1,6 +1,6 @@
 import './LoginForm.css'
 import React from 'react'
-import image from "./WikiAssets/email.png"
+import image from "./WikiAssets/whiteEmail.png"
 import axios from 'axios'
 import { useRef, useState } from 'react'
 import {useDispatch} from "react-redux"
@@ -62,13 +62,13 @@ const LoginForm = () => {
             <form action="" onSubmit={handleSubmit}>
                 <h2 className='login-h2'>Login</h2>
                 <div className="input-box">
-                    <span className="icon"><img src={image} width="20px" /></span>
-                    <input type="email" required  ref={emailRef} id='email' placeholder='email' name='email' value={form.email} onInput={handleInput}/>
+                    <span className="icon"></span>
+                    <input type="email" required  ref={emailRef} id='email' placeholder='' name='email' value={form.email} onInput={handleInput}/>
                         <label htmlFor='email'>Email</label>
                 </div>
                 <div className="input-box">
                     <span className="icon"></span>
-                    <input type="password" required  id='password' placeholder='************' name='password' value={form.password} onInput={handleInput} />
+                    <input type="password" required  id='password' placeholder='' name='password' value={form.password} onInput={handleInput} />
                         <label htmlFor='password'>Password</label>
                 </div>
                 <div className="remember-forgot">
