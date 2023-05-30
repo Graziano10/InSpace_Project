@@ -30,7 +30,7 @@ const Header = () => {
               </p>
               <Link
                 to="/ExplorPlanets"
-                className="bg-white text-black py-4 px-12 rounded-md hover:bg-neutral-200"
+                className="bg-white text-black py-4 px-12 rounded-[40px] hover:bg-neutral-200 h-9 flex justify-center items-center"
               >
                 Explore
               </Link>
