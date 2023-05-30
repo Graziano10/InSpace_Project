@@ -29,7 +29,7 @@ const Header = () => {
                 una realtà,
               </p>
               <Link
-                to="/ExplorPlanets"
+                to="/Wiki-Planet"
                 className="bg-white text-black py-4 px-12 rounded-[40px] hover:bg-neutral-200 h-9 flex justify-center items-center"
               >
                 Explore

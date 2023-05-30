@@ -6,7 +6,7 @@ import ScrollTop from "../../atoms/ScrollTop";
 function Footer() {
   
   return (
-    <div className=" bg-[#0E0F14] h-full">
+    <div className=" bg-[#04091b] h-full">
      {/*  <div className="  mx-auto container relative flex items-center  mb-24  rounded-3xl bg-[url('/src/assets/assets-footer/universe.jpg')] bg-cover h-4/5">
         <div className="  ring 3xl:w-3/12 3xl:left-52  xl:w-4/12  md:w-5/12 md:left-20 s:w-6/12 xs:w-7/12 absolute left-12 xs:left-5 bottom-13">
           <img src={mars} alt="mars" />
@@ -55,7 +55,7 @@ function Footer() {
 
 {/* footer */}
 
-{<section class="  bg-[#0E0F14]">
+{<section class="  bg-[#04091b]">
     <div class=" px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav class="flex flex-wrap justify-center -mx-5 -my-2">
             <div class="px-5 py-2">

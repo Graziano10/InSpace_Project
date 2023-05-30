@@ -24,7 +24,7 @@ const Section01 = () => {
   const seconds = countdown % 60;
 
   return (
-    <div className="h-screen text-white flex items-center justify-center relative bg-[#0E0F14] z-1">
+    <div className="h-screen text-white flex items-center justify-center relative bg-[#04091b] z-1">
       <section className=" container w-11/12 h-5/6 bg-cover bg-center rounded-lg flex" style={logoHeader}>
         <div className="container mx-auto text-center text-white flex flex-col justify-center items-center ">
           <h1 className="text-5xl font-medium mb-6">Universo: la meraviglia oltre</h1>
@@ -33,7 +33,7 @@ const Section01 = () => {
           </p>
           <Link
             to="/ExplorPlanets"
-            className="bg-white text-black py-4 px-12 rounded-md hover:bg-neutral-200"
+            className="bg-white text-black py-4 px-12 rounded-[40px] hover:bg-neutral-200 h-9 flex justify-center items-center"
           >
             Registrati
           </Link>
