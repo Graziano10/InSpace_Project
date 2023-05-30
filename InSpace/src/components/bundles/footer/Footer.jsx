@@ -1,5 +1,7 @@
 import React from "react";
 import mars from '/src/assets/assets-footer/mars.png'
+import ScrollTop from "../../atoms/ScrollTop";
+
 
 function Footer() {
   
@@ -122,6 +124,7 @@ function Footer() {
         <p class="mt-8 text-base leading-6 text-center text-gray-300">
             © 2023 Team Develhope, Inc. All rights reserved.
         </p>
+        <ScrollTop/>
     </div>
 </section>}
     </div>
