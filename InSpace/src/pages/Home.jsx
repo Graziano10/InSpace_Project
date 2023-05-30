@@ -5,7 +5,7 @@ import Section01 from "../components/bundles/header/Section01";
 const Home = () => {
 
     return(
-        <div style={{fontFamily: 'Karantina, sans-serif'}}>
+        <div cl style={{fontFamily: 'Ubuntu, sans-serif'}}>
             <Header/>
             <Section01/>
             <Footer/>

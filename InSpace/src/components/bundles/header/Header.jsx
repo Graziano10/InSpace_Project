@@ -11,7 +11,7 @@ const Header = () => {
   };
   return (
     <>
-      <div className="h-screen text-white flex items-center relative z-1 ">
+      <div className="h-screen text-white flex items-center relative z-1">
         <section
           className="w-full bg-cover bg-center h-full"
           style={divStyle02}
