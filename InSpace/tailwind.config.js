@@ -25,6 +25,7 @@ export default {
         "form-bg5": "url('./assets/shuttle.launching.webp')",
         "form-bg6": "url('./assets/donna_blue.webp')",
         "form-bg7": "url('./assets/rocket.jpeg')",
+        "Wiki-bg": "url('./assets/WikiBackground.png')"
       },
     },
   },
