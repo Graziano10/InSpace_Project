@@ -7,6 +7,8 @@ import {useDispatch} from "react-redux"
 import { login } from '../../store/authSlice'
 import {useNavigate} from "react-router-dom"
 import {toast} from "react-toastify"
+import {motion} from 'framer-motion'
+
 
 const LoginForm = () => {
     const dispatch = useDispatch();
@@ -56,8 +58,12 @@ const LoginForm = () => {
 
 
     return(
-        <section className='section-login'>
+      
+
+
+  <section className='section-login'>
         <div className="background">
+          <motion.div initial= {{x : 600}} animate= {{x:0}} >
         <div className="login-box">
             <form action="" onSubmit={handleSubmit}>
                 <h2 className='login-h2'>Login</h2>
@@ -81,11 +87,18 @@ const LoginForm = () => {
                 </div>
             </form>
         </div>
+        </motion.div>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         </div>
         </section>
        
+      
+        
+
+        
+      
+      
     )
 }
 

@@ -5,6 +5,7 @@ import FormPlanet from "./pages/FormPlanet";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 
+import { AnimatePresence } from "framer-motion";
 
 const App = () => {
   return (
@@ -16,14 +17,16 @@ const App = () => {
         <Link to="/Wiki-Planet">WikiPlanets</Link>
         <Link to="/Login">Login</Link>
       </nav>
-
-      <Routes>
+      <AnimatePresence>
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/explor-planets" element={<ExplorPlanets />} />
         <Route path="/wiki-planet" element={<WikiPlanet />} />
         <Route path="/form-planet" element={<FormPlanet />} />
         <Route path="/login" element={<Login/>}/>
       </Routes>
+      </AnimatePresence>
+      
 
     </>
   );
