@@ -1,17 +1,16 @@
 import React from "react";
 import './Navbar.css'
-import video from './WikiAssets/WikiPlanet3.mp4'
-import logo from './WikiAssets/Logo.png'
+
 import NavBar from "./NavBar2";
 
 
 
 function Navbar() {
     return (
-      <div className="wiki-container">
-        <video src={video} autoPlay loop muted></video>
+      <div className="wiki-container bg-Wiki-bg bg-cover bg-center  bg-no-repeat">
         <NavBar/>
         <header>
+          <h1 className="md:hidden">Ciao sono Lello</h1>
           {/* Contenuto dell'header */}
         </header>
       </div>
