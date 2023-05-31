@@ -27,7 +27,7 @@ const NavBar = () => {
             </Link>
             <Link
               to="/WikiPlanet"
-              className="text-red-500 hover:text-gray-300 text-xl font-medium mx-14"
+              className="text-white hover:text-gray-300 text-xl font-medium mx-14"
             >
               WikiPlanet
             </Link>
