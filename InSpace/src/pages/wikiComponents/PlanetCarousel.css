@@ -5,3 +5,13 @@
   top: 20%;
   left: 20%;
 }
+@media (max-width: 821px){
+  
+}
+
+@media (max-width: 414px){
+  .carousel-root{
+    left: 10%;
+    top: 10%;
+  }
+}

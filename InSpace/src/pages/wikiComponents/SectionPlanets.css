@@ -6,6 +6,9 @@
 .Container {
   position: relative;
   height: 100vh;
+  background-image: url("./WikiAssets/Stelle.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .Stelle {
   width: 100%;
@@ -152,7 +155,37 @@
 }
 
 @media (max-width: 821px) {
+  .Container{
+    display: flex;
+  }
+  .Container img {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  .Little-section{
+    position: absolute;
+    top: 67%;
+    left: 31%;
+    font-size: 53px;
+  }
+  .Little-section p{
+    font-size: 26px;
+  }
+  
+  
 }
 
 @media (max-width: 414px) {
+  .banner{
+    width: 160%;
+  }
+  .Container{
+    width: 160%;
+    height: 140vh;
+  }
+  .Little-section{
+    top: 60%;
+    left: 27%;
+  }
 }
