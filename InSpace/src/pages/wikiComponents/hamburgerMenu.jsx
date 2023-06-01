@@ -39,7 +39,7 @@ const HamburgerMenu = () => {
           <ul className="py-2 mt-6 flex flex-col flex-1">
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10 ">
               <Link
-                to="/ExplorPlanets"
+                to="/Wiki-Planet"
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10"
               >
                 Explor Planets
@@ -49,7 +49,7 @@ const HamburgerMenu = () => {
 
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10">
               <Link
-                to="/WikiPlanet"
+                to="/Explor-Planets"
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10"
               >
                 Wiki Planet
@@ -57,14 +57,14 @@ const HamburgerMenu = () => {
               <div className="w-full h-[2px] bg-gray-900  mt-2"></div>
             </li>
             <li className="px-4 py-2 cursor-pointer mb-10">
-              <Link to="/FormPlanet" className="px-4 py-2 cursor-pointer mb-10">
+              <Link to="/Form-Planet" className="px-4 py-2 cursor-pointer mb-10">
                 Form Planet
               </Link>
               <div className="w-full h-[2px] bg-gray-900  mt-2"></div>
             </li>
             <li className="px-4 py-2 cursor-pointer mb-10">
               <Link
-                to="/ExplorPlanets"
+                to="/Login"
                 className="px-4 py-2 cursor-pointer mb-10"
               >
                 Login
