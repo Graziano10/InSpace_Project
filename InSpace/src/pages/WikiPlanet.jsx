@@ -2,6 +2,7 @@ import Planets from "./wikiComponents/SectionPlanets";
 import Cards from "./wikiComponents/Cards";
 import Navbar from "./wikiComponents/WikiHeader";
 import {motion} from 'framer-motion'
+import ScrollTop from "../components/atoms/ScrollTop";
 const WikiPlanet = () => {
   return (
     
@@ -26,6 +27,7 @@ const WikiPlanet = () => {
           <Planets />
         </section>
       </div>
+      <ScrollTop/>
       </motion.div>
     </>
     

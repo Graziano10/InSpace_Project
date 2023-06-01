@@ -1,4 +1,5 @@
 // import bg_img from '../assets/formBg.png'
+
 import "./formPlanet.css";
 import {motion} from 'framer-motion'
 
@@ -207,6 +208,7 @@ export const FormPlanet = () => {
             Submit
           </button>
         </form>
+        
       </section>
     </motion.div>
   );
