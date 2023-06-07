@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import HamburgerMenu from "./HamburgerMenu";
 import logo from "./WikiAssets/Logo.png"
 
+
 const NavBar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const token = useSelector((state) => state.auth.token);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -62,7 +65,15 @@ const HamburgerMenu = () => {
               </Link>
               <div className="w-full h-[2px] bg-gray-900  mt-2"></div>
             </li>
-            <li className="px-4 py-2 cursor-pointer mb-10">
+    {token != null ? <li className="px-4 py-2 cursor-pointer mb-10">
+              <Link
+                to="/Logout"
+                className="px-4 py-2 cursor-pointer mb-10 "
+              >
+                Logout
+              </Link>
+              <div className="w-full h-[2px] bg-gray-900 mt-2"></div>
+            </li>  : <li className="px-4 py-2 cursor-pointer mb-10">
               <Link
                 to="/Login"
                 className="px-4 py-2 cursor-pointer mb-10 "
@@ -70,7 +81,7 @@ const HamburgerMenu = () => {
                 Login
               </Link>
               <div className="w-full h-[2px] bg-gray-900 mt-2"></div>
-            </li>
+            </li>}
           </ul>
           <div className="w-full h-[2px] bg-gray-900"></div>
           <div class="flex justify-center mt-3 space-x-6 mb-4">
