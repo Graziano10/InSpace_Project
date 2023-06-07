@@ -17,23 +17,23 @@ const NavBar = () => {
       <nav className="flex px-10 z-50  shadow-xl shadow-black opacity-90 bg-[#020617bc] ">
         <div className="flex items-center justify-between w-full relative">
           <div className="w-[210px]">
-            <img src={logo} alt="Logo" />
+          <Link to="/"><img src={logo} alt="Logo"/></Link>
           </div>
           <div className="mdd:block xs:hidden">
             <Link
-              to="/ExplorPlanets"
+              to="/Explor-Planets"
               className="text-white hover:text-gray-30 text-xl font-medium"
             >
               ExplorPlanets
             </Link>
             <Link
-              to="/WikiPlanet"
+              to="/Wiki-Planet"
               className="text-red-500 hover:text-gray-300 text-xl font-medium mx-14"
             >
               WikiPlanet
             </Link>
             <Link
-              to="/FormPlanet"
+              to="/Form-Planet"
               className="text-white hover:text-gray-300 text-xl font-medium"
             >
               FormPlanet
@@ -41,7 +41,7 @@ const NavBar = () => {
           </div>
           <div className="flex items-center justify-between mdd:w-[90px] w-[15px]">
             <Link
-              to="/ExplorPlanets"
+              to="/Login"
               className="text-white hover:text-gray-300 text-xl font-medium mdd:block xs:hidden w-[40px]"
             >
               Login

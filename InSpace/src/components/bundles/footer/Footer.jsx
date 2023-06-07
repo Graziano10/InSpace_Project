@@ -1,32 +1,14 @@
 import React from "react";
 import mars from '/src/assets/assets-footer/mars.png'
 import ScrollTop from "../../atoms/ScrollTop";
+import { Link } from "react-router-dom";
 
 
 function Footer() {
   
   return (
     <div className=" bg-[#04091b] h-full">
-     {/*  <div className="  mx-auto container relative flex items-center  mb-24  rounded-3xl bg-[url('/src/assets/assets-footer/universe.jpg')] bg-cover h-4/5">
-        <div className="  ring 3xl:w-3/12 3xl:left-52  xl:w-4/12  md:w-5/12 md:left-20 s:w-6/12 xs:w-7/12 absolute left-12 xs:left-5 bottom-13">
-          <img src={mars} alt="mars" />
-        </div>
-        <div className=" ring text-white ml-80 mr-10 md:mr-20 xl:mr-40 absolute right-0 ">
-          <p className="3xl:text-5xl xl:text-3xl md:text-lg s:text-[0.9rem] xs:text-[0.6rem] mb-5  ">
-            LEARNING IS EASY WITH US
-          </p>
-          <p className="3xl:text-lg xl:text-lg md:text-sm s:text-[0.6rem] xs:text-[0.4rem] mb-5">
-            Augmented reality is an interactive experience{" "}
-          </p>
-          <p className="3xl:text-lg xl:text-lg md:text-sm s:text-[0.6rem] xs:text-[0.4rem]">
-            Augmented reality is an interactive experience
-          </p>
-        </div>
-      </div> */}
-
-
-      
-      {/* <!-- component --> */}
+     
 
 {/* universe image */}
     {<div class=" container rounded-3xl bg-[url('/src/assets/assets-footer/universe.jpg')] bg-cover shadow-xl p-10 lg:p-20 mx-auto text-white relative md:text-left">
@@ -45,7 +27,7 @@ function Footer() {
                 <div>
                     
                     <div class="inline-block align-bottom">
-                        <button class="bg-yellow-600 opacity-75 hover:opacity-100 text-black hover:text-gray-900 rounded-full px-10 py-2 font-semibold"> SUBSCRIBE</button>
+                        <button class="bg-yellow-600 opacity-75 hover:opacity-100 text-black hover:text-gray-900 rounded-full px-10 py-2 font-semibold"> <Link to="/Login">Subscribe</Link></button>
                     </div>
                 </div>
             </div>

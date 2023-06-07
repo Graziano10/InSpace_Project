@@ -150,4 +150,41 @@
 }
 }
 @media (max-width: 414px) {
+  .infoh2{
+    width: 160%;
+  }
+  .infoh2 h2{
+    font-size: 20px;
+  }
+  .BannerButton{
+    width: 160%;
+    display: flex;
+  }
+  .BannerButton button{
+    margin-right: -5px;
+    padding: 10px 30px;
+  }
+  .card-container-planet{
+    width: 160%;
+    height: 170vh;
+    
+  }
+  .main-paragraph{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 40px;
+  }
+  .wrapcard{
+    margin-left: 35px;
+    display: flex;
+  }
+  .col{
+    flex-basis: 50%;
+    margin-top: 20px;
+  }
+  .main-paragraph p{
+    font-size: 19px;
+     flex-basis: 26%;
+  }
 }

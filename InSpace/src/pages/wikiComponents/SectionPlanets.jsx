@@ -1,6 +1,6 @@
 import "./SectionPlanets.css";
 import { useState } from "react";
-import stelle from "./WikiAssets/stelle.jpg";
+
 import PlanetCarousel from "./PlanetCarousel";
 import luna from "./WikiAssets/Pianeti Carosello/Luna.png";
 import Giove from "./WikiAssets/Pianeti Carosello/Giove.png";
@@ -25,7 +25,6 @@ function Planets() {
         </div>
       </div>
       <div className="Container">
-        <img src={stelle} alt="" className="Stelle" />
         <PlanetCarousel planets={planets} />
         <div className="Little-section">
           <p>

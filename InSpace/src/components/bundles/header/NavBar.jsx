@@ -20,7 +20,9 @@ const NavBar = () => {
       <nav className="flex px-10 z-50  shadow-xl shadow-black opacity-90 bg-[#020617bc] ">
         <div className="flex items-center justify-between w-full relative">
           <div className="w-[210px]">
-            <img src={logo} alt="Logo" />
+            
+            <Link to="/"><img src={logo} alt="Logo"/></Link>
+            
           </div>
           <div className="mdd:block xs:hidden">
             <Link
