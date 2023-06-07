@@ -1,18 +1,25 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import HamburgerMenu from "./hamburgerMenu";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../../store/authSlice"
 
 
 const NavBar = () => {
   const logo = "src/assets/assets-Header/Logo.png";
+  const avatar = 'src/assets/User_Avatar.png'
 
   const token = useSelector((state) => state.auth.token);
+  const dispatch = useDispatch();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
   };
 
   return (
@@ -52,7 +59,12 @@ const NavBar = () => {
                 toggleMenu={toggleMenu}
                 
               />
-              <p>LSOSOAOSLOSOSS</p>
+              <div className="flex justify-center items-center gap-2">
+                <div className="w-[50px] h-[50px] bg-black rounded-full">
+                <img src={avatar} alt="Avatar"/></div>
+                
+                <button onClick={handleLogout} className="text-white hover:text-gray-300 text-xl font-medium">Logout</button>
+              </div>
             </div>
           ) : (
             <div className="flex items-center justify-between mdd:w-[90px] w-[15px]">

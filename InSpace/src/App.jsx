@@ -4,6 +4,7 @@ import WikiPlanet from "./pages/WikiPlanet";
 import FormPlanet from "./pages/FormPlanet";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import SectionProfile from './pages/SectionProfile';
 
 
 
@@ -11,7 +12,7 @@ import Login from "./pages/Login";
 const App = () => {
   return (
     <>
-      <nav className="hidden">
+      <nav className="hidden" style={{ fontFamily: "Ubuntu, sans-serif" }}>
         <Link to="/">Home</Link>
         <Link to="/Explor-Planets">ExplorPlanets</Link>
         <Link to="/Form-Planet">FormPlanet</Link>
