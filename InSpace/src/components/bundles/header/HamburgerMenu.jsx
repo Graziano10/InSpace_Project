@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../../store/authSlice";
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,10 @@ const HamburgerMenu = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
   };
 
   return (
@@ -38,7 +43,7 @@ const HamburgerMenu = () => {
         </svg>
       </button>
       {isOpen && (
-        <div className=" flex flex-col text-xl absolute top-0 right-0 mt-14 w-[321px] h-[700px] bg-[#020617]  shadow-black shadow-xl transition-transform transform translate-x-[9%] z-50">
+        <div className=" flex flex-col text-xl absolute top-0.5 right-0 mt-14 w-[321px] h-[700px] bg-[#020617]  shadow-black shadow-xl transition-transform transform translate-x-[12%] z-50 rounded-xl">
           <ul className="py-2 mt-6 flex flex-col flex-1">
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10 ">
               <Link
@@ -68,7 +73,8 @@ const HamburgerMenu = () => {
     {token != null ? <li className="px-4 py-2 cursor-pointer mb-10">
               <Link
                 to="/Logout"
-                className="px-4 py-2 cursor-pointer mb-10 "
+                className="px-4 py-2 cursor-pointer mb-10"
+                onClick={handleLogout}
               >
                 Logout
               </Link>
