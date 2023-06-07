@@ -17,6 +17,7 @@ const App = () => {
         <Link to="/Form-Planet">FormPlanet</Link>
         <Link to="/Wiki-Planet">WikiPlanets</Link>
         <Link to="/Login">Login</Link>
+        <Link to="/SectionProfile">SectionProfile</Link>
       </nav>
       
         <Routes>
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/wiki-planet" element={<WikiPlanet />} />
           <Route path="/form-planet" element={<FormPlanet />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/section-profile" element={<SectionProfile/>}/>
         </Routes>
     
     </>
