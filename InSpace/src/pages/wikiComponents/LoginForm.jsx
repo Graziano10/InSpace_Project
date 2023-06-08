@@ -65,7 +65,7 @@ const LoginForm = () => {
         <div className="background">
           <motion.div initial= {{x : 600}} animate= {{x:0}} >
         <div className="login-box">
-            <form action="" onSubmit={handleSubmit}>
+            <form className='formPageLogin' action="" onSubmit={handleSubmit}>
                 <h2 className='login-h2'>Login</h2>
                 <div className="input-box">
                     <span className="icon"></span>
