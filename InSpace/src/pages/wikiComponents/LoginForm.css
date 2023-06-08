@@ -102,19 +102,29 @@
 .remember-forgot a:hover {
   text-decoration: underline;
 }
+
+.contentButtonLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .login-button {
-  width: 100%;
+  /* width: 100%; */
   height: 40px;
   background: #fff;
   color: #fff;
-  border: none;
+  /* border: none; */
   outline: none;
   border-radius: 40px;
   cursor: pointer;
   font-size: 1.5em;
   font-weight: 500;
   border-radius: 40px;
+  width: 150px;
+  border: solid 2px;
 }
+
 .register-link {
   font-size: 0.9em;
   color: #fff;
