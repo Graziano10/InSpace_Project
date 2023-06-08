@@ -12,7 +12,7 @@ import SectionProfile from './pages/SectionProfile';
 const App = () => {
   return (
     <>
-      <nav className="hidden">
+      <nav className="hidden" style={{ fontFamily: "Ubuntu, sans-serif" }}>
         <Link to="/">Home</Link>
         <Link to="/Explor-Planets">ExplorPlanets</Link>
         <Link to="/Form-Planet">FormPlanet</Link>

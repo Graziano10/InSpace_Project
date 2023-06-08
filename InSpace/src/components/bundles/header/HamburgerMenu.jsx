@@ -74,8 +74,9 @@ const HamburgerMenu = () => {
               <Link
                 to="/Logout"
                 className="px-4 py-2 cursor-pointer mb-10"
+                onClick={handleLogout}
               >
-                <button  onClick={handleLogout}><Link to="/Login">Logout</Link></button>
+                Logout
               </Link>
               <div className="w-full h-[2px] bg-gray-900 mt-2"></div>
             </li>  : <li className="px-4 py-2 cursor-pointer mb-10">
