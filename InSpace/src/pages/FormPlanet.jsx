@@ -7,12 +7,15 @@ import {motion} from 'framer-motion'
 export const FormPlanet = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0.3 , y: 20, scale: 3 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+     transition={{ duration: 0.5}} 
+     
+      
+      
+    
     >
-      <section className=" bg-form-bg bg-cover bg-center min-h-screen  flex flex-col xl:flex-row justify-evenly md:items-center xl:justify-end xl:items-start">
+      <section id="content" className=" bg-form-bg bg-cover bg-center min-h-screen  flex flex-col xl:flex-row justify-evenly md:items-center xl:justify-end xl:items-start">
         <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center w-1/2 h-screen  ">
           <div className="overlay flex justify-center items-center bg-">
             {/* testi pc */}

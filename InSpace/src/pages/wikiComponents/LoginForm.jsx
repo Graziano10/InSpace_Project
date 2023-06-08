@@ -63,7 +63,7 @@ const LoginForm = () => {
 
   <section className='section-login'>
         <div className="background">
-          <motion.div initial= {{x : 600}} animate= {{x:0}} >
+          <motion.div initial= {{x : 600}} animate= {{x:0}}>
         <div className="login-box">
             <form action="" onSubmit={handleSubmit}>
                 <h2 className='login-h2'>Login</h2>
