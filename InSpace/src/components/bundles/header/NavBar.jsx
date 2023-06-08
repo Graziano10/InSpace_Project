@@ -21,6 +21,12 @@ const NavBar = () => {
     dispatch(logout());
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu02 = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <nav className="flex px-10 z-50  shadow-xl shadow-black opacity-90 bg-[#020617bc] ">
@@ -55,7 +61,24 @@ const NavBar = () => {
               <div className="flex items-center justify-between mdd:w-[90px] w-[15px] ">
                 <div className="flex justify-center items-center gap-2">
                   <div className="w-[40px] h-[40px] bg-black rounded-full">
-                    <img src={avatar} alt="Avatar" />
+                    <img src={avatar} alt="Avatar" onClick={toggleMenu02} />
+                    {isOpen && (
+                      <div className="absolute left-[42%] z-10 mt-2 bg-white rounded-lg shadow-xl w-[200px] h-[250px] flex flex-col justify-between md:left-[75%] mdd:left-[85%]">
+                        <div className="w-full h-10 bg-slate-300 rounded-lg mt-4 pl-3 flex items-center hover:bg-slate-400">
+                        <button className="text-black"><Link to="/SectionProfile">Window Profile</Link></button>
+                        </div>
+                        <div className="w-full h-10 bg-slate-300 rounded-lg pl-3 flex items-center hover:bg-slate-400">
+                        <button className="text-black">Roket</button>
+                        </div>
+                        <div className="w-full h-10 bg-slate-300 rounded-lg pl-3 flex items-center hover:bg-slate-400">
+                        <button className="text-black">Information</button>
+                        </div>
+                        <div onClick={handleLogout} className="w-full h-10 bg-[#04091b] rounded pl-3 flex items-center justify-center hover:bg-gray-950">
+                        <p className="text-white">Logout</p>
+                        </div>
+
+                      </div>
+                    )}
                   </div>
 
                   <button
@@ -73,16 +96,15 @@ const NavBar = () => {
                   className="text-white hover:text-gray-300 text-xl font-medium mdd:block xs:hidden w-[40px]"
                 >
                   Login
-                </Link>              
+                </Link>
               </div>
             )}
-             <HamburgerMenu
-                  className="bg-white text-"
-                  isOpen={isMenuOpen}
-                  toggleMenu={toggleMenu}
-                />
+            <HamburgerMenu
+              className="bg-white text-"
+              isOpen={isMenuOpen}
+              toggleMenu={toggleMenu}
+            />
           </div>
-          
         </div>
       </nav>
     </>

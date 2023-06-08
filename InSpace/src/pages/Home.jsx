@@ -11,7 +11,7 @@ const Home = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div style={{ fontFamily: "Ubuntu, sans-serif" }}>
+      <div>
         <Header />
         <Section01 />
         <Footer />
