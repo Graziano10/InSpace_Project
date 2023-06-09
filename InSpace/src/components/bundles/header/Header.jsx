@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
+import Rotate from 'react-reveal/Rotate';
+import Fade from 'react-reveal/Fade';
 
 const Header = () => {
   const logoHeader = {
@@ -19,7 +21,7 @@ const Header = () => {
           <NavBar />
           <div className="flex md:w-full h-full justify-center items-center ">
             <div className="mdd:w-full mdd:h-full"></div>
-
+            <Fade left>
             <div className="container text-center text-white flex flex-col justify-center items-center h-full z-1">
               <h1 className="text-5xl font-medium mb-6">Welcome InSpace</h1>
               <p className="text-xl mb-12">
@@ -33,6 +35,7 @@ const Header = () => {
                 Explore
               </Link>
             </div>
+            </Fade>
           </div>
         </section>
       </div>
