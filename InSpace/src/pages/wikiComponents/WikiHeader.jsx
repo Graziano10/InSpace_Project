@@ -34,6 +34,25 @@ function Navbar() {
   EXPLORE PLANET <i className="far fa-play-circle" />
     </Button>
   </div>
+  <div className="launch-time">
+    <div>
+      <p>00</p>
+      <span>Days</span>
+    </div>
+    <div>
+      <p>00</p>
+      <span>Hours</span>
+    </div>
+    <div>
+      <p>00</p>
+      <span>Minutes</span>
+    </div>
+    <div>
+      <p>00</p>
+      <span>Seconds</span>
+    </div>
+
+  </div>
 </div>
     );
   }
