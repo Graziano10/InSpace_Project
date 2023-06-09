@@ -4,13 +4,16 @@ import ScrollTop from "../../atoms/ScrollTop";
 import { Link } from "react-router-dom";
 
 
+
 function Footer() {
   
   return (
+
     <div className=" bg-[#04091b] h-full">
      
 
 {/* universe image */}
+
     {<div class=" container rounded-3xl bg-[url('/src/assets/assets-footer/universe.jpg')] bg-cover shadow-xl p-10 lg:p-20 mx-auto text-white relative md:text-left">
         <div class="md:flex items-center -mx-10">
             <div class=" w-full 3xl:w-5/12 md:w-1/2 px-10 mb-10 md:mb-0">
@@ -110,6 +113,7 @@ function Footer() {
     </div>
 </section>}
     </div>
+    
   );
 }
 
