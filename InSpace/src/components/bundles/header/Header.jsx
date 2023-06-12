@@ -13,7 +13,7 @@ const Header = () => {
   };
   return (
     <>
-      <div className="h-screen text-white flex items-center relative z-1">
+      <div className="h-screen text-white flex items-center relative z-1" >
         <section
           className="w-full bg-cover bg-center h-full"
           style={divStyle02}
@@ -24,7 +24,7 @@ const Header = () => {
             {/* <Fade left className="z-0"> */}
             <div className="container text-center text-white flex flex-col justify-center items-center h-full z-1">
               <h1 className="text-5xl font-medium mb-6">Welcome InSpace</h1>
-              <p className="text-xl mb-12">
+              <p className="text-xl mb-12" >
                 One small step for man, one giant leap for humanity two were
                 done today, interplanetary travel is now a reality
               </p>
