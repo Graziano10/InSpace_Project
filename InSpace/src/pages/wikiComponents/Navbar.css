@@ -119,7 +119,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 0px 50px 10px #fffefe; */
+    border: 1px solid #fff;
+    backdrop-filter: blur(10px);
+   padding: 0 15px;
+  
   }
   
   .wikiP {
@@ -150,7 +154,7 @@
     }
   }
   
-  @media screen and (max-width: 768px) {
+   @media screen and (max-width: 768px) {
     .wiki-container .wikiTitle {
       font-size: 50px;
       margin-top: -100px;
@@ -169,19 +173,61 @@
     .btn {
       width: 100%;
     }
-  }
+  } 
   @media screen and (max-width: 390px) {
     .wiki-container .wikiTitle {
       font-size: 70px;
       margin-top: 50px;
     }
+    .wiki-container video{
+      width: 100vw;
+      object-fit: cover;
+    }
   }
 
-  .launch-time{
+  .launch-time {
     display: flex;
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    align-items: center; /* Centra gli elementi verticalmente */
+    color: #fff;
+    font-family: Arial, sans-serif; /* Aggiungi un font di tua scelta */
+    font-weight: bold; /* Aggiungi spessore al testo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aggiungi una leggera ombreggiatura al testo */
   }
-  .launch-time div{
+  
+  .launch-time .launch-div {
     flex-basis: 100px;
+    color: #fff;
   }
-
+  
+  .launch-time div p {
+    font-size: 60px;
+    margin: 30px 5px; /* Rimuovi il margine inferiore */
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(58, 2, 58, 0.2); /* Cambia il colore di sfondo */
+    border-radius: 5px; /* Aggiungi angoli arrotondati */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0px 0px 30px 3px #fffefe;
+    
+    backdrop-filter: blur(10px);
+  }
+  .rocket {
+    width: 200px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+  }
+  @keyframes rocket{
+    0%{
+      bottom: -50%;
+      opacity: 0;
+    }
+    100%{
+      bottom: 105%;
+      opacity: 1;
+    }
+  }
+ 
  
