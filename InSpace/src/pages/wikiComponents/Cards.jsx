@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./card.css";
 
 import { useState } from "react";
@@ -6,13 +7,18 @@ function Cards() {
     <>
       <h1>Mars</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia <br />
-        totam minima dignissimos in iste vel accusantium, odio quod <br />
-        corrupti. Pariatur quo neque corporis debitis sed cumque consectetur{" "}
+        Mars is the fourth planet and the furthest terrestrial planet from the{" "}
         <br />
-        quisquam fuga tenetur!
+        Sun. The reddish color of its surface is due to finely grained <br />
+        iron oxide dust in the soil, giving it the nickname "the Red <br />
+        Planet". Mars has a second smallest radius among the planets <br />
+        in the Solar System at 3,389.5 km and has a surface gravity <br />
+        of 3.72 m/s2 , which is 38% of Earth's gravity. <br />
       </p>
-      <button>Explore</button>
+      <Link to={"Explor-Planets"}>
+        {" "}
+        <button>Explore</button>{" "}
+      </Link>
     </>
   );
 
@@ -65,12 +71,13 @@ function Cards() {
       <>
         <h1>Moon</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia{" "}
+          The Moon is Earth's only natural satellite. Its diameter is about{" "}
           <br />
-          totam minima dignissimos in iste vel accusantium, odio quod <br />
-          corrupti. Pariatur quo neque corporis debitis sed cumque consectetur{" "}
+          one-quarter of Earth's (comparable to the width of Australia), <br />
+          making it the fifth largest satellite in the Solar System and the{" "}
           <br />
-          quisquam fuga tenetur!
+          largest and most massive relative to its parent planet. It is <br />
+          larger than all known dwarf planets in the Solar System. <br />
         </p>
         <button>Explore</button>
       </>
@@ -128,12 +135,14 @@ function Cards() {
       <>
         <h1>Saturn</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia{" "}
+          Saturn is the sixth planet from the Sun and the second-largest in the{" "}
           <br />
-          totam minima dignissimos in iste vel accusantium, odio quod <br />
-          corrupti. Pariatur quo neque corporis debitis sed cumque consectetur{" "}
+          Solar System, after Jupiter. It is a gas giant with an average radius{" "}
           <br />
-          quisquam fuga tenetur!
+          of about nine and a half times that of Earth. It has only <br />
+          one-eighth the average density of Earth, but is over 95 times more{" "}
+          <br />
+          massive.
         </p>
         <button>Explore</button>
       </>
@@ -155,10 +164,8 @@ function Cards() {
         <br />
         <p>
           The rings of Saturn are planetary rings that revolve around the planet
-          Saturn. In theory it could be considered as a single ring, but it is
-          intentionally broken up into several separate rings. They are made up
-          of billions of small fragments, ranging in size from micrometres to
-          metres
+          Saturn.They are made up of billions of small fragments, ranging in
+          size from micrometres to metres
         </p>
       </>
     );
@@ -191,12 +198,12 @@ function Cards() {
         <h1>Jupiter</h1>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia{" "}
+          Jupiter is the fifth planet from the Sun and the largest in the Solar{" "}
           <br />
-          totam minima dignissimos in iste vel accusantium, odio quod <br />
-          corrupti. Pariatur quo neque corporis debitis sed cumque consectetur{" "}
+          System. It is a gas giant with a mass more than two and a half times{" "}
           <br />
-          quisquam fuga tenetur!
+          that of all the other planets in the Solar System combined, and <br />
+          slightly less than one one-thousandth the mass of the Sun. <br />
         </p>
         <button>Explore</button>
       </>
@@ -222,7 +229,7 @@ function Cards() {
         <p>
           Jupiter's atmosphere is the largest planetary atmosphere in the solar
           system. It is composed mainly of molecular hydrogen and helium with
-          traces of methane, ammonia, hydrogen sulphide and water
+          traces of methane, ammonia, hydrogen and water
         </p>
       </>
     );
@@ -256,12 +263,13 @@ function Cards() {
       <>
         <h1>Mars</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia{" "}
+          Mars is the fourth planet and the furthest terrestrial planet from the{" "}
           <br />
-          totam minima dignissimos in iste vel accusantium, odio quod <br />
-          corrupti. Pariatur quo neque corporis debitis sed cumque consectetur{" "}
-          <br />
-          quisquam fuga tenetur!
+          Sun. The reddish color of its surface is due to finely grained <br />
+          iron oxide dust in the soil, giving it the nickname "the Red <br />
+          Planet". Mars has a second smallest radius among the planets <br />
+          in the Solar System at 3,389.5 km and has a surface gravity <br />
+          of 3.72 m/s2 , which is 38% of Earth's gravity. <br />
         </p>
         <button>Explore</button>
       </>
@@ -312,9 +320,6 @@ function Cards() {
   };
   return (
     <>
-      <div className="infoh2">
-        <h2>Information about some planets</h2>
-      </div>
       <div className="BannerButton">
         <button onClick={reset}>Mars</button>
         <button onClick={handleclickMoon}>Moon</button>
