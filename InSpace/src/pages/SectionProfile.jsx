@@ -16,7 +16,7 @@ const SectionProfile = () => {
       >
         <div className="h-[100vh] flex justify-center items-center">
           <div className="w-[60%] h-[60%] bg-white rounded-md flex flex-col justify-between">
-            <div className="w-full h-auto border-b-[3px]  border-[#CA8A04] bg-[#04091b] rounded-md">
+            <div className="w-full h-auto border-b-[3px]  border-[#CA8A04] bg-[#04091b] rounded-t-md">
             <div className="w-[210px]">
               <Link to="/">
                 <img src={logo} alt="Logo" />
@@ -26,7 +26,7 @@ const SectionProfile = () => {
             <div className="h-auto bg-[#04091b] rounded-sm mt-7">
                 <h3>Prenotazione:</h3>
             </div>
-            <div className="w-full h-[30%] ring my-4">
+            <div className="w-full h-[30%] ring-1 ring-black p-4 my-4 bg-gray-300">
 
             </div>
             <div class="  bg-[#04091b] flex flex-1">
