@@ -1,7 +1,8 @@
-import Planets from "./wikiComponents/SectionPlanets";
+/* import Planets from "./wikiComponents/SectionPlanets"; */
 import Cards from "./wikiComponents/Cards";
 import Navbar from "./wikiComponents/WikiHeader";
 import ScrollTop from "../components/atoms/ScrollTop";
+import "./wikiComponents/SectionPlanets.css";
 const WikiPlanet = () => {
   return (
     
@@ -19,7 +20,7 @@ const WikiPlanet = () => {
       </div>
       <div className="LastPart">
         <section>
-          <Planets />
+         {/*  <Planets /> */}
         </section>
       </div>
       <ScrollTop/>
