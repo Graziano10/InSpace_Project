@@ -175,13 +175,17 @@
     }
   } 
   @media screen and (max-width: 390px) {
-    .wiki-container .wikiTitle {
-      font-size: 70px;
+    .wiki-container {
+      font-size: 20px;
       margin-top: 50px;
+      justify-content: center;
     }
     .wiki-container video{
       width: 100vw;
       object-fit: cover;
+    }
+    .wikiTitle{
+      display: hidden;
     }
   }
 
