@@ -18,7 +18,7 @@ const App = () => {
         <Link to="/Form-Planet">FormPlanet</Link>
         <Link to="/Wiki-Planet">WikiPlanets</Link>
         <Link to="/Login">Login</Link>
-        <Link to="/SectionProfile">SectionProfile</Link>
+        <Link to="/Section-Profile">SectionProfile</Link>
       </nav>
       
         <Routes>
