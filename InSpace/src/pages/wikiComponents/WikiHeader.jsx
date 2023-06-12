@@ -11,7 +11,7 @@ import React, { useState, useEffect } from 'react';
 
 function Navbar() {
   const [countdown, setCountdown] = useState({
-    days: 0,
+    days: 60,
     hours: 0,
     minutes: 0,
     seconds: 0
@@ -21,7 +21,7 @@ function Navbar() {
     const countDownDate = new Date("Jun 16, 2023 00:00:00").getTime();
     const interval = setInterval(() => {
       const now = new Date().getTime();
-      const distance = countDownDate - now;
+    const distance = countDownDate - now + (60 * 24 * 60 * 60 * 1000); // Aggiungi 60 giorni in millisecondi
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
