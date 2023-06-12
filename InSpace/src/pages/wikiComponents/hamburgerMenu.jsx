@@ -37,39 +37,39 @@ const HamburgerMenu = () => {
       {isOpen && (
         <div className=" flex flex-col text-xl absolute top-0 right-0 mt-14 w-[321px] h-[700px] bg-[#020617]  shadow-black shadow-xl transition-transform transform translate-x-[9%] z-50">
           <ul className="py-2 mt-6 flex flex-col flex-1">
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10 ">
+            <li className="px-4 py-2 hover:bg-gray-700 cursor-pointer mb-10 text-white">
               <Link
                 to="/Wiki-Planet"
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10"
+                className="px-4 py-2 cursor-pointer mb-10"
               >
                 Explor Planets
               </Link>
               <div className="w-full h-[2px] bg-gray-900 mt-2"></div>
             </li>
 
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10">
+            <li className="px-4 py-2 hover:bg-gray-700cursor-pointer mb-10 hover:bg-gray-700  text-white">
               <Link
                 to="/Explor-Planets"
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10"
+                className="px-4 py-2 cursor-pointer mb-10"
               >
                 Wiki Planet
               </Link>
               <div className="w-full h-[2px] bg-gray-900  mt-2"></div>
             </li>
-            <li className="px-4 py-2 cursor-pointer mb-10">
+            <li className="px-4 py-2 cursor-pointer mb-10 hover:bg-gray-700  text-white">
               <Link to="/Form-Planet" className="px-4 py-2 cursor-pointer mb-10">
                 Form Planet
               </Link>
               <div className="w-full h-[2px] bg-gray-900  mt-2"></div>
             </li>
-            <li className="px-4 py-2 cursor-pointer mb-10">
+            <li className="px-4 py-2 cursor-pointer mb-10 hover:bg-gray-700 text-white">
               <Link
                 to="/Login"
                 className="px-4 py-2 cursor-pointer mb-10"
               >
                 Login
               </Link>
-              <div className="w-full h-[2px] bg-gray-900 mt-2"></div>
+              <div className="w-full h-[2px] bg-gray-900 mt-2 "></div>
             </li>
           </ul>
           <div className="w-full h-[2px] bg-gray-900"></div>

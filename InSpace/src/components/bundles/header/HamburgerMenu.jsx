@@ -43,34 +43,34 @@ const HamburgerMenu = () => {
         </svg>
       </button>
       {isOpen && (
-        <div className=" flex flex-col text-xl absolute top-0.5 right-0 mt-14 w-[321px] h-[700px] bg-[#020617]  shadow-black shadow-xl transition-transform transform translate-x-[12%] z-50 rounded-xl">
+        <div className=" flex flex-col text-xl absolute top-0.5 right-0 mt-14 w-[321px] h-[700px] bg-[#020617]  shadow-black shadow-xl transition-transform transform translate-x-[12%] z-150 rounded-xl">
           <ul className="py-2 mt-6 flex flex-col flex-1">
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10 ">
+            <li className="px-4 py-2  hover:bg-gray-700  cursor-pointer mb-10 ">
               <Link
                 to="/Wiki-Planet"
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10"
+                className="px-4 py-2cursor-pointer mb-10"
               >
                 Explor Planets
               </Link>
               <div className="w-full h-[2px] bg-gray-900 mt-2"></div>
             </li>
 
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10">
+            <li className="px-4 py-2  hover:bg-gray-700 cursor-pointer mb-10">
               <Link
                 to="/Explor-Planets"
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10"
+                className="px-4 py-2cursor-pointer mb-10"
               >
                 Wiki Planet
               </Link>
               <div className="w-full h-[2px] bg-gray-900  mt-2"></div>
             </li>
-            <li className="px-4 py-2 cursor-pointer mb-10">
+            <li className="px-4 py-2 cursor-pointer mb-10 hover:bg-gray-700">
               <Link to="/Form-Planet" className="px-4 py-2 cursor-pointer mb-10">
                 Form Planet
               </Link>
               <div className="w-full h-[2px] bg-gray-900  mt-2"></div>
             </li>
-    {token != null ? <li className="px-4 py-2 cursor-pointer mb-10">
+    {token != null ? <li className="px-4 py-2 cursor-pointer mb-10 hover:bg-gray-700">
               <Link
                 to="/Logout"
                 className="px-4 py-2 cursor-pointer mb-10"
@@ -79,7 +79,7 @@ const HamburgerMenu = () => {
                 Logout
               </Link>
               <div className="w-full h-[2px] bg-gray-900 mt-2"></div>
-            </li>  : <li className="px-4 py-2 cursor-pointer mb-10">
+            </li>  : <li className="px-4 py-2 cursor-pointer mb-10 hover:bg-gray-700">
               <Link
                 to="/Login"
                 className="px-4 py-2 cursor-pointer mb-10 "
