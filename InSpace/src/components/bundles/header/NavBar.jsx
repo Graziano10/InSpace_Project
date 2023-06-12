@@ -7,6 +7,7 @@ import { logout } from "../../../store/authSlice";
 const NavBar = () => {
   const logo = "src/assets/assets-Header/Logo.png";
   const avatar = "src/assets/User_Avatar.png";
+  const avatar2 = "/src/assets/avatar3.svg";
 
   const token = useSelector((state) => state.auth.token);
   const dispatch = useDispatch();
@@ -60,8 +61,8 @@ const NavBar = () => {
             {token != null ? (
               <div className="flex items-center justify-between mdd:w-[90px] w-[15px] ">
                 <div className="flex justify-center items-center gap-2">
-                  <div className="w-[40px] h-[40px] bg-black rounded-full">
-                    <img src={avatar} alt="Avatar" onClick={toggleMenu02} />
+                  <div className="w-[40px] h-[40px] bg-black rounded-full mr-3">
+                    <img src={avatar2} alt="Avatar" onClick={toggleMenu02} className="rounded-full" />
                     {isOpen && (
                       <div className="absolute left-[42%] z-10 mt-2 bg-white rounded-lg shadow-xl w-[200px] h-[250px] flex flex-col justify-between md:left-[75%] mdd:left-[85%]">
                         <div className="w-full h-10 bg-slate-300 rounded-lg mt-4 pl-3 flex items-center hover:bg-slate-400">
