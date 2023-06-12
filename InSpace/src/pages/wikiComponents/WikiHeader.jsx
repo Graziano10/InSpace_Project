@@ -1,14 +1,45 @@
-import React from "react";
+
 import './Navbar.css'
 import video from './WikiAssets/Terminal.mp4'
 import NavBar from "./NavBar2";
 import { Button } from "./WikiButton";
 import { Link } from "react-router-dom";
+import imageRock from './WikiAssets/rocket.png'
+import React, { useState, useEffect } from 'react';
 
 
 
 function Navbar() {
- 
+  const [countdown, setCountdown] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const countDownDate = new Date("Jun 16, 2023 00:00:00").getTime();
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      setCountdown({ days, hours, minutes, seconds });
+
+      if (distance < 0) {
+        clearInterval(interval);
+        // Countdown è terminato, puoi fare qualcosa qui se necessario
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
     return (
       <div className="wiki-container">
   <video src={video} autoPlay loop muted></video>
@@ -35,24 +66,25 @@ function Navbar() {
     </Button>
   </div>
   <div className="launch-time">
-    <div>
-      <p>00</p>
+    <div className="launch-div">
+      <p>{countdown.days.toString().padStart(2, '0')}</p>
       <span>Days</span>
     </div>
     <div>
-      <p>00</p>
+      <p>{countdown.hours.toString().padStart(2, '0')}</p>
       <span>Hours</span>
     </div>
     <div>
-      <p>00</p>
+      <p>{countdown.minutes.toString().padStart(2, '0')}</p>
       <span>Minutes</span>
     </div>
     <div>
-      <p>00</p>
+      <p>{countdown.seconds.toString().padStart(2, '0')}</p>
       <span>Seconds</span>
     </div>
 
   </div>
+  <img src={imageRock} className="rocket"/>
 </div>
     );
   }
