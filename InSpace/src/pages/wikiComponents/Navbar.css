@@ -150,7 +150,7 @@
     }
   }
   
-  @media screen and (max-width: 768px) {
+   @media screen and (max-width: 768px) {
     .wiki-container .wikiTitle {
       font-size: 50px;
       margin-top: -100px;
@@ -169,7 +169,7 @@
     .btn {
       width: 100%;
     }
-  }
+  } 
   @media screen and (max-width: 390px) {
     .wiki-container .wikiTitle {
       font-size: 70px;
@@ -181,20 +181,29 @@
     }
   }
 
-  .launch-time{
+  .launch-time {
     display: flex;
-    color: rgb(84, 23, 147);
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    align-items: center; /* Centra gli elementi verticalmente */
+    color: #fff;
+    font-family: Arial, sans-serif; /* Aggiungi un font di tua scelta */
+    font-weight: bold; /* Aggiungi spessore al testo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aggiungi una leggera ombreggiatura al testo */
   }
-  .launch-time .launch-div{
+  
+  .launch-time .launch-div {
     flex-basis: 100px;
-    color: rgb(84, 23, 147);
+    color: #fff;
   }
-  .launch-time div p{
+  
+  .launch-time div p {
     font-size: 60px;
-    margin-bottom: -14px;
+    margin: 0; /* Rimuovi il margine inferiore */
     padding: 10px;
-    color: rgb(84, 23, 147);
-    box-shadow: inset 0 0 0 1000px rgba(58, 2, 58, 0.2);
+    color: #fff;
+    background-color: rgba(58, 2, 58, 0.2); /* Cambia il colore di sfondo */
+    border-radius: 5px; /* Aggiungi angoli arrotondati */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Aggiungi una leggera ombra */
   }
   .rocket {
     width: 200px;
@@ -213,5 +222,5 @@
       opacity: 1;
     }
   }
-
+ 
  
