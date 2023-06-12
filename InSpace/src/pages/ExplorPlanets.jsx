@@ -1,4 +1,3 @@
-import ButtonAtom from "../components/atoms/ButtonAtom";
 import {motion} from 'framer-motion'
 const ExplorPlanets = () => {
 
