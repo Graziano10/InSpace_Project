@@ -43,7 +43,7 @@ const HamburgerMenu = () => {
         </svg>
       </button>
       {isOpen && (
-        <div className=" flex flex-col text-xl absolute top-0.5 right-0 mt-14 w-[321px] h-[700px] bg-[#020617]  shadow-black shadow-xl transition-transform transform translate-x-[12%] z-50 rounded-xl">
+        <div className=" flex flex-col text-xl absolute top-0.5 right-0 mt-14 w-[321px] h-[700px] bg-[#020617]  shadow-black shadow-xl transition-transform transform translate-x-[12%] z-150 rounded-xl">
           <ul className="py-2 mt-6 flex flex-col flex-1">
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer mb-10 ">
               <Link
