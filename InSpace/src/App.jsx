@@ -12,13 +12,13 @@ import SectionProfile from './pages/SectionProfile';
 const App = () => {
   return (
     <>
-      <nav className="hidden" style={{ fontFamily: "Ubuntu, sans-serif" }}>
+      <nav className="hidden" >
         <Link to="/">Home</Link>
         <Link to="/Explor-Planets">ExplorPlanets</Link>
         <Link to="/Form-Planet">FormPlanet</Link>
         <Link to="/Wiki-Planet">WikiPlanets</Link>
         <Link to="/Login">Login</Link>
-        <Link to="/SectionProfile">SectionProfile</Link>
+        <Link to="/Section-Profile">SectionProfile</Link>
       </nav>
       
         <Routes>
