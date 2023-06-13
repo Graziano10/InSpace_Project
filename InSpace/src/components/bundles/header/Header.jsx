@@ -21,7 +21,7 @@ const Header = () => {
           <NavBar />
           <div className="flex md:w-full h-full justify-center items-center ">
             <div className="mdd:w-full mdd:h-full"></div>
-            <Fade left>
+            <Fade bottom delay = {200}>
             <div className="container text-center text-white flex flex-col justify-center items-center h-full z-1">
               <h1 className="text-5xl font-medium mb-6">Welcome InSpace</h1>
               <p className="text-xl mb-12">

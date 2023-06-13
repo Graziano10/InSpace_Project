@@ -27,7 +27,7 @@ const Section01 = () => {
   return (
 
       <div className="h-screen text-white flex items-center justify-center relative bg-[#04091b] z-1">
-            <Fade left>
+            <Fade bottom delay = {200}>
         <section
           className=" container w-11/12 h-5/6 bg-cover bg-center rounded-lg flex"
           style={logoHeader}
