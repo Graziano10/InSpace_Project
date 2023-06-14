@@ -69,7 +69,7 @@ const NavBar = () => {
                         <button className="text-black"><Link to="/Section-Profile">Window Profile</Link></button>
                         </div>
                         <div className="w-full h-10 bg-slate-300 rounded-lg pl-3 flex items-center hover:bg-slate-400">
-                        <button className="text-black">Roket</button>
+                        <button className="text-black">Rocket</button>
                         </div>
                         <div className="w-full h-10 bg-slate-300 rounded-lg pl-3 flex items-center hover:bg-slate-400">
                         <button className="text-black">Information</button>

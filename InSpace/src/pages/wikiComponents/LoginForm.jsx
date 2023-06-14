@@ -39,9 +39,19 @@ const LoginForm = () => {
             ...form,
           },
         });
-        const data = results.data; // -> { user: { ... }, token: ... }
-        dispatch(login(data));
-        navigate("/");
+        
+        if(results.status == 200) {
+          const data = results.data; // -> { user: { ... }, token: ... }
+          dispatch(login(data));
+          navigate("/");
+        } else {
+          toast.error("User not found!");
+          setForm({
+            email: "",
+            password: "",
+          });
+        }
+
       } catch (err) {
         console.error(err);
         toast.error("User not found!");

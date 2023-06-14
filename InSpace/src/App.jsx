@@ -29,7 +29,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/section-profile" element={<SectionProfile/>}/>
         </Routes>
-    
+
     </>
   );
 };
