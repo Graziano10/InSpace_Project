@@ -8,12 +8,11 @@ function Cards() {
       <h1>Mars</h1>
       <p>
         Mars is the fourth planet and the furthest terrestrial planet from the{" "}
-        <br />
-        Sun. The reddish color of its surface is due to finely grained <br />
-        iron oxide dust in the soil, giving it the nickname "the Red <br />
-        Planet". Mars has a second smallest radius among the planets <br />
-        in the Solar System at 3,389.5 km and has a surface gravity <br />
-        of 3.72 m/s2 , which is 38% of Earth's gravity. <br />
+        Sun. The reddish color of its surface is due to finely grained iron
+        oxide dust in the soil, giving it the nickname "the Red Planet". Mars
+        has a second smallest radius among the planets in the Solar System at
+        3,389.5 km and has a surface gravity of 3.72 m/s2 , which is 38% of
+        Earth's gravity.
       </p>
       <Link to={"Explor-Planets"}>
         {" "}
@@ -72,12 +71,10 @@ function Cards() {
         <h1>Moon</h1>
         <p>
           The Moon is Earth's only natural satellite. Its diameter is about{" "}
-          <br />
-          one-quarter of Earth's (comparable to the width of Australia), <br />
-          making it the fifth largest satellite in the Solar System and the{" "}
-          <br />
-          largest and most massive relative to its parent planet. It is <br />
-          larger than all known dwarf planets in the Solar System. <br />
+          one-quarter of Earth's (comparable to the width of Australia), making
+          it the fifth largest satellite in the Solar System and the largest and
+          most massive relative to its parent planet. It is larger than all
+          known dwarf planets in the Solar System.
         </p>
         <button>Explore</button>
       </>
@@ -136,13 +133,9 @@ function Cards() {
         <h1>Saturn</h1>
         <p>
           Saturn is the sixth planet from the Sun and the second-largest in the{" "}
-          <br />
           Solar System, after Jupiter. It is a gas giant with an average radius{" "}
-          <br />
-          of about nine and a half times that of Earth. It has only <br />
-          one-eighth the average density of Earth, but is over 95 times more{" "}
-          <br />
-          massive.
+          of about nine and a half times that of Earth. It has only one-eighth
+          the average density of Earth, but is over 95 times more massive.
         </p>
         <button>Explore</button>
       </>
@@ -199,11 +192,9 @@ function Cards() {
 
         <p>
           Jupiter is the fifth planet from the Sun and the largest in the Solar{" "}
-          <br />
           System. It is a gas giant with a mass more than two and a half times{" "}
-          <br />
-          that of all the other planets in the Solar System combined, and <br />
-          slightly less than one one-thousandth the mass of the Sun. <br />
+          that of all the other planets in the Solar System combined, and
+          slightly less than one one-thousandth the mass of the Sun.
         </p>
         <button>Explore</button>
       </>
@@ -264,12 +255,11 @@ function Cards() {
         <h1>Mars</h1>
         <p>
           Mars is the fourth planet and the furthest terrestrial planet from the{" "}
-          <br />
-          Sun. The reddish color of its surface is due to finely grained <br />
-          iron oxide dust in the soil, giving it the nickname "the Red <br />
-          Planet". Mars has a second smallest radius among the planets <br />
-          in the Solar System at 3,389.5 km and has a surface gravity <br />
-          of 3.72 m/s2 , which is 38% of Earth's gravity. <br />
+          Sun. The reddish color of its surface is due to finely grained iron
+          oxide dust in the soil, giving it the nickname "the Red Planet". Mars
+          has a second smallest radius among the planets in the Solar System at
+          3,389.5 km and has a surface gravity of 3.72 m/s2 , which is 38% of
+          Earth's gravity.
         </p>
         <button>Explore</button>
       </>

@@ -159,6 +159,11 @@
 }
 
 @media (max-width: 821px) {
+  .Middlepart{
+    padding: 40px 40px;
+    background-color: #010001;
+    height: 150vh;
+  }
   .Container{
     display: flex;
   }
@@ -191,5 +196,10 @@
   .Little-section{
     top: 60%;
     left: 27%;
+  }
+  .Middlepart{
+    padding: 40px 40px;
+    background-color: #010001;
+    height: 220vh;
   }
 }
