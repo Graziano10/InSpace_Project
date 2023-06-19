@@ -46,7 +46,7 @@ export const FormPlanet = () => {
     <div className="flex flex-col ring h-screen">
       <section
         id="content"
-        className="  bg-form-bg bg-cover bg-center  flex flex-col md:h-3/4  xl:h-full xl:justify-end xl:items-start  xl:flex-row "
+        className="  bg-form-bg bg-cover bg-center flex flex-col md:h-full  xl:h-full xl:justify-end xl:items-start  xl:flex-row "
       >
         <ToastContainer
           position="bottom-right"
@@ -88,7 +88,7 @@ export const FormPlanet = () => {
             action="/register"
             method="POST"
             onSubmit={handleSubmit}
-            className=" px-10 pb-10 w-full h-full shadow-2xl bg-gradient-to-b from-transparent to-blue-950  xl:w-1/2 xl:h-screen xl:my-0  xl:bg-gradient-to-b xl:from-orange xl:to-black "
+            className=" px-10 sm: pb-10 w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950 lg: pt-20 xl:w-1/2 xl:h-screen xl:my-0  xl:bg-gradient-to-b xl:from-orange xl:to-black xl:pt-10"
           >
             <Link to="/">
               <div className="logo w-1/3 h-10 bg-logo bg-cover bg-center xl: mx-auto "></div>
@@ -277,7 +277,7 @@ export const FormPlanet = () => {
         {/* </div> */}
       </section>
 
-      <div className="xl:hidden">
+      <div className="xl:hidden ">
         <FooterLinks />
       </div>
     </div>
