@@ -13,13 +13,13 @@ const Section01 = () => {
   };
   return (
 
-      <div className="h-screen text-white flex items-center justify-center relative bg-[#04091b] z-1 px-3">
+      <div className="h-screen text-white flex items-center justify-center relative bg-[#04091b] z-1 px-7">
             <Fade bottom delay = {200}>
         <section
-          className=" ìcontainer w-11/12 h-5/6 bg-cover bg-center rounded-lg flex"
+          className="container w-11/12 h-5/6 bg-cover bg-center rounded-3xl flex "
           style={logoHeader}
         >
-          <div className="container mx-auto text-center text-white flex flex-col justify-center items-center ">
+          <div className="container mx-auto text-center text-white flex flex-col justify-center items-center p-3 ">
             <h1 className="text-5xl font-medium mb-6">
               Universe: The Wonder Beyond
             </h1>
