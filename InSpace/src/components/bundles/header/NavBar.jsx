@@ -30,7 +30,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="flex px-10 z-50  shadow-xl shadow-black opacity-90 bg-[#020617bc] ">
+      <nav className="flex px-10 z-50  shadow-xl shadow-black opacity-90 bg-[#020617bc]">
         <div className="flex items-center justify-between w-full relative">
           <div className="w-[210px]">
             <Link to="/">
@@ -38,24 +38,24 @@ const NavBar = () => {
             </Link>
           </div>
           <div className="mdd:block xs:hidden">
-            <Link
+            {/* <Link
               to="/Explor-Planets"
               className="text-white hover:text-gray-30 text-xl font-medium"
             >
-              ExplorPlanets
-            </Link>
+              ExplorePlanets
+            </Link> */}
             <Link
               to="/Wiki-Planet"
               className="text-white hover:text-gray-300 text-xl font-medium mx-14"
             >
-              WikiPlanet
+              Explore Planets
             </Link>
-            <Link
+            {/* <Link
               to="/Form-Planet"
               className="text-white hover:text-gray-300 text-xl font-medium"
             >
               FormPlanet
-            </Link>
+            </Link> */}
           </div>
           <div className="mdd: flex gap-10 items-center">
             {token != null ? (
@@ -91,12 +91,18 @@ const NavBar = () => {
                 </div>
               </div>
             ) : (
-              <div className="flex items-center justify-between mdd:w-[90px] w-[15px]">
+              <div className="flex items-center justify-between gap-2 mdd:w-[135px] w-[150px]">
                 <Link
                   to="/Login"
-                  className="text-white hover:text-gray-300 text-xl font-medium mdd:block xs:hidden w-[40px]"
+                  className="text-white hover:text-gray-300 text-xl font-medium mdd:block xs:hidden"
                 >
                   Login
+                </Link>
+                <Link
+                  to="/Form-Planet"
+                  className="text-white hover:text-gray-300 text-xl font-medium mdd:block xs:hidden"
+                >
+                  +Sign-in
                 </Link>
               </div>
             )}
