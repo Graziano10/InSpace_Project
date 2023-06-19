@@ -3,8 +3,8 @@ import ScrollTop from "./ScrollTop";
 const FooterLinks = () => {
 return(
     <div >
-        <section class="  bg-[#04091b]">
-          <div class="  py-12 mx-auto space-y-12  sm:px-6 lg:px-8 ">
+        <section class="  bg-[#04091b] ">
+          <div class="  py-14 mx-auto  space-y-12  sm:px-6 md:h-96">
             <nav class="flex flex-wrap justify-center">
               <div class="px-5 py-2">
                 <a
