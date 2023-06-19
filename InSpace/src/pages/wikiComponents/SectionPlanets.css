@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.Middlepart{
+.Middlepart {
   padding: 40px 40px;
   background-color: #010001;
 }
@@ -157,9 +157,25 @@
   transition: 1s;
   color: rgb(0, 0, 0);
 }
-
+@media (max-width: 374px) {
+  .Middlepart {
+    height: 230vh;
+  }
+}
+@media (max-width: 686px) {
+  .Middlepart {
+    padding: 40px 40px;
+    background-color: #010001;
+    height: 200vh;
+  }
+}
 @media (max-width: 821px) {
-  .Container{
+  .Middlepart {
+    padding: 40px 40px;
+    background-color: #010001;
+    height: 175vh;
+  }
+  .Container {
     display: flex;
   }
   .Container img {
@@ -167,29 +183,32 @@
     background-position: center;
     background-size: cover;
   }
-  .Little-section{
+  .Little-section {
     position: absolute;
     top: 67%;
     left: 31%;
     font-size: 53px;
   }
-  .Little-section p{
+  .Little-section p {
     font-size: 26px;
   }
-  
-  
 }
 
 @media (max-width: 414px) {
-  .banner{
+  .banner {
     width: 160%;
   }
-  .Container{
+  .Container {
     width: 160%;
-    height: 140vh;
+    height: 265vh;
   }
-  .Little-section{
+  .Little-section {
     top: 60%;
     left: 27%;
+  }
+  .Middlepart {
+    padding: 40px 40px;
+    background-color: #010001;
+    height: 265vh;
   }
 }
