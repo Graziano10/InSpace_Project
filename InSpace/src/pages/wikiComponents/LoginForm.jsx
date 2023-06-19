@@ -31,6 +31,7 @@ const LoginForm = () => {
   
     const handleSubmit = async (event) => {
       event.preventDefault();
+      
       try {
         const results = await axios({
           url: "http://localhost:3000/users/login",
@@ -62,16 +63,7 @@ const LoginForm = () => {
         emailRef.current.focus();
       }
     };
-  
-
-
-
-
-
     return(
-      
-
-
   <section className='section-login'>
         <div className="background">
           <Fade top>

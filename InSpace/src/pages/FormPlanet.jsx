@@ -1,57 +1,90 @@
 // import bg_img from '../assets/formBg.png'
 
+import { useRef, useState } from "react";
 import "./formPlanet.css";
-import Fade from 'react-reveal/Fade'
-
-
+import Fade from "react-reveal/Fade";
 
 export const FormPlanet = () => {
+  const password_confirm = useRef()
+
+  const [data, setData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(data.password !== password_confirm.current.value){
+      alert('Passwords do not match!')
+    }else {
+      console.log(data)
+    }
+  };
+
+  const handleChange = (e)=> {
+    const {name , value} = e.target
+    setData((prevData) => ({...prevData , [name] : value}))
+  }
+
+
   return (
-  
-      <section id="content" className=" bg-form-bg bg-cover bg-center min-h-screen  flex flex-col xl:flex-row justify-evenly md:items-center xl:justify-end xl:items-start">
-        <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center w-1/2 h-screen  ">
-         <Fade>
+    <section
+      id="content"
+      className=" bg-form-bg bg-cover bg-center min-h-screen  flex flex-col xl:flex-row justify-evenly md:items-center xl:justify-end xl:items-start"
+    >
+      <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center w-1/2 h-screen  ">
+        <Fade>
           <div className="overlay flex justify-center items-center bg-">
             {/* testi pc */}
-              <Fade bottom delay={500}>
-            <div className="flex flex-col items-center w-full p-5 m-auto rounded-xl">
-              <h1 className="text-white text-7xl mb-1 italic">Be the next</h1>
-              <p className="text-white text-3xl ">
-                Universe is waiting for you
-              </p>
-            </div>
+            <Fade bottom delay={500}>
+              <div className="flex flex-col items-center w-full p-5 m-auto rounded-xl">
+                <h1 className="text-white text-7xl mb-1 italic">Be the next</h1>
+                <p className="text-white text-3xl ">
+                  Universe is waiting for you
+                </p>
+              </div>
             </Fade>
           </div>
-          </Fade>
+        </Fade>
+      </div>
+      <div className=" text-white xl:hidden flex  justify-center items-center p-5 bg-black rounded-none md:bg-transparent ">
+        {/* testi smartphone, tablet */}
+        <div>
+          <h1 className=" text-white text-4xl mb-3 text-center md:text-6xl md:mb-8 italic">
+            Be the next
+          </h1>
+          <p className="text-xl text-center md:text-3xl italic">
+            Universe is waiting for you
+          </p>
         </div>
-        <div className=" text-white xl:hidden flex  justify-center items-center p-5 bg-black rounded-none md:bg-transparent ">
-          {/* testi smartphone, tablet */}
-          <div>
-            <h1 className=" text-white text-4xl mb-3 text-center md:text-6xl md:mb-8 italic">
-              Be the next
-            </h1>
-            <p className="text-xl text-center md:text-3xl italic">
-              Universe is waiting for you
-            </p>
-          </div>
-        </div>
+      </div>
       <Fade>
-        <form className=" shadow-2xl bg-gradient-to-b from-transparent to-blue-700  p-6 md:w-2/3 md:h-min xl:w-1/2 xl:h-screen xl:my-0  rounded-none  xl:bg-gradient-to-b xl:from-orange xl:to-black ">
+        <form
+          action="/register"
+          method="POST"
+          onSubmit={handleSubmit}
+          className=" shadow-2xl bg-gradient-to-b from-transparent to-blue-700  p-6 md:w-2/3 md:h-min xl:w-1/2 xl:h-screen xl:my-0  rounded-none  xl:bg-gradient-to-b xl:from-orange xl:to-black "
+        >
           <div className="logo w-1/3 h-10 bg-logo bg-cover bg-center xl: m-auto"></div>
           <div className="grid gap-6 mg-6 md:grid-cols-2 xl:mt-10 ">
             <div>
               <label
-                htmlFor="first_name"
+                htmlFor="firstname"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 First name
               </label>
               <input
                 type="text"
-                id="first_name"
+                id="firstname"
                 className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="John"
+                placeholder="firstname"
                 required
+                name="firstname"
+                value={data.firstname}
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -63,10 +96,13 @@ export const FormPlanet = () => {
               </label>
               <input
                 type="text"
-                id="last_name"
+                id="lastname"
                 className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Doe"
+                placeholder="lastname"
                 required
+                name="lastname"
+                value={data.lastname}
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -74,14 +110,13 @@ export const FormPlanet = () => {
                 htmlFor="company"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
-                Company
+                State
               </label>
               <input
                 type="text"
                 id="company"
                 className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Flowbite"
-                required
+                placeholder="Italy , United States, United Kingdom..."
               />
             </div>
             <div>
@@ -89,15 +124,13 @@ export const FormPlanet = () => {
                 htmlFor="phone"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
-                Phone number
+                Address
               </label>
               <input
-                type="tel"
-                id="phone"
+                type="text"
+                id="text"
                 className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="123-45-678"
-                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                required
+                placeholder="Address"
               />
             </div>
             <div>
@@ -105,14 +138,13 @@ export const FormPlanet = () => {
                 htmlFor="website"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
-                Website URL
+                Phone Number
               </label>
               <input
-                type="url"
-                id="website"
+                type="tel"
+                id="age"
                 className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="flowbite.com"
-                required
+                placeholder="Phone number"
               />
             </div>
             <div>
@@ -120,14 +152,13 @@ export const FormPlanet = () => {
                 htmlFor="visitors"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
-                Unique visitors (per month)
+                Age
               </label>
               <input
                 type="number"
-                id="visitors"
+                id="age"
                 className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder=""
-                required
+                placeholder="Age"
               />
             </div>
           </div>
@@ -142,8 +173,11 @@ export const FormPlanet = () => {
               type="email"
               id="email"
               className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="john.doe@company.com"
+              placeholder="user@gmail.com"
               required
+              name="email"
+              value={data.email}
+              onChange={handleChange}
             />
           </div>
           <div className="mb-6">
@@ -159,6 +193,9 @@ export const FormPlanet = () => {
               className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="•••••••••"
               required
+              name="password"
+              value={data.password}
+              onChange={handleChange}
             />
           </div>
           <div className="mb-6">
@@ -174,6 +211,9 @@ export const FormPlanet = () => {
               className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="•••••••••"
               required
+              name="password_confirm"
+              ref={password_confirm}
+              
             />
           </div>
           <div className="flex items-start mb-6">
@@ -207,9 +247,8 @@ export const FormPlanet = () => {
             Submit
           </button>
         </form>
-        </Fade>
-      </section>
-  
+      </Fade>
+    </section>
   );
 };
 
