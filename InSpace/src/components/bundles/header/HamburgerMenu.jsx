@@ -47,7 +47,7 @@ const HamburgerMenu = () => {
           <ul className="py-2 mt-6 flex flex-col flex-1">
             <li className="px-4 py-2  hover:bg-gray-700  cursor-pointer mb-10 ">
               <Link
-                to="/Explor-Planets"
+                to="/Wiki-Planet"
                 className="px-4 py-2cursor-pointer mb-10"
               >
                 Explor Planets
