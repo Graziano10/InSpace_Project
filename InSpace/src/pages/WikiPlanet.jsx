@@ -3,6 +3,7 @@ import Cards from "./wikiComponents/Cards";
 import Navbar from "./wikiComponents/WikiHeader";
 import ScrollTop from "../components/atoms/ScrollTop";
 import "./wikiComponents/SectionPlanets.css";
+import Footer from "../components/bundles/footer/Footer";
 const WikiPlanet = () => {
   return (
     
@@ -24,7 +25,7 @@ const WikiPlanet = () => {
         </section>
       </div>
       <ScrollTop/>
-     
+     <Footer/>
     </>
     
     
