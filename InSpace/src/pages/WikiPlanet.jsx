@@ -26,7 +26,7 @@ const WikiPlanet = () => {
       </div>
       <Footer/>
       <ScrollTop/>
-     
+     <Footer/>
     </>
     
     
