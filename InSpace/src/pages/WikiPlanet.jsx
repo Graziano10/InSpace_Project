@@ -24,7 +24,6 @@ const WikiPlanet = () => {
          {/*  <Planets /> */}
         </section>
       </div>
-      <Footer/>
       <ScrollTop/>
      <Footer/>
     </>
