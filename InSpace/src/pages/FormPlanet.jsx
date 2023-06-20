@@ -70,7 +70,7 @@ export const FormPlanet = () => {
         pauseOnHover
         theme="dark"
       />
-      <nav className=" w-screen h-20  flex items-center bg-[#04091b] sticky top-0">
+      <nav className=" w-screen h-20  flex items-center bg-[#04091b] sticky top-0 z-10000 md:static">
         <div  className="hidden xl:block text-white  relative left-10 ">
           <Link to="/Wiki-Planet"> <h2>Explore Planets</h2></Link>
         </div>
@@ -97,21 +97,27 @@ export const FormPlanet = () => {
 
       <section
         id="content"
-        className="bg-form-bg bg-cover bg-center flex flex-row md:h-min md:pt-20  "
+        className="bg-form-bg bg-cover bg-center flex flex-col md:h-min"
       >
         
+           
           <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center h-full  ">
+
             <div className="overlay flex justify-center items-center ">
               {/* testi pc */}
 
               <div className="flex flex-col items-center p-5 ">
+                <Fade>
+
                 <h1 className="text-white text-7xl mb-1 italic">Be the next</h1>
                 <p className="text-white text-3xl ">
                   Universe is waiting for you
                 </p>
+                </Fade>
               </div>
             </div>
           </div>
+            
 
           <form
             action="/register"
