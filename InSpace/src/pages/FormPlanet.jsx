@@ -35,10 +35,10 @@ export const FormPlanet = () => {
   };
 
   useEffect(() => {
-    first_name.current.focus()
-  })
+    first_name.current.focus();
+  });
 
-    const notify = () =>
+  const notify = () =>
     toast.error("Passwords do not match ☄️", {
       position: "bottom-right",
       autoClose: 5000,
@@ -51,10 +51,10 @@ export const FormPlanet = () => {
     });
 
   return (
-    <div className="flex flex-col  h-screen">
+    <div className="flex flex-col h-screen">
       <section
         id="content"
-        className="  bg-form-bg bg-cover bg-center flex flex-col md:h-full  xl:h-full xl:justify-end xl:items-start  xl:flex-row "
+        className="bg-form-bg bg-cover bg-center flex flex-col md:h-full  xl:h-full  xl:items-start xl:flex-row "
       >
         <ToastContainer
           position="bottom-right"
@@ -86,20 +86,17 @@ export const FormPlanet = () => {
           </Fade>
         </div>
 
-        <nav className=" w-screen h-20  flex items-center absolute bg-[#04091b]">
+        <nav className=" w-screen h-20  flex items-center bg-[#04091b] ">
           <RegBurger />
           <RegLogo />
         </nav>
-        
-          className=" flex justify-center items-center bg-logo h-20 sm:h-10 bg-center bg-no-repeat md:w-full xl:hidden md:p-14"
-        
 
         <Fade>
           <form
             action="/register"
             method="POST"
             onSubmit={handleSubmit}
-            className=" ring px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950   xl:h-screen   xl:bg-gradient-to-b xl:from-orange xl:to-black"
+            className="  px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950  md:pt-20 xl:h-screen   xl:bg-gradient-to-b xl:from-orange xl:to-black"
           >
             <div className="grid gap-6 my-6 md:grid-cols-2">
               <div>
@@ -281,11 +278,10 @@ export const FormPlanet = () => {
             </button>
           </form>
         </Fade>
-          <div className="xl:hidden ">
-            <FooterLinks />
-          </div>
+        <div className="xl:hidden ">
+          <FooterLinks />
+        </div>
       </section>
-
     </div>
   );
 };
