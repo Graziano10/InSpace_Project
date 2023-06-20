@@ -51,7 +51,7 @@ export const FormPlanet = () => {
     });
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-fit">
       <ToastContainer
         position="bottom-right"
         autoClose={5000}
@@ -71,7 +71,7 @@ export const FormPlanet = () => {
 
       <section
         id="content"
-        className="bg-form-bg bg-cover bg-center flex flex-col md:h-full  "
+        className="bg-form-bg bg-cover bg-center flex flex-col md:h-fit  "
       >
         <article className=" flex flex-row h-fit w-screen ">
           <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center h-screen  ">
@@ -265,12 +265,15 @@ export const FormPlanet = () => {
                 .
               </label>
             </div>
+            <div className="w-full flex justify-center">
+
             <button
               type="submit"
-              className="text-white  bg-yellow-600 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
-            >
+              className="text-white  bg-yellow-600 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center md:w-1/4 "
+              >
               Submit
             </button>
+              </div>
           </form>
         </article>
       </section>
