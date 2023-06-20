@@ -42,7 +42,7 @@ export const FormPlanet = () => {
 
   useEffect(() => {
     first_name.current.focus();
-  });
+  },[]);
 
   const notify = () =>
     toast.error("Passwords do not match ☄️", {
@@ -103,10 +103,10 @@ export const FormPlanet = () => {
            
           <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center h-full  ">
 
-            <div className="overlay flex justify-center items-center ">
+            <div className="overlay flex justify-center items-center  ">
               {/* testi pc */}
 
-              <div className="flex flex-col items-center p-5 ">
+              <div className="flex flex-col items-center p-5 md:pt-10">
                 
 
                 <h1 className="text-white text-7xl mb-1 italic">Be the next</h1>
@@ -123,7 +123,7 @@ export const FormPlanet = () => {
             action="/register"
             method="POST"
             onSubmit={handleSubmit}
-            className="px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950  md:pt-10   xl:bg-gradient-to-b xl:from-orange xl:to-black xl:max-w-3xl xl:mx-auto"
+            className="px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950  md:pt-10   xl:bg-gradient-to-b xl:from-orange xl:to-black xl:max-w-3xl xl:mx-auto "
           >
             <div className="grid gap-6 my-6 md:grid-cols-2">
               <div>
@@ -136,7 +136,7 @@ export const FormPlanet = () => {
                 <input
                   type="text"
                   id="firstname"
-                  className="  bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 "
+                  className="  bg-gray-200 focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 "
                   placeholder="firstname"
                   required
                   name="firstname"
@@ -155,7 +155,7 @@ export const FormPlanet = () => {
                 <input
                   type="text"
                   id="lastname"
-                  className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                  className="bg-gray-200  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="lastname"
                   required
                   name="lastname"
@@ -173,7 +173,7 @@ export const FormPlanet = () => {
                 <input
                   type="text"
                   id="company"
-                  className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                  className="bg-gray-200  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="Italy , United States, United Kingdom..."
                 />
               </div>
@@ -187,7 +187,7 @@ export const FormPlanet = () => {
                 <input
                   type="text"
                   id="text"
-                  className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                  className="bg-gray-200  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="Address"
                 />
               </div>
@@ -201,7 +201,7 @@ export const FormPlanet = () => {
                 <input
                   type="tel"
                   id="age"
-                  className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                  className="bg-gray-200  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="Phone number"
                 />
               </div>
@@ -215,7 +215,7 @@ export const FormPlanet = () => {
                 <input
                   type="number"
                   id="age"
-                  className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                  className="bg-gray-200  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="Age"
                 />
               </div>
@@ -230,7 +230,7 @@ export const FormPlanet = () => {
               <input
                 type="email"
                 id="email"
-                className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                className="bg-gray-200  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                 placeholder="user@gmail.com"
                 required
                 name="email"
@@ -248,7 +248,7 @@ export const FormPlanet = () => {
               <input
                 type="password"
                 id="password"
-                className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                className="bg-gray-200  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                 placeholder="•••••••••"
                 required
                 name="password"
@@ -266,7 +266,7 @@ export const FormPlanet = () => {
               <input
                 type="password"
                 id="confirm_password"
-                className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                className="bg-gray-200  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                 placeholder="•••••••••"
                 required
                 name="password_confirm"
@@ -297,13 +297,13 @@ export const FormPlanet = () => {
                 .
               </label>
             </div>
-            <div className="w-full flex justify-center">
+            <div className="w-full flex justify-center md:justify-start">
 
             <button
               type="submit"
-              className="text-white  bg-yellow-600 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center md:w-1/4 "
+              className="text-white  bg-yellow-600 hover:bg-yellow-600 hover:ring-yellow-600 hover:ring-2 active:ring-0 ring-yellow-600  font-medium rounded-lg text-sm md:text-lg xl:text-xl w-full sm:w-auto px-5 py-2.5 text-center md:w-1/4 "
               >
-              Submit
+              Submit 
             </button>
               </div>
           </form>
