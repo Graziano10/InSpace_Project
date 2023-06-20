@@ -13,6 +13,12 @@ export const FormPlanet = () => {
   const first_name = useRef();
   const password_confirm = useRef();
 
+  const [isActive, setIsAcive] = useState(false)
+
+  const handleToggle = () => {
+    setIsAcive(!isActive)
+  }
+
   const [data, setData] = useState({
     firstname: "",
     lastname: "",
@@ -65,15 +71,26 @@ export const FormPlanet = () => {
         theme="dark"
       />
       <nav className=" w-screen h-20  flex items-center bg-[#04091b] ">
-        <RegBurger />
+        <RegBurger isActive={isActive} handleToggle={handleToggle}/>
         <RegLogo />
       </nav>
+
+      <aside className="absolute top-20  w-full h-2/5 flex  bg-[#04091b]/90 text-xl">
+        <ul className="text-white ring w-full flex justify-evenly items-center flex-col ">
+          <li>Homepage</li>
+         
+          <li>Wikiplanets</li>
+         
+          <li>Login</li>
+        </ul>
+      </aside>
+
 
       <section
         id="content"
         className="bg-form-bg bg-cover bg-center flex flex-col md:h-fit  "
       >
-        <article className=" flex flex-row h-fit w-screen ">
+        <article className=" flex flex-row  w-screen ">
           <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center h-screen  ">
             <div className="overlay flex justify-center items-center ">
               {/* testi pc */}
@@ -91,7 +108,7 @@ export const FormPlanet = () => {
             action="/register"
             method="POST"
             onSubmit={handleSubmit}
-            className="px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950  md:pt-20   xl:bg-gradient-to-b xl:from-orange xl:to-black "
+            className="px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950  md:pt-10   xl:bg-gradient-to-b xl:from-orange xl:to-black "
           >
             <div className="grid gap-6 my-6 md:grid-cols-2">
               <div>
