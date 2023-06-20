@@ -97,10 +97,10 @@ export const FormPlanet = () => {
 
       <section
         id="content"
-        className="bg-form-bg bg-cover bg-center flex flex-col md:h-fit  "
+        className="bg-form-bg bg-cover bg-center flex flex-row md:h-min md:pt-20  "
       >
-        <article className=" flex flex-row  w-screen ">
-          <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center h-screen  ">
+        
+          <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center h-full  ">
             <div className="overlay flex justify-center items-center ">
               {/* testi pc */}
 
@@ -117,7 +117,7 @@ export const FormPlanet = () => {
             action="/register"
             method="POST"
             onSubmit={handleSubmit}
-            className="px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950  md:pt-10   xl:bg-gradient-to-b xl:from-orange xl:to-black "
+            className="px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950  md:pt-10   xl:bg-gradient-to-b xl:from-orange xl:to-black xl:max-w-3xl xl:mx-auto"
           >
             <div className="grid gap-6 my-6 md:grid-cols-2">
               <div>
@@ -301,7 +301,7 @@ export const FormPlanet = () => {
             </button>
               </div>
           </form>
-        </article>
+        
       </section>
         <div className="xl:w-full ">
         <FooterLinks />
