@@ -99,9 +99,9 @@ export const FormPlanet = () => {
             action="/register"
             method="POST"
             onSubmit={handleSubmit}
-            className=" px-10 sm: pb-10 w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950 lg: pt-20  xl:h-screen   xl:bg-gradient-to-b xl:from-orange xl:to-black"
+            className=" ring px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950   xl:h-screen   xl:bg-gradient-to-b xl:from-orange xl:to-black"
           >
-            <div className="grid gap-6 my-6 md:grid-cols-2 xl:mt-130 ">
+            <div className="grid gap-6 my-6 md:grid-cols-2">
               <div>
                 <label
                   htmlFor="firstname"
@@ -281,13 +281,11 @@ export const FormPlanet = () => {
             </button>
           </form>
         </Fade>
-        {/* <div className="xl:hidden"> */}
-        {/* </div> */}
+          <div className="xl:hidden ">
+            <FooterLinks />
+          </div>
       </section>
 
-      <div className="xl:hidden ">
-        <FooterLinks />
-      </div>
     </div>
   );
 };
