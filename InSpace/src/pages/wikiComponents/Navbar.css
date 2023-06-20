@@ -150,13 +150,6 @@
   
 
 
-  @media screen and (min-width: 391px){
-
-    .wiki-container .wikiTitle {
-      font-size: 70px;
-      margin-top: 50px;
-    }
-  }
   
 
  
@@ -189,19 +182,24 @@
     }
   } 
   @media screen and (max-width: 390px) {
-    .wiki-container {
-      font-size: 20px;
-      margin-top: 50px;
+    .wiki-container .wikiTitle {
+      font-size: 30px;
+      margin-top: 30px;
       justify-content: center;
     }
-    .wiki-container video{
-      width: 100vw;
-      object-fit: cover;
+    
+  }
 
+  @media screen and (max-width: 414px) {
+    .wiki-container .wikiTitle {
+      font-size: 30px;
+      margin-top: 10px;
+      justify-content: center;
     }
-    .wikiTitle{
-      display: hidden;
+    .rocket{
+      display: none;
     }
+    
   }
 
   .launch-time {
@@ -237,6 +235,11 @@
     right: 10%;
     bottom: 0;
     animation: rocket 4s linear infinite;
+  }
+  @media screen and (max-width: 390px){
+    .rocket{
+      display: none;
+    }
   }
   @keyframes rocket{
     0%{

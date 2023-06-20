@@ -1,26 +1,18 @@
 // import bg_img from '../assets/formBg.png'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./formPlanet.css";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 import FooterLinks from "../components/atoms/FooterLinks";
+import RegBurger from "../components/atoms/RegBurger";
+import RegLogo from "../components/atoms/RegLogo";
 
 export const FormPlanet = () => {
-  const notify = () =>
-    toast.error("Passwords do not match ☄️", {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-
+  const first_name = useRef();
   const password_confirm = useRef();
+
   const [data, setData] = useState({
     firstname: "",
     lastname: "",
@@ -42,59 +34,66 @@ export const FormPlanet = () => {
     setData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  useEffect(() => {
+    first_name.current.focus();
+  });
+
+  const notify = () =>
+    toast.error("Passwords do not match ☄️", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
   return (
-    <>
+    <div className="flex flex-col h-screen">
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+      <nav className=" w-screen h-20  flex items-center bg-[#04091b] ">
+        <RegBurger />
+        <RegLogo />
+      </nav>
+
       <section
         id="content"
-        className=" bg-form-bg bg-cover bg-center  flex flex-col h-s md:items-center  xl:justify-end xl:items-start  xl:flex-row "
+        className="bg-form-bg bg-cover bg-center flex flex-col md:h-full  "
       >
-        <ToastContainer
-          position="bottom-right"
-          autoClose={5000}
-          hideProgressBar={true}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
-        <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center w-1/2 h-screen  ">
-          <Fade>
-            <div className="overlay flex justify-center items-center bg-">
+        <article className=" flex flex-row h-screen w-screen ">
+          <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center h-screen  ">
+            <div className="overlay flex justify-center items-center ">
               {/* testi pc */}
-              <Fade bottom delay={500}>
-                <div className="flex flex-col items-center w-full p-5 m-auto rounded-xl">
-                  <h1 className="text-white text-7xl mb-1 italic">
-                    Be the next
-                  </h1>
-                  <p className="text-white text-3xl ">
-                    Universe is waiting for you
-                  </p>
-                </div>
-              </Fade>
+
+              <div className="flex flex-col items-center p-5 ">
+                <h1 className="text-white text-7xl mb-1 italic">Be the next</h1>
+                <p className="text-white text-3xl ">
+                  Universe is waiting for you
+                </p>
+              </div>
             </div>
-          </Fade>
-        </div>
+          </div>
 
-        <Link
-          to="/"
-          className=" flex justify-center items-center bg-logo h-20  bg-center bg-no-repeat md:w-full xl:hidden"
-        />
-
-        <Fade>
           <form
             action="/register"
             method="POST"
             onSubmit={handleSubmit}
-            className="w-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950 p-6   xl:w-1/2 xl:h-screen xl:my-0  xl:bg-gradient-to-b xl:from-orange xl:to-black "
+            className="px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950  md:pt-20   xl:bg-gradient-to-b xl:from-orange xl:to-black "
           >
-            <Link to="/">
-              <div className="logo w-1/3 h-10 bg-logo bg-cover bg-center xl: m-auto"></div>
-            </Link>
-
-            <div className="grid gap-6 my-6 md:grid-cols-2 xl:mt-10 ">
+            <div className="grid gap-6 my-6 md:grid-cols-2">
               <div>
                 <label
                   htmlFor="firstname"
@@ -105,12 +104,13 @@ export const FormPlanet = () => {
                 <input
                   type="text"
                   id="firstname"
-                  className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="  bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 "
                   placeholder="firstname"
                   required
                   name="firstname"
                   value={data.firstname}
                   onChange={handleChange}
+                  ref={first_name}
                 />
               </div>
               <div>
@@ -123,7 +123,7 @@ export const FormPlanet = () => {
                 <input
                   type="text"
                   id="lastname"
-                  className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="lastname"
                   required
                   name="lastname"
@@ -141,7 +141,7 @@ export const FormPlanet = () => {
                 <input
                   type="text"
                   id="company"
-                  className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="Italy , United States, United Kingdom..."
                 />
               </div>
@@ -155,7 +155,7 @@ export const FormPlanet = () => {
                 <input
                   type="text"
                   id="text"
-                  className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="Address"
                 />
               </div>
@@ -169,7 +169,7 @@ export const FormPlanet = () => {
                 <input
                   type="tel"
                   id="age"
-                  className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="Phone number"
                 />
               </div>
@@ -183,7 +183,7 @@ export const FormPlanet = () => {
                 <input
                   type="number"
                   id="age"
-                  className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="Age"
                 />
               </div>
@@ -198,7 +198,7 @@ export const FormPlanet = () => {
               <input
                 type="email"
                 id="email"
-                className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                 placeholder="user@gmail.com"
                 required
                 name="email"
@@ -216,7 +216,7 @@ export const FormPlanet = () => {
               <input
                 type="password"
                 id="password"
-                className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                 placeholder="•••••••••"
                 required
                 name="password"
@@ -234,7 +234,7 @@ export const FormPlanet = () => {
               <input
                 type="password"
                 id="confirm_password"
-                className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-200 focus:border-yellow-600 border-2 border-solid focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                 placeholder="•••••••••"
                 required
                 name="password_confirm"
@@ -272,15 +272,12 @@ export const FormPlanet = () => {
               Submit
             </button>
           </form>
-        </Fade>
-        {/* <div className="xl:hidden"> */}
-        {/* </div> */}
+        </article>
+        <div className="xl:w-full ">
+          <FooterLinks />
+        </div>
       </section>
-      <div className="xl:hidden ">
-      <FooterLinks />
-      </div>
-        
-    </>
+    </div>
   );
 };
 
