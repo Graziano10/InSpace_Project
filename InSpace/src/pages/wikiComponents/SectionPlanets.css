@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .Middlepart {
-  padding: 40px 40px;
+  padding: 40px 0px;
   background-color: #04091b;
 }
 .Container {
@@ -159,15 +159,15 @@
 }
 @media (max-width: 686px) {
   .Middlepart {
-    padding: 40px 40px;
+    padding: 0px 0px;
     background-color: #010001;
     height: 200vh;
   }
 }
 @media (max-width: 821px) {
   .Middlepart {
-    padding: 40px 40px;
-    background-color: #010001;
+    padding: 66px 30px;
+    background-color: #04091b;
     height: 175vh;
   }
   .Container {
@@ -220,9 +220,10 @@
     left: 27%;
   }
   .Middlepart {
-    padding: 40px 40px;
+    padding: 45px 46px;
     background-color: #04091b;
     height: 165vh;
     width: 100%;
   }
 }
+/* padding left right 12 */

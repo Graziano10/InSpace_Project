@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./card.css";
+import Fade from "react-reveal/Fade";
 
 import { useState } from "react";
 function Cards() {
@@ -14,7 +15,7 @@ function Cards() {
         3,389.5 km and has a surface gravity of 3.72 m/s2 , which is 38% of
         Earth's gravity.
       </p>
-      <Link to={"Explor-Planets"}>
+      <Link to="/Login">
         {" "}
         <button>Explore</button>{" "}
       </Link>
@@ -310,31 +311,37 @@ function Cards() {
   };
   return (
     <>
-      <div className="BannerButton">
-        <button onClick={reset}>Mars</button>
-        <button onClick={handleclickMoon}>Moon</button>
-        <button onClick={handleclickSaturn}>Saturn</button>
-        <button onClick={handleclickjupiter}>Jupiter</button>
-      </div>
-      <div className="card-container-planet">
-        <div className="row">
-          <div className="col main-paragraph">{initialParagraph}</div>
-          <div className="wrapcard">
-            <div className="col">
-              <div className="cards card1">{initialCard1}</div>
-            </div>
-            <div className="col">
-              <div className="cards card2">{initialCard2}</div>
-            </div>
-            <div className="col">
-              <div className="cards card3">{initialCard3}</div>
-            </div>
-            <div className="col">
-              <div className="cards card4">{initialCard4}</div>
-            </div>
+      <Fade bottom delay={1000}>
+        <div className="BannerButton">
+          <button onClick={reset}>Mars</button>
+          <button onClick={handleclickMoon}>Moon</button>
+          <button onClick={handleclickSaturn}>Saturn</button>
+          <button onClick={handleclickjupiter}>Jupiter</button>
+        </div>
+        <div className="card-container-planet">
+          <div className="row">
+            <Fade  top delay={1500}>
+              <div className="col main-paragraph">{initialParagraph}</div>
+            </Fade>
+            <Fade  top delay={1500}>
+              <div className="wrapcard">
+                <div className="col">
+                  <div className="cards card1">{initialCard1}</div>
+                </div>
+                <div className="col">
+                  <div className="cards card2">{initialCard2}</div>
+                </div>
+                <div className="col">
+                  <div className="cards card3">{initialCard3}</div>
+                </div>
+                <div className="col">
+                  <div className="cards card4">{initialCard4}</div>
+                </div>
+              </div>
+            </Fade>
           </div>
         </div>
-      </div>
+      </Fade>
     </>
   );
 }
