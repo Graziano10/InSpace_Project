@@ -107,13 +107,13 @@ export const FormPlanet = () => {
               {/* testi pc */}
 
               <div className="flex flex-col items-center p-5 ">
-                <Fade>
+                
 
                 <h1 className="text-white text-7xl mb-1 italic">Be the next</h1>
                 <p className="text-white text-3xl ">
                   Universe is waiting for you
                 </p>
-                </Fade>
+                
               </div>
             </div>
           </div>
