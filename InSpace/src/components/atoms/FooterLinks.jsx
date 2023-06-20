@@ -3,7 +3,7 @@ import ScrollTop from "./ScrollTop";
 const FooterLinks = () => {
 return(
     <div >
-        <section class="  bg-[#04091b] h-full">
+        <section class="  bg-[#04091b]">
           <div class="  py-12 mx-auto space-y-12  sm:px-6 lg:px-8 ">
             <nav class="flex flex-wrap justify-center">
               <div class="px-5 py-2">
@@ -55,6 +55,13 @@ return(
                 </a>
               </div>
             </nav>
+            <div className=" p-4 flex justify-center mt-8 space-x-6">
+              <a className="h-24 w-24"><img className="rounded-full" src="\src\assets\assets-footer\stefano.png" alt="" /></a>
+              <a className="h-24 w-24"><img className="rounded-full" src="\src\assets\assets-footer\paolobaiada.png" alt="" /></a>
+              <a className="h-24 w-24 "><img className="rounded-full" src="\src\assets\assets-footer\graziano.png" alt="" /></a>
+              <a className="h-24 w-24 "></a>
+              <a className="h-24 w-24 "></a>
+            </div>
             <div class="flex justify-center mt-8 space-x-6">
               <a href="#" class="text-gray-400 hover:text-white">
                 <span class="sr-only">Facebook</span>
