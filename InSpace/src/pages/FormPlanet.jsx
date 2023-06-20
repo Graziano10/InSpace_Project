@@ -72,22 +72,23 @@ export const FormPlanet = () => {
       />
       <nav className=" w-screen h-20  flex items-center bg-[#04091b] sticky top-0 z-10000 md:static">
         <div  className="hidden xl:block text-white  relative left-10 ">
-          <Link to="/Wiki-Planet"> <h2>Explore Planets</h2></Link>
+          <Link to="/Wiki-Planet"> <h2  className="hover:text-slate-300" >Explore Planets</h2></Link>
         </div>
         <RegBurger isActive={isActive} handleToggle={handleToggle}/>
         <RegLogo/>
         <div  className="hidden xl:block text-white relative right-10">
-          <Link to="/Login"><h2>login</h2></Link>
+          <Link to="/Login"><h2  className="hover:text-slate-300">login</h2></Link>
         </div>
         <Fade>
-        <aside className={` ${isActive ? 'absolute top-20  w-full h-fit flex  bg-[#04091b]/90 text-xl' : 'hidden'}`}>
+
+        <aside className={` ${isActive ? 'absolute top-20  w-full h-fit flex  bg-[#04091b]/95 text-xl' : 'hidden'}`}>
           <ul className="text-white rounded-br-xl rounded-bl-xl w-full flex justify-evenly items-center flex-col  gap-10 py-10 shadow-sxl md:gap-48 md:py-20 md:text-5xl">
-            <Link to="/"><li>Homepage</li></Link>
+            <Link to="/"><li className="active:text-yellow-600">Homepage</li></Link>
           
                
-            <Link to="/Wiki-Planet"><li>Explore Planets</li></Link>
+            <Link to="/Wiki-Planet"><li  className="active:text-yellow-600">Explore Planets</li></Link>
           
-            <Link to="/Login"><li>Login</li></Link>
+            <Link to="/Login"><li  className="active:text-yellow-600">Login</li></Link>
           </ul>
         </aside>
         </Fade>
