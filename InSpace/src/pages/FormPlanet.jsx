@@ -52,51 +52,46 @@ export const FormPlanet = () => {
 
   return (
     <div className="flex flex-col h-screen">
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+      <nav className=" w-screen h-20  flex items-center bg-[#04091b] ">
+        <RegBurger />
+        <RegLogo />
+      </nav>
+
       <section
         id="content"
-        className="bg-form-bg bg-cover bg-center flex flex-col md:h-full  xl:h-full  xl:items-start xl:flex-row "
+        className="bg-form-bg bg-cover bg-center flex flex-col md:h-full  "
       >
-        <ToastContainer
-          position="bottom-right"
-          autoClose={5000}
-          hideProgressBar={true}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
-        <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center h-screen  ">
-          <Fade>
+        <article className=" flex flex-row h-screen w-screen ">
+          <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center h-screen  ">
             <div className="overlay flex justify-center items-center ">
               {/* testi pc */}
-              <Fade bottom delay={500}>
-                <div className="flex flex-col items-center p-5 ">
-                  <h1 className="text-white text-7xl mb-1 italic">
-                    Be the next
-                  </h1>
-                  <p className="text-white text-3xl ">
-                    Universe is waiting for you
-                  </p>
-                </div>
-              </Fade>
+
+              <div className="flex flex-col items-center p-5 ">
+                <h1 className="text-white text-7xl mb-1 italic">Be the next</h1>
+                <p className="text-white text-3xl ">
+                  Universe is waiting for you
+                </p>
+              </div>
             </div>
-          </Fade>
-        </div>
+          </div>
 
-        <nav className=" w-screen h-20  flex items-center bg-[#04091b] ">
-          <RegBurger />
-          <RegLogo />
-        </nav>
-
-        <Fade>
           <form
             action="/register"
             method="POST"
             onSubmit={handleSubmit}
-            className="  px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950  md:pt-20 xl:h-screen   xl:bg-gradient-to-b xl:from-orange xl:to-black"
+            className="px-8 pb-10  w-full h-full  shadow-2xl bg-gradient-to-b from-transparent to-blue-950  md:pt-20   xl:bg-gradient-to-b xl:from-orange xl:to-black "
           >
             <div className="grid gap-6 my-6 md:grid-cols-2">
               <div>
@@ -277,8 +272,8 @@ export const FormPlanet = () => {
               Submit
             </button>
           </form>
-        </Fade>
-        <div className="xl:hidden ">
+        </article>
+        <div className="xl:w-full ">
           <FooterLinks />
         </div>
       </section>
