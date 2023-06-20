@@ -73,7 +73,7 @@ export const FormPlanet = () => {
         id="content"
         className="bg-form-bg bg-cover bg-center flex flex-col md:h-full  "
       >
-        <article className=" flex flex-row h-screen w-screen ">
+        <article className=" flex flex-row h-fit w-screen ">
           <div className=" backy bg-form-bg8 bg-no-repeat  bg-cover bg-center h-screen  ">
             <div className="overlay flex justify-center items-center ">
               {/* testi pc */}
@@ -273,10 +273,10 @@ export const FormPlanet = () => {
             </button>
           </form>
         </article>
-        <div className="xl:w-full ">
-          <FooterLinks />
-        </div>
       </section>
+        <div className="xl:w-full ">
+        <FooterLinks />
+        </div>
     </div>
   );
 };

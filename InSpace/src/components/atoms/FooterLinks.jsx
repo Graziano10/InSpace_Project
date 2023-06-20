@@ -4,7 +4,7 @@ const FooterLinks = () => {
 return(
     <div >
 
-        <section class="  bg-[#04091b] ">
+        <section class="  bg-[#04091b]">
           <div class="  py-12 mx-auto space-y-12  sm:px-6 lg:px-8 ">
 
             <nav class="flex flex-wrap justify-center">
