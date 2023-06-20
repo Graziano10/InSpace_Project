@@ -71,8 +71,14 @@ export const FormPlanet = () => {
         theme="dark"
       />
       <nav className=" w-screen h-20  flex items-center bg-[#04091b] sticky top-0">
+        <div  className="hidden xl:block text-white  relative left-10 ">
+          <h2>Explore Planets</h2>
+        </div>
         <RegBurger isActive={isActive} handleToggle={handleToggle}/>
-        <RegLogo isActive={isActive}/>
+        <RegLogo/>
+        <div  className="hidden xl:block text-white relative right-10">
+          <h2>login</h2>
+        </div>
         <aside className={` ${isActive ? 'absolute top-20  w-full h-fit flex  bg-[#04091b]/90 text-xl' : 'hidden'}`}>
           <ul className="text-white rounded-br-xl rounded-bl-xl w-full flex justify-evenly items-center flex-col  gap-10 py-10 shadow-sxl md:gap-48 md:py-20 md:text-5xl">
             <Link to="/"><li>Homepage</li></Link>
