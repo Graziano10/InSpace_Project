@@ -13,10 +13,10 @@ export const FormPlanet = () => {
   const first_name = useRef();
   const password_confirm = useRef();
 
-  const [isActive, setIsAcive] = useState(false)
+  const [isActive, setIsActive] = useState(false)
 
   const handleToggle = () => {
-    setIsAcive(!isActive)
+    setIsActive(!isActive)
   }
 
   const [data, setData] = useState({
@@ -70,12 +70,12 @@ export const FormPlanet = () => {
         pauseOnHover
         theme="dark"
       />
-      <nav className=" w-screen h-20  flex items-center bg-[#04091b] ">
+      <nav className=" w-screen h-20  flex items-center bg-[#04091b] sticky top-0">
         <RegBurger isActive={isActive} handleToggle={handleToggle}/>
         <RegLogo />
       </nav>
 
-      <aside className="absolute top-20  w-full h-2/5 flex  bg-[#04091b]/90 text-xl">
+      <aside className={` ${isActive ? 'absolute top-20  w-full h-2/5 flex  bg-[#04091b]/90 text-xl' : 'hidden'}`}>
         <ul className="text-white ring w-full flex justify-evenly items-center flex-col ">
           <li>Homepage</li>
          
