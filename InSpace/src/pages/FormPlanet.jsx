@@ -72,18 +72,18 @@ export const FormPlanet = () => {
       />
       <nav className=" w-screen h-20  flex items-center bg-[#04091b] sticky top-0">
         <RegBurger isActive={isActive} handleToggle={handleToggle}/>
-        <RegLogo />
+        <RegLogo isActive={isActive}/>
+        <aside className={` ${isActive ? 'absolute top-20  w-full h-fit flex  bg-[#04091b]/90 text-xl' : 'hidden'}`}>
+          <ul className="text-white rounded-br-xl rounded-bl-xl w-full flex justify-evenly items-center flex-col  gap-10 py-10 shadow-sxl md:gap-48 md:py-20 md:text-5xl">
+            <Link to="/"><li>Homepage</li></Link>
+               
+            <Link to="/Wiki-Planet"><li>Wikiplanets</li></Link>
+          
+            <Link to="/Login"><li>Login</li></Link>
+          </ul>
+        </aside>
       </nav>
 
-      <aside className={` ${isActive ? 'absolute top-20  w-full h-2/5 flex  bg-[#04091b]/90 text-xl' : 'hidden'}`}>
-        <ul className="text-white ring w-full flex justify-evenly items-center flex-col ">
-          <li>Homepage</li>
-         
-          <li>Wikiplanets</li>
-         
-          <li>Login</li>
-        </ul>
-      </aside>
 
 
       <section
