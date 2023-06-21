@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector} from "react-redux";
 import { logout } from "../../../store/authSlice";
+import Fade from "react-reveal/Fade";
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
+  const animationFadeDuration = 800;
 
   const token = useSelector((state) => state.auth.token);
 
@@ -44,7 +46,8 @@ const HamburgerMenu = () => {
         </svg>
       </button>
       {isOpen && (
-        <div className=" flex flex-col text-xl absolute top-0.5 right-0 mt-[30px] w-[321px] h-[600px] bg-[#020617] shadow-black shadow-xl transition-transform transform translate-x-[12%] z-150 rounded-xl md:mt-[54px]">
+                <Fade Right duration={animationFadeDuration} >
+        <div className=" flex flex-col text-xl absolute top-0.5 right-0 left-[-255px] mt-[30px] w-[321px] h-[600px] bg-[#020617] shadow-black shadow-xl transition-transform transform translate-x-[12%] z-150 rounded-xl md:mt-[54px]">
           <ul className="py-2 mt-6 flex flex-col flex-1">
             <li className="px-4 py-2  hover:bg-gray-700  cursor-pointer mb-10">
               <Link
@@ -168,6 +171,7 @@ const HamburgerMenu = () => {
             </a>
           </div>
         </div>
+        </Fade>
       )}
     </div>
   );
