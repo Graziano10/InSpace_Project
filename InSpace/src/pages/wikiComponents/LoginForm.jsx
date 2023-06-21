@@ -11,73 +11,65 @@ import Fade from "react-reveal/Fade";
 import NavBar from "./NavBar2";
 
 const LoginForm = () => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+  
+    const [form, setForm] = useState({
+      email: "",
+      password: "",
+    });
+  
+    const emailRef = useRef();
+  
+    const handleInput = (event) => {
+      setForm((_form) => ({
+        ..._form,
+        [event.target.name]: event.target.value,
+      }));
+    };
+  
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      
+      try {
+        const results = await axios({
+          url: "http://localhost:3000/users/login",
+          method: "POST",
+          data: {
+            ...form,
+          },
+        });
+        
+        if(results.status == 200) {
+          const data = results.data; // -> { user: { ... }, token: ... }
+          dispatch(login(data));
+          navigate("/");
+        } else {
+          toast.error("User not found!");
+          setForm({
+            email: "",
+            password: "",
+          });
+        }
 
-  const [form, setForm] = useState({
-    email: "",
-    password: "",
-  });
-
-  const emailRef = useRef();
-
-  const handleInput = (event) => {
-    setForm((_form) => ({
-      ..._form,
-      [event.target.name]: event.target.value,
-    }));
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const results = await axios({
-        url: "http://localhost:3000/users/login",
-        method: "POST",
-        data: {
-          ...form,
-        },
-      });
-
-      if (results.status == 200) {
-        const data = results.data; // -> { user: { ... }, token: ... }
-        dispatch(login(data));
-        navigate("/");
-      } else {
+      } catch (err) {
+        console.error(err);
         toast.error("User not found!");
         setForm({
           email: "",
           password: "",
         });
+        emailRef.current.focus();
       }
-    } catch (err) {
-      console.error(err);
-      toast.error("User not found!");
-      setForm({
-        email: "",
-        password: "",
-      });
-      emailRef.current.focus();
-    }
-  };
-  return (
-    <>
-      <div>
-        <section className="section-login flex flex-col relative">
-          <div className="absolute top-0 w-full z-50">
-            <NavBar />
-          </div>
-          <div className="background ring w-full h-full flex justify-center items-center relative">
-            <Fade top>
-              <div className="login-box x:absolute top-10">
-                <form
-                  className="formPageLogin"
-                  action=""
-                  onSubmit={handleSubmit}
-                >
-                  <h2 className="login-h2">Login</h2>
-                  <div className="input-box">
+    };
+    return(
+  <section className='section-login'>
+        <div className="background">
+          <Fade top>
+        <div className="login-box">
+            <form className='formPageLogin' action="" onSubmit={handleSubmit}>
+                <h2 className='login-h2'>Login</h2>
+                <div className="input-box">
                     <span className="icon"></span>
                     <input
                       type="email"
