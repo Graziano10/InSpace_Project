@@ -31,7 +31,8 @@ export const FormPlanet = () => {
     if (data.password !== password_confirm.current.value) {
       notify();
     } else {
-      console.log(data);
+      // console.log(data);
+      
     }
   };
 
