@@ -65,6 +65,7 @@ const LoginForm = () => {
     };
     return(
   <section className='section-login'>
+    
         <div className="background">
           <Fade top>
         <div className="login-box">
