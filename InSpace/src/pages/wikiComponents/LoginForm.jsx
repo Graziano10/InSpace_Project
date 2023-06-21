@@ -63,10 +63,14 @@ const LoginForm = () => {
       }
     };
     return(
+      <>
   <section className='section-login'>
-        <div className="background">
+     <div className="absolute top-0 w-full z-50">
+            <NavBar />
+          </div>
+        <div className="background  w-full h-full flex justify-center items-center relative">
           <Fade top>
-        <div className="login-box">
+        <div className="login-box x:absolute top-10">
             <form className='formPageLogin' action="" onSubmit={handleSubmit}>
                 <h2 className='login-h2'>Login</h2>
                 <div className="input-box">
@@ -126,8 +130,7 @@ const LoginForm = () => {
             ></script>
           </div>
         </section>
-      </div>
-    </>
+        </>
   );
 };
 
