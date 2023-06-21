@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade } from "react-bootstrap";
+import { Fade } from "react-reveal";
 
 const RegBurger = ({isActive , handleToggle}) => {
   return (

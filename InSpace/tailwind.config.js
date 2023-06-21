@@ -11,6 +11,8 @@ export default {
 
       mdd: "857px",
 
+      x: "1025",
+
       xl: "1280px",
 
       "3xl": "1900px",
