@@ -8,7 +8,7 @@ import { login } from "../../store/authSlice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Fade from "react-reveal/Fade";
-import NavBar from "./NavBar2";
+import NavBar from "../../components/bundles/header/NavBar";
 
 const LoginForm = () => {
     const dispatch = useDispatch();
@@ -65,7 +65,7 @@ const LoginForm = () => {
     return(
       <>
   <section className='section-login'>
-     <div className="absolute top-0 w-full z-50">
+     <div className="absolute top-0 w-full z-50 text-white">
             <NavBar />
           </div>
         <div className="background  w-full h-full flex justify-center items-center relative">
