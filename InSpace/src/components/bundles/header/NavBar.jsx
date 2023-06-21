@@ -64,7 +64,7 @@ const NavBar = () => {
                   <div className="w-[40px] h-[40px] bg-black rounded-full mr-3">
                     <img src={avatar2} alt="Avatar" onClick={toggleMenu02} className="rounded-full" />
                     {isOpen && (
-                      <div className="absolute left-[42%] z-10 mt-2 bg-white rounded-lg shadow-xl w-[200px] h-[250px] flex flex-col justify-between md:left-[75%] mdd:left-[85%]">
+                      <div className="absolute left-[42%] z-50 mt-2 bg-white rounded-lg shadow-xl w-[200px] h-[250px] flex flex-col justify-between md:left-[75%] mdd:left-[85%]">
                         <div className="w-full h-10 bg-slate-300 rounded-lg mt-4 pl-3 flex items-center hover:bg-slate-400">
                         <button className="text-black"><Link to="/Section-Profile">Window Profile</Link></button>
                         </div>
