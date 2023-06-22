@@ -61,12 +61,12 @@ return(
                 </a>
               </div>
             </nav>
-            <div className=" p-4 flex justify-center mt-8 space-x-6">
-              <a className="h-24 w-24"><img className="rounded-full" src="\src\assets\assets-footer\stefano.png" alt="" /></a>
-              <a className="h-24 w-24"><img className="rounded-full" src="\src\assets\assets-footer\paolobaiada.png" alt="" /></a>
-              <a className="h-24 w-24 "><img className="rounded-full" src="\src\assets\assets-footer\graziano.png" alt="" /></a>
-              <a className="h-24 w-24 "></a>
-              <a className="h-24 w-24 "></a>
+            <div className="p-4 flex justify-center mt-8 space-x-6">
+              <a href="https://www.linkedin.com/in/stefano-macina-leone-239003174/" className="h-24 w-24"><img className="rounded-full" src="\src\assets\assets-footer\stefano.png" alt="" /></a>
+              <a href="https://www.linkedin.com/in/paolobaiada/" className="h-24 w-24"><img className="rounded-full" src="\src\assets\assets-footer\paolobaiada.png" alt="" /></a>
+              <a href="https://www.linkedin.com/in/gaziano-corineo-front-end-developer/" className="h-24 w-24 "><img className="rounded-full" src="\src\assets\assets-footer\graziano.png" alt="" /></a>
+              <a href="https://www.linkedin.com/in/antonio-cammarata-b20538276/" className="h-24 w-24 "><img className="rounded-full" src="\src\assets\assets-footer\antoniocammarata.jpg" alt="" /></a>
+              <a href="https://www.linkedin.com/in/francesco-l-abbate-906253275/" className="h-24 w-24 "><img className="rounded-full" src="\src\assets\assets-footer\antonio.jpg" alt="" /></a>
             </div>
             <div class="flex justify-center mt-8 space-x-6">
               <a href="#" class="text-gray-400 hover:text-white">
