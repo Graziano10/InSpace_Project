@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import FooterLinks from "../components/atoms/FooterLinks";
 import RegBurger from "../components/atoms/RegBurger";
 import RegLogo from "../components/atoms/RegLogo";
+import axios from "axios";
 
 export const FormPlanet = () => {
   const first_name = useRef();
@@ -20,8 +21,8 @@ export const FormPlanet = () => {
   }
 
   const [data, setData] = useState({
-    firstname: "",
-    lastname: "",
+    first_name: "",
+    last_name: "",
     email: "",
     password: "",
   });
@@ -31,10 +32,21 @@ export const FormPlanet = () => {
     if (data.password !== password_confirm.current.value) {
       notify();
     } else {
-      // console.log(data);
-      
+      postData()
     }
   };
+
+  async function postData (){
+    try {
+      const res = await axios.post('http://localhost:3000/register' , data,  {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      })
+    } catch (error) {
+      alert(error.name)
+    }
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -122,6 +134,7 @@ export const FormPlanet = () => {
             
 
           <form
+          id="register_form"
             action="/register"
             method="POST"
             onSubmit={handleSubmit}
@@ -137,12 +150,12 @@ export const FormPlanet = () => {
                 </label>
                 <input
                   type="text"
-                  id="firstname"
+                  id="first_name"
                   className="  bg-gray-200 focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 "
                   placeholder="firstname"
                   required
-                  name="firstname"
-                  value={data.firstname}
+                  name="first_name"
+                  value={data.first_name}
                   onChange={handleChange}
                   ref={first_name}
                 />
@@ -156,12 +169,12 @@ export const FormPlanet = () => {
                 </label>
                 <input
                   type="text"
-                  id="lastname"
+                  id="last_name"
                   className="bg-gray-200  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="lastname"
                   required
-                  name="lastname"
-                  value={data.lastname}
+                  name="last_name"
+                  value={data.last_name}
                   onChange={handleChange}
                 />
               </div>
