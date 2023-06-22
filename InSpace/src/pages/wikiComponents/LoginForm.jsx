@@ -5,7 +5,7 @@ import axios from "axios";
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../../store/authSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Fade from "react-reveal/Fade";
 import NavBar from "../../components/bundles/header/NavBar";
@@ -114,7 +114,7 @@ const LoginForm = () => {
                   </div>
                   <div className="register-link">
                     <p>
-                      Don't have an account?<a href="#">Register</a>
+                      Don't have an account? <Link to='/Form-Planet'>Register</Link>
                     </p>
                   </div>
                 </form>
