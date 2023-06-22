@@ -9,10 +9,12 @@ import FooterLinks from "../components/atoms/FooterLinks";
 import RegBurger from "../components/atoms/RegBurger";
 import RegLogo from "../components/atoms/RegLogo";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const FormPlanet = () => {
   const first_name = useRef();
   const password_confirm = useRef();
+  const navigate = useNavigate()
 
   const [isActive, setIsActive] = useState(false)
 
@@ -43,8 +45,15 @@ export const FormPlanet = () => {
           'Content-Type': 'application/json'
         },
       })
+      if(res.status === 200){
+        alert(res.data.message);
+        navigate('/Login')
+
+      }
+      
+      
     } catch (error) {
-      alert(error.name)
+      alert(error)
     }
   }
 
