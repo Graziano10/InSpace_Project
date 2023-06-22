@@ -54,7 +54,7 @@ const HamburgerMenu = () => {
                 to="/Wiki-Planet"
                 className="px-4 py-2cursor-pointer mb-10"
               >
-                Explor Planets
+                Explore Planets
               </Link>
               <div className="w-full h-[2px] bg-gray-900 mt-2"></div>
             </li>
