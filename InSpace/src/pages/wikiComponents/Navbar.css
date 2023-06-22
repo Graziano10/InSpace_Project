@@ -115,7 +115,7 @@
   .wikiTitle {
     color: #fff;
     font-size: 100px;
-    margin-top: -1000px;
+    /* margin-top: -1000px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -131,8 +131,6 @@
     margin-top: 8px;
     color: #fff;
     font-size: 32px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-      'Lucida Sans', Arial, sans-serif;
   }
   
   .hero-btns {
@@ -146,13 +144,59 @@
   .fa-play-circle {
     margin-left: 4px;
   }
-  
+
+  .launch-time span {
+    margin-left: 10px;
+  }
   
 
+  
+  @media (min-width: 1023px ) and (max-width: 1025px) {
+
+    .wikiTitle {
+      font-size: 5rem;
+      position: absolute;
+      top: 130px;
+    }
+    
+    .wikiP {
+      font-size: 2rem;
+      position: absolute;
+      top: 260px;
+    }
+    
+    .hero-btns {
+      position: absolute;
+      top: 290px;
+    }
+
+    .launch-time {
+      position: absolute;
+      top: 390px;
+
+    }
+    
+  }
 
   
+  @media screen and (max-width: 821px) {
+    
+    .wikiTitle {
+      font-size: 5rem;
+    }
 
- 
+    .wikiP {
+      font-size: 3rem;
+    }
+    
+    .hero-btns {
+
+    }
+
+  }
+
+
+
 
   @media screen and (max-width: 768px) {
 
@@ -161,7 +205,7 @@
       margin-top: 10px;
     }
     
-    @media screen and (min-width: 769px) {
+    @media screen and (max-width: 769px) {
       .wiki-container .wikiTitle {
         font-size: 70px;
         margin-top: 50px;
