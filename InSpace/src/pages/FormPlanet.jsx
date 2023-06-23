@@ -32,7 +32,7 @@ export const FormPlanet = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (data.password !== password_confirm.current.value) {
-      notify();
+      errorNotify();
     } else {
       postData()
     }
@@ -46,8 +46,16 @@ export const FormPlanet = () => {
         },
       })
       if(res.status === 200){
-        alert(res.data.message);
-        navigate('/Login')
+        successfullNotify();
+        setTimeout(() => {
+          setData({
+            first_name: "",
+    last_name: "",
+    email: "",
+    password: "",
+          })
+          navigate('/Login')
+        }, 2500);
 
       }
       
@@ -66,7 +74,19 @@ export const FormPlanet = () => {
     first_name.current.focus();
   },[]);
 
-  const notify = () =>
+  const successfullNotify = () => 
+  toast("Registration successful" , {
+    position: "top-center",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+  })
+
+  const errorNotify = () =>
     toast.error("Passwords do not match ☄️", {
       position: "bottom-right",
       autoClose: 5000,
@@ -80,18 +100,7 @@ export const FormPlanet = () => {
 
   return (
     <div className="flex flex-col h-fit">
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={true}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
+      <ToastContainer/>
       <nav className=" w-screen h-20  flex items-center bg-[#04091b] sticky top-0 z-10000 md:static">
         <div  className="hidden xl:block text-white  relative left-10 ">
           <Link to="/Wiki-Planet"> <h2  className="hover:text-slate-300" >Explore Planets</h2></Link>
