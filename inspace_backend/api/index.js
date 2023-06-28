@@ -1,14 +1,8 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const Pool = require("pg").Pool;
-const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "inspace_db",
-  password: "appleinc1",
-  port: 5432,
-});
+
+
 
 const cors = require("cors");
 
