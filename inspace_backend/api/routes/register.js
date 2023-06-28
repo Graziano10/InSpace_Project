@@ -15,7 +15,11 @@ const registerUser = (req, res) => {
     const newUser = { id, first_name, last_name, email, password };
 
     // Aggiungere il nuovo utente all'array users
-    dbData.users.push(newUser);
+    if(newUser.email in dbData){
+      alert(`user already exist`)
+    } else {
+      dbData.users.push(newUser);
+    }
 
     // Scrivere il file db.json con i nuovi dati
     fs.writeFileSync(filePath, JSON.stringify(dbData, null, 2), 'utf-8');
