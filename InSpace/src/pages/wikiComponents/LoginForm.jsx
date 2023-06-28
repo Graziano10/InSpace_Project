@@ -33,12 +33,13 @@ const LoginForm = () => {
       
       try {
         const results = await axios({
-          url: "http://localhost:3000/users/login",
+          url: "http://localhost:3000/login",
           method: "POST",
           data: {
             ...form,
           },
         });
+        console.log(results)
         
         if(results.status == 200) {
           const data = results.data; // -> { user: { ... }, token: ... }

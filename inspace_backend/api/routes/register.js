@@ -1,29 +1,20 @@
 const fs = require('fs');
 const path = require('path');
+const { PrismaClient } = require('@prisma/client')
+const prisma = new PrismaClient()
 
-const registerUser = (req, res) => {
+const registerUser = async (req, res) => {
     const { first_name, last_name, email, password } = req.body;
-
-    // Leggere il file db.json
-    const filePath = path.join(__dirname, '../data/db.json');
-    const dbData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-
-    // Generare un nuovo ID per l'utente
-    const id = generateId();
-
-    // Creare un nuovo oggetto utente
-    const newUser = { id, first_name, last_name, email, password };
-
-    // Aggiungere il nuovo utente all'array users
-    if(newUser.email in dbData){
-      alert(`user already exist`)
-    } else {
-      dbData.users.push(newUser);
-    }
-
-    // Scrivere il file db.json con i nuovi dati
-    fs.writeFileSync(filePath, JSON.stringify(dbData, null, 2), 'utf-8');
-
+    
+    await prisma.User.create({
+      data: {
+        name: first_name + " " + last_name,
+        email: email,
+        password : password
+      },
+    })
+  
+    
     // Invia una risposta di conferma
     res.status(200).json({ message: 'Registrazione avvenuta con successo!' });
 };
