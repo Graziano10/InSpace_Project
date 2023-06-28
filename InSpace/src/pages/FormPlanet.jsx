@@ -63,31 +63,7 @@ export const FormPlanet = () => {
   }
 
 
-// ------------------------------------------------------------
-// ------------------------------------------------------------ FETCH DATI DA DB.JSON
-  // async function postData() {
-  //   try {
-  //     const res = await axios.post("http://localhost:3000/register", data, {
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     });
-  //     if (res.status === 200) {
-  //       successfullNotify();
-  //       setTimeout(() => {
-  //         setData({
-  //           first_name: "",
-  //           last_name: "",
-  //           email: "",
-  //           password: "",
-  //         });
-  //         navigate("/Login");
-  //       }, 2500);
-  //     }
-  //   } catch (error) {
-  //     alert(error);
-  //   }
-  // }
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
