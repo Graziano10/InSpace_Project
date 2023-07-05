@@ -9,6 +9,7 @@ const loginUser = async (req, res) => {
   const el = await prisma.User.findFirst({
     where: {
       email: email,
+      password: password
     },
   });
   console.log(el);
