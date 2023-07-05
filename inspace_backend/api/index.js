@@ -19,6 +19,9 @@ app.use("/register", require("./routes/register"));
 
 app.use("/login", require("./routes/login-user"));
 
+app.use("/reservation" , require('./routes/reservation'))
+
+
 app.listen(3000, () => {
   console.log("Server up and running on http://localhost:3000...");
 });

@@ -1,4 +1,4 @@
-const fs = require("fs");
+
 const path = require("path");
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
@@ -12,12 +12,11 @@ const loginUser = async (req, res) => {
       password: password
     },
   });
-  console.log(el);
   if (!el) {
     return res.status(500).json({error : "not found"});
   } else {
+    console.log('errore')
     return res.status(200).json({ message: "Benvenuto" });
-    
   }
 
 };
