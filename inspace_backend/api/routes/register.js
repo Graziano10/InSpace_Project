@@ -1,18 +1,23 @@
 const fs = require('fs');
 const path = require('path');
-const { PrismaClient } = require('@prisma/client')
+const { PrismaClient } = require('@prisma/client');
+const { log } = require('console');
 const prisma = new PrismaClient()
 
 const registerUser = async (req, res) => {
     const { first_name, last_name, email, password } = req.body;
     
-    await prisma.User.create({
-      data: {
-        name: first_name + " " + last_name,
-        email: email,
-        password : password
-      },
-    })
+    try {
+      await prisma.User.create({
+        data: {
+          name: first_name + " " + last_name,
+          email: email,
+          password : password
+        },
+      })
+    } catch (error) {
+      log(error)
+    }
   
     
     // Invia una risposta di conferma
