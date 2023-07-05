@@ -46,7 +46,7 @@ export const Reservation = () => {
         },
       });
       if (res.status === 200) {
-        successfullNotify();
+        successReservation();
         setTimeout(() => {
           setData({
             first_name: "",
@@ -54,7 +54,7 @@ export const Reservation = () => {
             email: "",
             password: "",
           });
-          navigate("/Login");
+          navigate("/");
         }, 2500);
       }
     } catch (error) {
@@ -71,8 +71,8 @@ export const Reservation = () => {
     first_name.current.focus();
   }, []);
 
-  const successfullNotify = () =>
-    toast("Registration successful", {
+  const successReservation = () =>
+    toast("Reservation  successful", {
       position: "top-center",
       autoClose: 2500,
       hideProgressBar: false,
@@ -83,17 +83,17 @@ export const Reservation = () => {
       theme: "dark",
     });
 
-  const errorNotify = () =>
-    toast.error("Passwords do not match ☄️", {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
+//   const errorNotify = () =>
+//     toast.error("Passwords do not match ☄️", {
+//       position: "bottom-right",
+//       autoClose: 5000,
+//       hideProgressBar: true,
+//       closeOnClick: true,
+//       pauseOnHover: true,
+//       draggable: true,
+//       progress: undefined,
+//       theme: "dark",
+//     });
 
   return (
     <div className="flex flex-col h-fit">
@@ -147,7 +147,7 @@ export const Reservation = () => {
 
             <div className="flex flex-col items-center p-5 md:pt-10">
               <h1 className="text-white text-7xl mb-1 italic">
-                Reserve The experiences
+                Be The Next Choice
               </h1>
               <p className="text-white text-4xl">Universe is waiting for you</p>
             </div>
