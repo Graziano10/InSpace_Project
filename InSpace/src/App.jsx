@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SectionProfile from './pages/SectionProfile';
 import Footer from "./components/bundles/footer/Footer";
+import Reservation from "./pages/Reservation";
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
         <Link to="/Wiki-Planet">WikiPlanets</Link>
         <Link to="/Login">Login</Link>
         <Link to="/Section-Profile">SectionProfile</Link>
+        <Link to="/reservation">Reservation</Link>
       </nav>
       
         <Routes>
@@ -29,6 +31,7 @@ const App = () => {
           <Route path="/form-planet" element={<FormPlanet />} />
           <Route path="/login" element={<Login />} />
           <Route path="/section-profile" element={<SectionProfile/>}/>
+          <Route path="/reservation" element={<Reservation/>}/>
         </Routes>
 
     </>
