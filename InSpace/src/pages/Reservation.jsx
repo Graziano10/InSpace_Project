@@ -25,22 +25,19 @@ export const Reservation = () => {
   const [data, setData] = useState({
     first_name: "",
     last_name: "",
-    email: "",
-    password: "",
+    date: "",
+    planet: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (data.password !== password_confirm.current.value) {
-      errorNotify();
-    } else {
-      postData();
-    }
+    
+      postData()
   };
 
   async function postData() {
     try {
-      const res = await axios.post("http://localhost:3000/register", data, {
+      const res = await axios.post("http://localhost:3000/reservation", data, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -51,8 +48,8 @@ export const Reservation = () => {
           setData({
             first_name: "",
             last_name: "",
-            email: "",
-            password: "",
+            date: "",
+            planet: "",
           });
           navigate("/");
         }, 2500);
@@ -83,17 +80,7 @@ export const Reservation = () => {
       theme: "dark",
     });
 
-//   const errorNotify = () =>
-//     toast.error("Passwords do not match ☄️", {
-//       position: "bottom-right",
-//       autoClose: 5000,
-//       hideProgressBar: true,
-//       closeOnClick: true,
-//       pauseOnHover: true,
-//       draggable: true,
-//       progress: undefined,
-//       theme: "dark",
-//     });
+
 
   return (
     <div className="flex flex-col h-fit">
@@ -226,13 +213,17 @@ export const Reservation = () => {
                 placeholder="Address"
               /> */}
               <select
-                id="myDropdown"
+                id="planet"
+                name="planet"
+                value={data.planet}
+                onChange={handleChange}
                 class="block w-full px-2 py-2 rounded-md border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               >
-                <option value="opzione1">Moon</option>
-                <option value="opzione2">Mars</option>
-                <option value="opzione3">Saturn</option>
-                <option value="opzione4">Jupiter</option>
+                <option value="">Select a planet</option> 
+                <option value="Moon">Moon</option>
+                <option value="Mars">Mars</option>
+                <option value="Saturn">Saturn</option>
+                <option value="Jupiter">Jupiter</option>
               </select>
             </div>
             <div>
@@ -243,10 +234,14 @@ export const Reservation = () => {
                 Starting Date
               </label>
               <input
+                onChange={handleChange}
                 type="date"
+                name="date"
+                value={data.date}
+                id='date'
                 min="2023-08-01"
                 max="2023-09-30"
-                id="date"
+    
                 className="bg-gray-200 focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                 placeholder="Starting Date"
               />
