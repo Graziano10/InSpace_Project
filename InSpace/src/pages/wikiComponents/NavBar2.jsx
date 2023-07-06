@@ -104,7 +104,7 @@ const NavBar = () => {
                   to="/Form-Planet"
                   className="text-white hover:text-gray-300 text-xl font-medium mdd:block xs:hidden"
                 >
-                  Sign in
+                  Sign Up
                 </Link>
               </div>
             )}

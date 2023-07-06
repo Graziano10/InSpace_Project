@@ -70,7 +70,7 @@ const HamburgerMenu = () => {
             </li>
             <li className="px-4 py-2 cursor-pointer mb-10 hover:bg-gray-700">
               <Link to="/Form-Planet" className="px-4 py-2 cursor-pointer mb-10">
-              Sign-in
+              Sign up
               </Link>
               <div className="w-full h-[2px] bg-gray-900  mt-2"></div>
             </li>
