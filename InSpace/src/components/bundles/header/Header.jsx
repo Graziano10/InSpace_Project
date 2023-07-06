@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import NavBar from "./NavBar";
+import NavBar from "./NavBar2";
 import Fade from "react-reveal/Fade";
 import Flip from "react-reveal/Flip";
 

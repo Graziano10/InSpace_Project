@@ -2,8 +2,11 @@
 const path = require("path");
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
+const jwt = require('jsonwebtoken');
+const {User,  Config } = require('../data');
 
 const loginUser = async (req, res) => {
+ 
   const { email, password } = req.body;
 
   const el = await prisma.User.findFirst({
@@ -15,10 +18,17 @@ const loginUser = async (req, res) => {
   if (!el) {
     return res.status(500).json({error : "not found"});
   } else {
-    console.log('errore')
-    return res.status(200).json({ message: "Benvenuto" });
+
+
+    const token = Math.random()
+    return res.status(200).json({ token, message: 'benvenuto' });
+   
   }
 
 };
+
+
+
+
 
 module.exports = loginUser;

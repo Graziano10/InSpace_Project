@@ -43,6 +43,7 @@ const LoginForm = () => {
         
         if(results.status == 200) {
           const data = results.data; // -> { user: { ... }, token: ... }
+          console.log(results.status);
           dispatch(login(data));
           navigate("/");
         } else {

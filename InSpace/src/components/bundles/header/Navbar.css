@@ -1,0 +1,299 @@
+ .wiki-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .wiki-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+  }
+  
+   .main-nav {
+    background-color: rgba(1, 0, 11, 0.7);
+    box-shadow: 0px 0px 50px 20px #000000;;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    z-index: 1; 
+    overflow: hidden;
+  }
+  
+  .logo {
+    margin-left: 50px;
+   
+  }
+  
+  header {
+    position: relative;
+    row-gap: 15px;
+    z-index: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .menu-link {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-link ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-link li {
+    margin: 0 10px;
+  }
+
+  .menu-link a {
+    text-decoration: none;
+    color: white;
+    padding: 50px;
+    font-size: 1.5rem;
+  }  
+  .p {
+    font-size: 16px;
+    font-weight: 400px;
+    color: #fff;
+    max-width: 550px;
+    text-align: center;
+  }
+
+
+   /* .wiki-container { 
+     height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain; 
+   }  */
+  
+   .wiki-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+  }
+  
+  .wikiTitle {
+    color: #fff;
+    font-size: 100px;
+    /* margin-top: -1000px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0px 0px 50px 10px #fffefe; */
+    border: 1px solid #fff;
+    backdrop-filter: blur(10px);
+   padding: 0 15px;
+  
+  }
+  
+  .wikiP {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 32px;
+  }
+  
+  .hero-btns {
+    margin-top: 32px;
+  }
+  
+  .hero-btns .btn {
+    margin: 6px;
+  }
+  
+  .fa-play-circle {
+    margin-left: 4px;
+  }
+
+  .launch-time span {
+    margin-left: 10px;
+  }
+  
+
+  
+  @media (min-width: 1023px ) and (max-width: 1025px) {
+
+    .wikiTitle {
+      font-size: 5rem;
+      position: absolute;
+      top: 130px;
+    }
+    
+    .wikiP {
+      font-size: 2rem;
+      position: absolute;
+      top: 260px;
+    }
+    
+    .hero-btns {
+      position: absolute;
+      top: 290px;
+    }
+
+    .launch-time {
+      position: absolute;
+      top: 390px;
+
+    }
+    
+  }
+
+  
+  @media screen and (max-width: 821px) {
+    
+    .wikiTitle {
+      font-size: 5rem;
+    }
+
+    .wikiP {
+      font-size: 3rem;
+    }
+    
+    .hero-btns {
+
+    }
+
+  }
+
+
+
+
+  @media screen and (max-width: 768px) {
+
+    .wiki-container .wikiTitle {
+      font-size: 70px;
+      margin-top: 10px;
+    }
+    
+    @media screen and (max-width: 769px) {
+      .wiki-container .wikiTitle {
+        font-size: 70px;
+        margin-top: 50px;
+      }
+    }
+    .wiki-container .wikiP {
+      font-size: 30px;
+      
+    }
+  
+    .btn-mobile {
+      display: block;
+      text-decoration: none;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  } 
+  @media screen and (max-width: 390px) {
+    .wiki-container .wikiTitle {
+      font-size: 30px;
+      margin-top: 30px;
+      justify-content: center;
+    }
+    
+  }
+
+  @media screen and (max-width: 414px) {
+    .wiki-container .wikiTitle {
+      font-size: 30px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+    .rocket{
+      display: none;
+    }
+    
+  }
+
+  .launch-time {
+    display: flex;
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    align-items: center; /* Centra gli elementi verticalmente */
+    color: #fff;
+    font-family: Arial, sans-serif; /* Aggiungi un font di tua scelta */
+    font-weight: bold; /* Aggiungi spessore al testo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aggiungi una leggera ombreggiatura al testo */
+  }
+  
+  .launch-time .launch-div {
+    flex-basis: 100px;
+    color: #fff;
+  }
+  
+  .launch-time div p {
+    font-size: 60px;
+    margin: 30px 5px; /* Rimuovi il margine inferiore */
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(58, 2, 58, 0.2); /* Cambia il colore di sfondo */
+    border-radius: 5px; /* Aggiungi angoli arrotondati */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0px 0px 30px 3px #fffefe;
+    
+    backdrop-filter: blur(10px);
+  }
+  .rocket {
+    width: 200px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+  }
+  @media screen and (max-width: 390px){
+    .rocket{
+      display: none;
+    }
+  }
+  @keyframes rocket{
+    0%{
+      bottom: -50%;
+      opacity: 0;
+    }
+    100%{
+      bottom: 105%;
+      opacity: 1;
+    }
+  }
+ 
+ 

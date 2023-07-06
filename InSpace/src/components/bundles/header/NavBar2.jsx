@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import HamburgerMenu from "./HamburgerMenu";
-import logo from "./WikiAssets/Logo.png"
+import HamburgerMenu from "./hamburgerMenu";
+
 import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../../store/authSlice";
+import { logout } from "../../../store/authSlice";
 
 
 const NavBar = () => {
   const logo = "src/assets/assets-Header/Logo.png";
-  const avatar = "src/assets/User_Avatar.png";
   const avatar2 = "/src/assets/avatar3.svg";
 
   const token = useSelector((state) => state.auth.token);
