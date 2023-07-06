@@ -9,15 +9,13 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-
-
  function sendmail(userEmail){
 
     const options = {
         from: "acustomer@outlook.it",
         to: userEmail,
         subject: "sending email using node.js",
-        text: " text of the email"
+        html: "<img src='./assets/inspace_logo.png' alt='logo image' width='25'><h1>The reservation has been received and we will contact you for further information.</h1> <p>click<a href='http://localhost:3000/'> here </a>to go to homepage</p>"
     };
     
     transporter.sendMail(options, (err, info) => {
