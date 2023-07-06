@@ -10,6 +10,7 @@ import RegBurger from "../components/atoms/RegBurger";
 import RegLogo from "../components/atoms/RegLogo";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./typewriter.css"
 
 export const FormPlanet = () => {
   const first_name = useRef();
@@ -17,6 +18,7 @@ export const FormPlanet = () => {
   const navigate = useNavigate();
 
   const [isActive, setIsActive] = useState(false);
+  const[isError, setIsError] = useState(false)
 
   const handleToggle = () => {
     setIsActive(!isActive);
@@ -46,6 +48,7 @@ export const FormPlanet = () => {
         },
       });
       if (res.status === 200) {
+        setIsError(false)
         successfullNotify();
         setTimeout(() => {
           setData({
@@ -58,7 +61,7 @@ export const FormPlanet = () => {
         }, 2500);
       }
     } catch (error) {
-      alert(error);
+      setIsError(true)
     }
   }
 
@@ -343,6 +346,9 @@ export const FormPlanet = () => {
             >
               Submit
             </button>
+          </div>
+          <div className="mt-10 h-4">
+            {isError && <h1 className="text-red-600 text-center md:text-left text-lg">User already exist</h1>}
           </div>
         </form>
       </section>
