@@ -8,6 +8,26 @@ const SectionProfile = () => {
 
   const logo = "src/assets/assets-Header/Logo.png";
 
+
+  const checkReservation = () => {
+    async function getUserAndBooking(id){
+      try {
+        const userResponse = await fetch(`/user?id=${id}`);
+        const user = await userResponse.json();
+
+        const bookingResponse = await fetch(`/booking?email=${user.email}`);
+        const booking = await bookingResponse.json();
+
+        return { user, booking };
+      } catch (error) {
+        console.error(error);
+        throw new Error('Errore durante il recupero dei dati');
+      }
+    }
+  }
+
+
+
   return (
     <div className="h-screen text-white flex items-center relative z-1">
       <section
@@ -25,6 +45,9 @@ const SectionProfile = () => {
             </div>
             <div className="h-auto bg-[#04091b] rounded-sm mt-7">
                 <h3>Prenotazione:</h3>
+            </div>
+            <div>
+              <button onClick={checkReservation}>check</button>
             </div>
             <div className="w-full h-[30%] ring-1 ring-black p-4 my-4 bg-gray-300">
 
