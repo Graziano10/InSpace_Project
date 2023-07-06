@@ -3,7 +3,7 @@ const prisma = new PrismaClient();
 const { parseISO } = require('date-fns');
 
 const reserve = async (req, res) => {
-  const { first_name, last_name, planet, date } = req.body;
+  const { first_name, last_name, planet, date, email } = req.body;
 
   try {
     await prisma.Travel.create({
@@ -11,7 +11,7 @@ const reserve = async (req, res) => {
         name: first_name + " " + last_name,
         planet: planet,
         bookingDate: parseISO(date),
-        
+        email: email
       },
     });
 

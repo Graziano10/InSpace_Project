@@ -22,4 +22,5 @@ model Travel {
   name  String?
   bookingDate DateTime?
   planet String?
+  email String? @unique
 }

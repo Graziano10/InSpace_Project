@@ -13,7 +13,6 @@ import { useNavigate } from "react-router-dom";
 
 export const Reservation = () => {
   const first_name = useRef();
-  const password_confirm = useRef();
   const navigate = useNavigate();
 
   const [isActive, setIsActive] = useState(false);
@@ -27,6 +26,7 @@ export const Reservation = () => {
     last_name: "",
     date: "",
     planet: "",
+    email:""
   });
 
   const handleSubmit = (e) => {
@@ -50,6 +50,7 @@ export const Reservation = () => {
             last_name: "",
             date: "",
             planet: "",
+            email:""
           });
           navigate("/");
         }, 2500);
