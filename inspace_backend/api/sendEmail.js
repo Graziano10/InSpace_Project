@@ -9,15 +9,17 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-//setting up the email options
-const options = {
-    from: "acustomer@outlook.it",
-    to: "s.macinaleone@gmail.com",
-    subject: "sending email using node.js",
-    text: " text of the email"
-};
 
- function sendmail(){
+
+ function sendmail(userEmail){
+
+    const options = {
+        from: "acustomer@outlook.it",
+        to: userEmail,
+        subject: "sending email using node.js",
+        text: " text of the email"
+    };
+    
     transporter.sendMail(options, (err, info) => {
     if(err){
         console.log(err);

@@ -17,7 +17,7 @@ const reserve = async (req, res) => {
     });
 
     // Invia una risposta di conferma
-    sendmail()
+    sendmail(email)
     res.status(200).json({ message: 'Prenotazione avvenuta con successo' });
   } catch (error) {
     res.status(500).json({ message: 'Errore durante la prenotazione' });
