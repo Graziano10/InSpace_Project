@@ -22,6 +22,7 @@ export default {
         "sxl" : "2px 36px 50px -8px rgba(167,166,166,0.75)"
       },
       backgroundImage: {
+        "avatarJeffBesoz": "url('./assets/Jeff_Bezos_2avatar.jpg')",
         "logo": "url('./assets/inspace_logo.png')",
         "form-bg": "url('./assets/formBg.png')",
         "form-bg2": "url('./assets/bg-3.webp')",

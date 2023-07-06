@@ -5,10 +5,9 @@ import HamburgerMenu from "./hamburgerMenu";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../../store/authSlice";
 
-
 const NavBar = () => {
   const logo = "src/assets/assets-Header/Logo.png";
-  const avatar2 = "/src/assets/avatar3.svg";
+  const avatar2 = "/src/assets/Jeff_Bezos_2 avatar.jpg";
 
   const token = useSelector((state) => state.auth.token);
   console.log(token);
@@ -63,23 +62,35 @@ const NavBar = () => {
             {token != null ? (
               <div className="flex items-center justify-between mdd:w-[90px] w-[15px] ">
                 <div className="flex justify-center items-center gap-2">
-                  <div className="w-[40px] h-[40px] bg-black rounded-full mr-3">
-                    <img src={avatar2} alt="Avatar" onClick={toggleMenu02} className="rounded-full" />
+                  <div
+                    className="w-[50px] h-[50px] rounded-full mr-3" onClick={toggleMenu02}
+                  >
+                    <img
+                      src={avatar2}
+                      alt="Avatar"
+                      onClick={toggleMenu02}
+                      className="rounded-full w-[50px] h-[50px]"
+                 
+                    />
                     {isOpen && (
                       <div className="absolute left-[42%] z-10 mt-2 bg-white rounded-lg shadow-xl w-[200px] h-[250px] flex flex-col justify-between md:left-[75%] mdd:left-[85%]">
                         <div className="w-full h-10 bg-slate-300 rounded-lg mt-4 pl-3 flex items-center hover:bg-slate-400">
-                        <button className="text-black"><Link to="/Section-Profile">Window Profile</Link></button>
+                          <button className="text-black">
+                            <Link to="/Section-Profile">Window Profile</Link>
+                          </button>
                         </div>
                         <div className="w-full h-10 bg-slate-300 rounded-lg pl-3 flex items-center hover:bg-slate-400">
-                        <button className="text-black">Rocket</button>
+                          <button className="text-black">Rocket</button>
                         </div>
                         <div className="w-full h-10 bg-slate-300 rounded-lg pl-3 flex items-center hover:bg-slate-400">
-                        <button className="text-black">Information</button>
+                          <button className="text-black">Information</button>
                         </div>
-                        <div onClick={handleLogout} className="w-full h-10 bg-[#04091b] rounded pl-3 flex items-center justify-center hover:bg-gray-950">
-                        <p className="text-white">Logout</p>
+                        <div
+                          onClick={handleLogout}
+                          className="w-full h-10 bg-[#04091b] rounded pl-3 flex items-center justify-center hover:bg-gray-950"
+                        >
+                          <p className="text-white">Logout</p>
                         </div>
-
                       </div>
                     )}
                   </div>
