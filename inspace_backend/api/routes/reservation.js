@@ -18,7 +18,6 @@ const reserve = async (req, res) => {
     // Invia una risposta di conferma
     res.status(200).json({ message: 'Prenotazione avvenuta con successo' });
   } catch (error) {
-    console.error(error);
     res.status(500).json({ message: 'Errore durante la prenotazione' });
   }
 };
