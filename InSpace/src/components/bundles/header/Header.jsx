@@ -34,7 +34,7 @@ const Header = () => {
                 </p>
                 <Link
                   to="/Wiki-Planet"
-                  className="bg-white text-black py-4 px-12 rounded-[40px] hover:bg-neutral-200 h-9 flex justify-center items-center"
+                  className="bg-white text-black py-4 px-12 rounded-[40px] hover:bg-neutral-200 h-9 flex justify-center items-center active:bg-yellow-600"
                 >
                   Explore
                 </Link>
