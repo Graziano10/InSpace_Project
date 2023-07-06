@@ -1,6 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const { parseISO } = require('date-fns');
+const  sendmail  = require('../sendEmail');
 
 const reserve = async (req, res) => {
   const { first_name, last_name, planet, date, email } = req.body;
@@ -16,10 +17,12 @@ const reserve = async (req, res) => {
     });
 
     // Invia una risposta di conferma
+    sendmail()
     res.status(200).json({ message: 'Prenotazione avvenuta con successo' });
   } catch (error) {
     res.status(500).json({ message: 'Errore durante la prenotazione' });
-  }
+    console.log(error)
+    }
 };
 
 module.exports = reserve;
