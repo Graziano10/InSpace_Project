@@ -5,8 +5,9 @@ import FormPlanet from "./pages/FormPlanet";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SectionProfile from './pages/SectionProfile';
-import Footer from "./components/bundles/footer/Footer";
 import Reservation from "./pages/Reservation";
+
+
 
 
 

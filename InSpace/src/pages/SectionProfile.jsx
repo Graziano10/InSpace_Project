@@ -9,6 +9,26 @@ const SectionProfile = () => {
 
   const logo = "src/assets/assets-Header/Logo.png";
 
+
+  const checkReservation = () => {
+    async function getUserAndBooking(id){
+      try {
+        const userResponse = await fetch(`/user?id=${id}`);
+        const user = await userResponse.json();
+
+        const bookingResponse = await fetch(`/booking?email=${user.email}`);
+        const booking = await bookingResponse.json();
+
+        return { user, booking };
+      } catch (error) {
+        console.error(error);
+        throw new Error('Errore durante il recupero dei dati');
+      }
+    }
+  }
+
+
+
   return (
     <>
       <div className="h-full text-white flex items-center relative z-1">

@@ -18,13 +18,9 @@ const loginUser = async (req, res) => {
   if (!el) {
     return res.status(500).json({error : "not found"});
   } else {
-
-
     const token = Math.random()
     return res.status(200).json({ token, message: 'benvenuto' });
-   
   }
-
 };
 
 

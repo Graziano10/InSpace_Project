@@ -11,12 +11,14 @@ import RegLogo from "../components/atoms/RegLogo";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+
 export const FormPlanet = () => {
   const first_name = useRef();
   const password_confirm = useRef();
   const navigate = useNavigate();
 
   const [isActive, setIsActive] = useState(false);
+  const[isError, setIsError] = useState(false)
 
   const handleToggle = () => {
     setIsActive(!isActive);
@@ -46,6 +48,7 @@ export const FormPlanet = () => {
         },
       });
       if (res.status === 200) {
+        setIsError(false)
         successfullNotify();
         setTimeout(() => {
           setData({
@@ -58,7 +61,7 @@ export const FormPlanet = () => {
         }, 2500);
       }
     } catch (error) {
-      alert(error);
+      setIsError(true)
     }
   }
 
@@ -269,7 +272,7 @@ export const FormPlanet = () => {
             <input
               type="email"
               id="email"
-              className="bg-gray-200  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+              className={`bg-gray-300  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black `}
               placeholder="user@gmail.com"
               required
               name="email"
@@ -343,6 +346,9 @@ export const FormPlanet = () => {
             >
               Submit
             </button>
+          </div>
+          <div className="mt-10 h-4">
+            {isError && <h1 className="text-red-600 text-center md:text-left text-lg">User already exist</h1>}
           </div>
         </form>
       </section>

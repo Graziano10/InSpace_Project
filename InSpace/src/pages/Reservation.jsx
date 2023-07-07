@@ -31,7 +31,6 @@ export const Reservation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
       postData()
   };
 
@@ -43,6 +42,7 @@ export const Reservation = () => {
         },
       });
       if (res.status === 200) {
+  
         successReservation();
         setTimeout(() => {
           setData({
@@ -55,8 +55,8 @@ export const Reservation = () => {
           navigate("/");
         }, 2500);
       }
-    } catch (error) {
-      alert(error);
+    } catch (error){
+      console.log(error)
     }
   }
 
@@ -326,6 +326,7 @@ export const Reservation = () => {
               Submit
             </button>
           </div>
+            
         </form>
       </section>
       <div className="xl:w-full ">

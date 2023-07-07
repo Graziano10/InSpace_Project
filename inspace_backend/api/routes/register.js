@@ -7,19 +7,23 @@ const prisma = new PrismaClient()
 const registerUser = async (req, res) => {
     const { first_name, last_name, email, password } = req.body;
     
-  
-      await prisma.User.create({
-        data: {
-          name: first_name + " " + last_name,
-          email: email,
-          password : password
-        },
-      })
+  try {
+    await prisma.User.create({
+      data: {
+        name: first_name + " " + last_name,
+        email: email,
+        password : password
+      },
+    })
+    res.status(200).json({ message: 'Registrazione avvenuta con successo!' });
+
+  } catch (error) {
+    res.status(400).json({ message : 'error'})
+  }
     
   
     
     // Invia una risposta di conferma
-    res.status(200).json({ message: 'Registrazione avvenuta con successo!' });
 };
 
 // Funzione per generare un ID univoco
