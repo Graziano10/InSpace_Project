@@ -1,8 +1,11 @@
-const fs = require('fs');
+
 const path = require('path');
 const { PrismaClient } = require('@prisma/client');
-const { log } = require('console');
+const regUser = require('../registrationEmail');
+
 const prisma = new PrismaClient()
+
+
 
 const registerUser = async (req, res) => {
     const { first_name, last_name, email, password } = req.body;
@@ -15,15 +18,12 @@ const registerUser = async (req, res) => {
         password : password
       },
     })
+    regUser(first_name, last_name, email)
     res.status(200).json({ message: 'Registrazione avvenuta con successo!' });
-
   } catch (error) {
     res.status(400).json({ message : 'error'})
+    console.log(error)
   }
-    
-  
-    
-    // Invia una risposta di conferma
 };
 
 // Funzione per generare un ID univoco

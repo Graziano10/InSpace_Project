@@ -11,13 +11,13 @@ const transporter = nodemailer.createTransport({
     }
 });
 
- function sendmail(first_name , userEmail , planet){
+ function regUser(first_name, last_name, userEmail){
 
     const options = {
         from: "customerExp11@outlook.it",
         to: userEmail,
-        subject: `Travel to ${planet}`,
-        html: `<img src='cid:inspaceLogo' alt='logo image' width='25'><h1>inSpace agency</h1> <h2>Thank you ${first_name}, the reservation for ${userEmail} has been received, we will contact you for further information about your travel to ${planet}</h2> <p>click<a href='http://localhost:3000/Home'> here </a>to go to homepage</p>`,
+        subject: `Registration successful`,
+        html: `<img src='cid:inspaceLogo' alt='logo image' width='25'><h1>inSpace agency</h1> <h2>Thank you ${first_name} ${last_name}, your registration for ${userEmail} has been received</h2> <p>click<a href='http://localhost:3000/Home'> inSpace </a>to login</p>`,
     };
     
     transporter.sendMail(options, (err, info) => {
@@ -29,4 +29,4 @@ const transporter = nodemailer.createTransport({
 } )
 }
 
-module.exports = sendmail
+module.exports = regUser

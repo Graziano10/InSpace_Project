@@ -16,6 +16,7 @@ export const Reservation = () => {
   const navigate = useNavigate();
 
   const [isActive, setIsActive] = useState(false);
+  const[isError, setIsError] = useState(false)
 
   const handleToggle = () => {
     setIsActive(!isActive);
@@ -44,6 +45,7 @@ export const Reservation = () => {
       if (res.status === 200) {
   
         successReservation();
+        setIsError(false)
         setTimeout(() => {
           setData({
             first_name: "",
@@ -56,7 +58,7 @@ export const Reservation = () => {
         }, 2500);
       }
     } catch (error){
-      console.log(error)
+      setIsError(true)
     }
   }
 
@@ -70,9 +72,9 @@ export const Reservation = () => {
   }, []);
 
   const successReservation = () =>
-    toast("Reservation  successful", {
-      position: "top-center",
-      autoClose: 2500,
+    toast("Reservation  successful, please check your email", {
+      position: "bottom-center",
+      autoClose: 4500,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -326,7 +328,9 @@ export const Reservation = () => {
               Submit
             </button>
           </div>
-            
+          <div className="mt-10 h-4">
+            {isError && <h1 className="text-red-600 text-center md:text-left text-lg">There is already a reservation with this email. </h1>}
+          </div>
         </form>
       </section>
       <div className="xl:w-full ">

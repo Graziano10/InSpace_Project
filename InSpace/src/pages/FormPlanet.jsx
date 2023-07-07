@@ -62,6 +62,7 @@ export const FormPlanet = () => {
       }
     } catch (error) {
       setIsError(true)
+      console.log(error);
     }
   }
 
