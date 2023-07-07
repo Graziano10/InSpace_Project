@@ -10,7 +10,7 @@ import RegBurger from "../components/atoms/RegBurger";
 import RegLogo from "../components/atoms/RegLogo";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./typewriter.css"
+
 
 export const FormPlanet = () => {
   const first_name = useRef();
@@ -272,7 +272,7 @@ export const FormPlanet = () => {
             <input
               type="email"
               id="email"
-              className="bg-gray-200  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+              className={`bg-gray-300  focus:bg-slate-400 focus:outline-none text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black `}
               placeholder="user@gmail.com"
               required
               name="email"
