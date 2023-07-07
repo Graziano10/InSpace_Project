@@ -1,0 +1,13 @@
+
+.arrow-animation{
+    transform: translateX(10px);
+}
+
+.ctaButton:hover{
+    .arrow-animation{
+        transform: translateX(30px);
+        transition: transform 0.5s ease;
+    }
+    
+}
+
