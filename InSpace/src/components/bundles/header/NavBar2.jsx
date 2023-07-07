@@ -9,6 +9,7 @@ const NavBar = () => {
   const logo = "src/assets/assets-Header/Logo.png";
   const avatar2 = "/src/assets/Jeff_Bezos_2 avatar.jpg";
 
+
   const token = useSelector((state) => state.auth.token);
   console.log(token);
   const dispatch = useDispatch();

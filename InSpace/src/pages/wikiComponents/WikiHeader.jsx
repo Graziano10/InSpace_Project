@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import video from "./WikiAssets/Terminal.mp4";
-import NavBar from "../../components/bundles/header/NavBar";
+import NavBar from "../../components/bundles/header/NavBar2";
 import { Button } from "./WikiButton";
 import { Link } from "react-router-dom";
 import imageRock from "./WikiAssets/rocket.png";
