@@ -343,9 +343,16 @@ export const FormPlanet = () => {
           <div className="w-full flex justify-center md:justify-start">
             <button
               type="submit"
-              className="text-white  bg-yellow-600 hover:bg-yellow-600 hover:ring-yellow-600 hover:ring-2 active:ring-0 ring-yellow-600  font-medium rounded-lg text-sm md:text-lg xl:text-xl w-full sm:w-auto px-5 py-2.5 text-center md:w-1/4 "
+              className="text-white flex submit-btn justify-evenly items-center bg-yellow-600 hover:bg-yellow-600 hover:ring-yellow-600 hover:ring-2 active:ring-0 ring-yellow-600  font-medium rounded-lg text-sm md:text-lg xl:text-xl w-full sm:w-auto px-5 py-2.5 text-center md:w-1/4 "
             >
               Submit
+              <div className="arrow-container">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+
+
             </button>
           </div>
           <div className="mt-10 h-4">

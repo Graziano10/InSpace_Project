@@ -1,0 +1,12 @@
+.submit-btn:hover{
+    .arrow-effect{
+        transform: translateX(20px);
+        transition: transform 0.5s ease;
+    }
+}
+
+@media (max-width : 765px) {
+    .arrow-effect{
+        display: none;
+    }
+}
